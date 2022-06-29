@@ -4,11 +4,11 @@ The A11yWatch system installed as a sidecar via npm [experimental].
 
 ## Getting started
 
-1. `npm install @a11ywatch/a11ywatch`
-1. start `mongodb` on port 27017 locally.
+1. `npm install @a11ywatch/a11ywatch`.
+1. start `mongodb` on port 27017 locally [if not a memory db of mongodb starts].
 1. start `redis` on 6379 locally.
-1. import at the top of your app like this `require("@a11ywatch/a11ywatch_sidecar");`.
-1. start making request to the server with one of the [clients](https://github.com/A11yWatch/a11ywatch/tree/main/clients).
+1. import at the top of your app like this `require("@a11ywatch/a11ywatch");`.
+1. make direct calls from the imports or make request with one of the [clients](https://github.com/A11yWatch/a11ywatch/tree/main/clients).
 
 Example output.
 
@@ -20,7 +20,7 @@ gRPC server running at http://127.0.0.1:50054
 gRPC server running at http://127.0.0.1:50055
 ```
 
-You should see the REST server up on http://localhost:8080/. If redis is not enabled it will poll the connection until. We are working on configuring this more gracefully.
+You should see the REST server up on http://localhost:8080/.
 
 Example of importing commands directly.
 
@@ -77,6 +77,15 @@ await multiPageScan({
   subdomains: true,
   tld: true,
 });
+```
+
+Import the A11ywatch module.
+
+```ts
+import { a11ywatch } from "@a11ywatch/a11ywatch";
+
+// follow the repos or docs to get more info on methods to call.
+console.log(a11ywatch);
 ```
 
 ## TODO

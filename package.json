@@ -1,6 +1,6 @@
 {
   "name": "@a11ywatch/a11ywatch",
-  "version": "0.0.2",
+  "version": "0.0.6",
   "description": "A11yWatch side car",
   "main": "./server.js",
   "author": "Jeff Mendez <jeff@a11ywatch.com>",
@@ -12,12 +12,13 @@
     "pub": "tsc && tsc-alias && cp package.json dist && cp package-lock.json dist && cp README.md dist && cp LICENSE dist && cd dist && npm publish --access public"
   },
   "dependencies": {
-    "@a11ywatch/core": "^0.3.3",
+    "@a11ywatch/core": "^0.3.6",
     "@a11ywatch/crawler": "^0.3.2",
     "@a11ywatch/elastic-cdn": "^0.3.1",
     "@a11ywatch/mav": "^0.3.1",
     "@a11ywatch/pagemind": "^0.3.1",
-    "@a11ywatch/protos": "^0.1.7"
+    "@a11ywatch/protos": "^0.1.7",
+    "mongodb-memory-server": "^8.7.2"
   },
   "license": "MIT",
   "devDependencies": {
@@ -29,7 +30,7 @@
     "ts-node-dev": "^1.1.6",
     "tsc-alias": "1.6.3",
     "tsconfig-paths": "^3.9.0",
-    "typescript": "^3.8.3"
+    "typescript": "^4.2.0"
   },
   "repository": {
     "type": "git",
