@@ -1,12 +1,12 @@
 # sidecar
 
-The A11yWatch system installed as a sidecar via npm [experimental].
+A11yWatch integrated sidecar.
 
 ## Getting started
 
 1. `npm install @a11ywatch/a11ywatch`.
-1. start `mongodb` on port 27017 locally [if not a memory db of mongodb starts].
-1. start `redis` on 6379 locally.
+1. start `mongodb` on port 27017.
+1. start `redis` on 6379.
 1. import at the top of your app like this `require("@a11ywatch/a11ywatch");`.
 1. make direct calls from the imports or make request with one of the [clients](https://github.com/A11yWatch/a11ywatch/tree/main/clients).
 
@@ -68,22 +68,8 @@ console.log(data);
 //     issues: [
 //       [Object], [Object], [Object], [Object], [Object], [Object],
 //       [Object], [Object], [Object], [Object], [Object], [Object],
-//       [Object], [Object], [Object], [Object], [Object], [Object],
-//       [Object], [Object], [Object], [Object], [Object], [Object],
-//       [Object], [Object], [Object], [Object], [Object], [Object],
-//       [Object], [Object], [Object], [Object], [Object], [Object],
-//       [Object], [Object], [Object], [Object], [Object], [Object],
-//       [Object], [Object], [Object], [Object], [Object], [Object],
-//       [Object], [Object], [Object], [Object], [Object], [Object],
-//       [Object], [Object], [Object], [Object], [Object], [Object],
-//       [Object], [Object], [Object], [Object], [Object], [Object],
-//       [Object], [Object], [Object], [Object], [Object], [Object],
-//       [Object], [Object], [Object], [Object], [Object], [Object],
-//       [Object], [Object], [Object], [Object], [Object], [Object],
-//       [Object], [Object], [Object], [Object], [Object], [Object],
-//       [Object], [Object], [Object], [Object], [Object], [Object],
-//       [Object], [Object], [Object], [Object],
-//       ... 61 more items
+//       [Object], [Object], [Object], [Object], [Object], [Object]
+//       ... 81 more items
 //     ]
 //   },
 //   success: true,
