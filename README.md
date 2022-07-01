@@ -20,7 +20,7 @@ gRPC server running at http://127.0.0.1:50054
 gRPC server running at http://127.0.0.1:50055
 ```
 
-You should see the REST server up on http://localhost:8080/.
+You should see the REST server up on http://localhost:3280/.
 
 Example of importing commands directly below.
 
