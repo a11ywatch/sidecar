@@ -1,28 +1,16 @@
 # sidecar
 
-A11yWatch integrated sidecar.
+A11yWatch sidecar.
 
 ## Getting started
 
 1. `npm install @a11ywatch/a11ywatch`.
 1. start `mongodb` on port 27017.
 1. start `redis` on 6379.
-1. import at the top of your app like this `require("@a11ywatch/a11ywatch");`.
-1. make direct calls from the imports or make request with one of the [clients](https://github.com/A11yWatch/a11ywatch/tree/main/clients).
+1. import or require the module `require("@a11ywatch/a11ywatch");`.
+1. Use the package exported methods, use a [client](https://github.com/A11yWatch/a11ywatch/tree/main/clients), or your own handling of request like curl/fetch.
 
-Example output.
-
-```sh
-gRPC server running at http://127.0.0.1:50051
-gRPC server running at http://127.0.0.1:50052
-gRPC server running at http://127.0.0.1:50053
-gRPC server running at http://127.0.0.1:50054
-gRPC server running at http://127.0.0.1:50055
-```
-
-You should see the REST server up on http://localhost:3280/.
-
-Example of importing commands directly below.
+Example below:
 
 ```ts
 import { scan, multiPageScan } from "@a11ywatch/a11ywatch";
@@ -105,6 +93,8 @@ await detectImage({
   width: 50,
 });
 ```
+
+View the [documentation](https://docs.a11ywatch.com/documentation/services/) for more information on ports and etc.
 
 ## TODO
 
