@@ -1,12 +1,12 @@
 # sidecar
 
-A11yWatch sidecar.
+A11yWatch sidecar for web accessibility testing.
 
 ## Getting started
 
-1. `npm install @a11ywatch/a11ywatch`.
-1. start `mongodb` on port 27017.
-1. start `redis` on 6379.
+1. `npm install @a11ywatch/a11ywatch` or skip all steps and use the docker image [`a11ywatch/a11ywatch`](https://hub.docker.com/r/a11ywatch/a11ywatch).
+1. optional: start `mongodb` on port 27017.
+1. optional: start `redis` on 6379.
 1. import or require the module `require("@a11ywatch/a11ywatch");`.
 1. Use the package exported methods, use a [client](https://github.com/A11yWatch/a11ywatch/tree/main/clients), or your own handling of request like curl/fetch.
 

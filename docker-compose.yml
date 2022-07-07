@@ -1,0 +1,9 @@
+version: "3.9"
+services:
+  a11ywatch:
+    container_name: a11ywatch
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 3280:3280

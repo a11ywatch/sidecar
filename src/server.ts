@@ -1,9 +1,11 @@
 // TODO: configure envs proper via docker
-process.env.GRPC_HOST_PAGEMIND = "127.0.0.1:50052";
-process.env.GRPC_HOST_MAV = "127.0.0.1:50053";
-process.env.GRPC_HOST_CRAWLER = "127.0.0.1:50055";
-process.env.GRPC_HOST_CDN = "127.0.0.1:50054";
-process.env.SUPER_MODE = "true";
+process.env.GRPC_HOST_PAGEMIND =
+  process.env.GRPC_HOST_PAGEMIND || "127.0.0.1:50052";
+process.env.GRPC_HOST_MAV = process.env.GRPC_HOST_MAV || "127.0.0.1:50053";
+process.env.GRPC_HOST_CRAWLER =
+  process.env.GRPC_HOST_CRAWLER || "127.0.0.1:50055";
+process.env.GRPC_HOST_CDN = process.env.GRPC_HOST_CDN || "127.0.0.1:50054";
+process.env.SUPER_MODE = process.env.SUPER_MODE || "true";
 
 import "@a11ywatch/elastic-cdn";
 import "@a11ywatch/mav";

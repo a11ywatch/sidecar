@@ -1,0 +1,99 @@
+FROM debian:buster-slim AS dbinstaller 
+
+RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
+
+RUN apt-get update && apt-get install -y apt-utils wget gnupg gnupg2 curl
+
+RUN wget -qO - https://www.mongodb.org/static/pgp/server-5.0.asc | apt-key add -
+RUN echo "deb https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/5.0 multiverse" | tee /etc/apt/sources.list.d/mongodb-org-5.0.list
+RUN apt-get update
+RUN apt-get install -y mongodb-org
+
+RUN sed -i "s,\\(^[[:blank:]]*bindIp:\\) .*,\\1 0.0.0.0," /etc/mongod.conf
+
+FROM --platform=$BUILDPLATFORM node:18.4-buster-slim AS installer 
+
+WORKDIR /usr/src/app
+
+RUN apt-get update && \ 
+	apt-get install -y build-essential \
+	python3 \
+	pkg-config \
+	make \
+	gcc \
+	curl \
+	libssl-dev \
+	cmake
+	
+COPY package*.json ./
+
+ENV PUPPETEER_EXECUTABLE_PATH="/usr/bin/chromium" \
+	PUPPETEER_SKIP_CHROMIUM_DOWNLOAD="true"  \
+ 	MONGOMS_SYSTEM_BINARY="/usr/bin/mongod"
+
+ENV PATH="/root/.cargo/bin:${PATH}"
+
+RUN npm ci
+
+RUN curl https://sh.rustup.rs -sSf | bash -s -- -y
+
+RUN cargo install website_crawler
+
+FROM --platform=$BUILDPLATFORM node:18.4-buster-slim AS builder 
+
+WORKDIR /usr/src/app
+
+RUN apt-get update && \ 
+	apt-get install -y build-essential \
+	python3 \
+	pkg-config \
+	make \
+	gcc \
+	libcurl4 \
+	curl
+
+ENV PUPPETEER_EXECUTABLE_PATH="/usr/bin/chromium" \
+	PUPPETEER_SKIP_CHROMIUM_DOWNLOAD="true"  \
+ 	MONGOMS_SYSTEM_BINARY="/usr/bin/mongod"
+
+COPY --from=installer /usr/src/app/node_modules ./node_modules
+COPY . .
+RUN  npm run build
+RUN rm -R ./node_modules
+RUN npm install --production
+
+FROM --platform=$BUILDPLATFORM node:18.4-buster-slim
+
+WORKDIR /usr/src/app
+
+ENV PUPPETEER_EXECUTABLE_PATH="/usr/bin/chromium" \
+ 	MONGOMS_SYSTEM_BINARY="/usr/bin/mongod" \
+	MONGO_INITDB_DATABASE="a11ywatch" \
+	MONGOMS_VERSION="5.0.9" \
+	# GRPC_HOST_PAGEMIND="pagemind:50052" \
+	# GRPC_HOST_CRAWLER="crawler:50055" \
+	# GRPC_PORT_MAV="mav:50053" \ 
+	DB_URL="-mongodb://0.0.0.0:27017/?compressors=zlib&gssapiServiceName=mongodb"
+
+# required runtime deps
+RUN apt-get update && \
+    apt-get install -y build-essential \
+	chromium \
+	curl
+	
+COPY --from=builder /usr/src/app/dist ./dist
+COPY --from=builder /usr/src/app/node_modules ./node_modules
+COPY --from=installer /root/.cargo/bin/website_crawler ./node_modules/@a11ywatch/crawler/target/release/website_crawler
+COPY --from=dbinstaller /usr/bin/mongod /usr/bin/mongod
+
+EXPOSE 27017
+EXPOSE 3280
+EXPOSE 50051
+
+RUN mkdir -p /data/db
+RUN mkdir ~/log
+
+# set volume
+VOLUME "/mongodb" "/data/db"
+
+CMD mongod --fork --logpath ~/log/mongodb.log && node --no-experimental-fetch ./dist/server.js
