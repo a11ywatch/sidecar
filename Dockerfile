@@ -11,7 +11,7 @@ RUN apt-get install -y mongodb-org
 
 RUN sed -i "s,\\(^[[:blank:]]*bindIp:\\) .*,\\1 0.0.0.0," /etc/mongod.conf
 
-FROM --platform=$BUILDPLATFORM node:18.4-buster-slim AS installer 
+FROM node:18.4-buster-slim AS installer 
 
 WORKDIR /usr/src/app
 
@@ -39,7 +39,7 @@ RUN curl https://sh.rustup.rs -sSf | bash -s -- -y
 
 RUN cargo install website_crawler
 
-FROM --platform=$BUILDPLATFORM node:18.4-buster-slim AS builder 
+FROM node:18.4-buster-slim AS builder 
 
 WORKDIR /usr/src/app
 
@@ -62,7 +62,7 @@ RUN  npm run build
 RUN rm -R ./node_modules
 RUN npm install --production
 
-FROM --platform=$BUILDPLATFORM node:18.4-buster-slim
+FROM node:18.4-buster-slim
 
 WORKDIR /usr/src/app
 
@@ -73,13 +73,16 @@ ENV PUPPETEER_EXECUTABLE_PATH="/usr/bin/chromium" \
 	# GRPC_HOST_PAGEMIND="pagemind:50052" \
 	# GRPC_HOST_CRAWLER="crawler:50055" \
 	# GRPC_PORT_MAV="mav:50053" \ 
-	DB_URL="-mongodb://0.0.0.0:27017/?compressors=zlib&gssapiServiceName=mongodb"
+	DB_URL="-mongodb://0.0.0.0:27017/?compressors=zlib&gssapiServiceName=mongodb" \
+	REDIS_CLIENT="redis://0.0.0.0:6379" \
+    REDIS_HOST="0.0.0.0"
 
 # required runtime deps
 RUN apt-get update && \
     apt-get install -y build-essential \
 	chromium \
-	curl
+	curl \
+	redis-server
 	
 COPY --from=builder /usr/src/app/dist ./dist
 COPY --from=builder /usr/src/app/node_modules ./node_modules
@@ -96,4 +99,4 @@ RUN mkdir ~/log
 # set volume
 VOLUME "/mongodb" "/data/db"
 
-CMD mongod --fork --logpath ~/log/mongodb.log && node --no-experimental-fetch ./dist/server.js
+CMD redis-server --daemonize yes && mongod --fork --logpath ~/log/mongodb.log && node --no-experimental-fetch ./dist/server.js

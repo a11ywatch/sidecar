@@ -15,7 +15,7 @@ Example below:
 ```ts
 import { scan, multiPageScan } from "@a11ywatch/a11ywatch";
 
-// wait about 5 seconds for server to start until async handles for isReady exported.
+// wait about 3 seconds or until log output [chrome launched and connected on: ws://127.0.0.1:$port]
 const data = await scan({ url: "https://jeffmendez.com" }); // single page website scan.
 console.log(data);
 // {
@@ -93,6 +93,29 @@ await detectImage({
   width: 50,
 });
 ```
+
+### Docker
+
+Example docker compose configuration:
+
+```yml
+version: "3.9"
+services:
+  a11ywatch:
+    image: a11ywatch/a11ywatch
+    ports:
+      - 3280:3280
+```
+
+Start the instance via docker:
+
+```sh
+docker run -p 3280:3280 a11ywatch/a11ywatch
+# run scan on website if CLI installed after container starts
+a11ywatch crawl -u https://a11ywatch.com
+```
+
+You can get the [CLI](https://github.com/A11yWatch/a11ywatch/tree/main/cli) with `cargo install a11ywatch_cli` or `npm i a11ywatch-cli -g` to run scans in shell.
 
 View the [documentation](https://docs.a11ywatch.com/documentation/services/) for more information on ports and etc.
 
