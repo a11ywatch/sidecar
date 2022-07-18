@@ -7,16 +7,54 @@ process.env.GRPC_HOST_CRAWLER =
 process.env.GRPC_HOST_CDN = process.env.GRPC_HOST_CDN || "127.0.0.1:50054";
 process.env.SUPER_MODE = process.env.SUPER_MODE || "true";
 
-import "@a11ywatch/elastic-cdn";
-import "@a11ywatch/mav";
-import "@a11ywatch/pagemind";
-import "@a11ywatch/crawler";
-import "@a11ywatch/core";
 import { scanWebsite } from "@a11ywatch/core/core/actions/crawl/scan";
-import { crawlMultiSiteWithEvent } from "@a11ywatch/core/core/utils"; // rename core double mapping
+import { crawlMultiSiteWithEvent as multiPageScan } from "@a11ywatch/core/core/utils"; // rename core double mapping
 import { client, initDbConnection } from "@a11ywatch/core/database/client";
 
-console.log("starting a11ywatch...");
+let startedApp = false;
+
+const initApplication = async () => {
+  if (!startedApp) {
+    console.log("starting a11ywatch...");
+    await import("@a11ywatch/elastic-cdn");
+    await import("@a11ywatch/mav");
+    await import("@a11ywatch/pagemind");
+    await import("@a11ywatch/crawler");
+    await import("@a11ywatch/core");
+
+    // if mongodb not connected use memory client
+    setTimeout(async () => {
+      if (!client?.isConnected()) {
+        console.log("creating MongoDb memory server...");
+        const { MongoMemoryServer } = await import("mongodb-memory-server");
+        let dbUrl = "mongodb://mongodb:27017/";
+        try {
+          const mongod = await MongoMemoryServer.create({
+            instance: {
+              port: 27017, // by default choose any free port
+              ip: "127.0.0.1", // by default '127.0.0.1', for binding to all IP addresses set it to `::,0.0.0.0`,
+              dbName: "a11ywatch",
+            },
+          });
+          if (mongod) {
+            dbUrl = mongod?.getUri();
+          }
+        } catch (e) {
+          console.error(e);
+        }
+
+        // @ts-ignore
+        await initDbConnection(dbUrl);
+        console.log("connected to memory mongodb.");
+      }
+    }, 250);
+  }
+};
+
+// auto init the suite.
+if (process.env.A11YWATCH_AUTO_START != "false") {
+  initApplication();
+}
 
 /*
  * A11yWatch SideCar
@@ -35,40 +73,4 @@ async function scan(props) {
   }
 }
 
-// multi page website scan. WIP
-async function multiPageScan(props) {
-  try {
-    return await crawlMultiSiteWithEvent({ ...props, scan: false });
-  } catch (e) {
-    console.error(e);
-  }
-}
-
-// if mongodb not connected use memory client
-setTimeout(async () => {
-  if (!client?.isConnected()) {
-    console.log("creating MongoDb memory server...");
-    const { MongoMemoryServer } = await import("mongodb-memory-server");
-    let dbUrl = "mongodb://mongodb:27017/";
-    try {
-      const mongod = await MongoMemoryServer.create({
-        instance: {
-          port: 27017, // by default choose any free port
-          ip: "127.0.0.1", // by default '127.0.0.1', for binding to all IP addresses set it to `::,0.0.0.0`,
-          dbName: "a11ywatch",
-        },
-      });
-      if (mongod) {
-        dbUrl = mongod?.getUri();
-      }
-    } catch (e) {
-      console.error(e);
-    }
-
-    // @ts-ignore
-    await initDbConnection(dbUrl);
-    console.log("connected to memory mongodb.");
-  }
-}, 250);
-
-export { scan, multiPageScan };
+export { scan, multiPageScan, initApplication };

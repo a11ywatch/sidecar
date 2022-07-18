@@ -65,11 +65,15 @@ console.log(data);
 //   message: 'CRAWLER FINISHED SCAN'
 // }
 
-// or crawl a website entirely with options to include subdomains and tld. Requires mongodb enabled at the moment.
+// crawl a website entirely with options to include subdomains and tld. Scan prop defined for streams
 // all pages
-await multiPageScan({ url: "https://a11ywatch.com" });
+await multiPageScan({ url: "https://a11ywatch.com", scan: false });
 // all pages and subdomains
-await multiPageScan({ url: "https://a11ywatch.com", subdomains: true });
+await multiPageScan({
+  url: "https://a11ywatch.com",
+  subdomains: true,
+  scan: false,
+});
 // all pages and tld extensions
 await multiPageScan({ url: "https://a11ywatch.com", tld: true });
 // all pages, subdomains, and tld extensions
@@ -77,6 +81,7 @@ await multiPageScan({
   url: "https://a11ywatch.com",
   subdomains: true,
   tld: true,
+  scan: false,
 });
 ```
 

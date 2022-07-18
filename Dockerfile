@@ -75,7 +75,8 @@ ENV PUPPETEER_EXECUTABLE_PATH="/usr/bin/chromium" \
 	# GRPC_PORT_MAV="mav:50053" \ 
 	DB_URL="-mongodb://0.0.0.0:27017/?compressors=zlib&gssapiServiceName=mongodb" \
 	REDIS_CLIENT="redis://0.0.0.0:6379" \
-    REDIS_HOST="0.0.0.0"
+    REDIS_HOST="0.0.0.0" \
+	SUPER_MODE="true"
 
 # required runtime deps
 RUN apt-get update && \
@@ -86,7 +87,7 @@ RUN apt-get update && \
 	
 COPY --from=builder /usr/src/app/dist ./dist
 COPY --from=builder /usr/src/app/node_modules ./node_modules
-COPY --from=installer /root/.cargo/bin/website_crawler ./node_modules/@a11ywatch/crawler/target/release/website_crawler
+COPY --from=installer /root/.cargo/bin/website_crawler /usr/bin/website_crawler
 COPY --from=dbinstaller /usr/bin/mongod /usr/bin/mongod
 
 EXPOSE 27017

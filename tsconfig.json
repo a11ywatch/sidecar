@@ -19,10 +19,11 @@
     "skipLibCheck": true,
     "resolveJsonModule": true,
     "removeComments": true,
+    "declaration": true,
     "paths": {
       "@app/*": ["./src/*"]
     }
   },
   "include": ["./src"],
-  "exclude": ["node_modules", "./src/screenshots", "./src/scripts"]
+  "exclude": ["node_modules"]
 }
