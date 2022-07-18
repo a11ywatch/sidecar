@@ -1,6 +1,6 @@
 {
   "name": "@a11ywatch/a11ywatch",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "A11yWatch nodejs side car",
   "main": "./server.js",
   "author": "Jeff Mendez <jeff@a11ywatch.com>",
@@ -12,7 +12,7 @@
     "pub": "tsc && tsc-alias && cp package.json dist && cp package-lock.json dist && cp README.md dist && cp LICENSE dist && cd dist && npm publish --access public"
   },
   "dependencies": {
-    "@a11ywatch/core": "^0.4.5",
+    "@a11ywatch/core": "^0.4.8",
     "@a11ywatch/crawler": "^0.4.1",
     "@a11ywatch/elastic-cdn": "^0.4.0",
     "@a11ywatch/mav": "^0.4.0",
