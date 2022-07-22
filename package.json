@@ -1,21 +1,21 @@
 {
   "name": "@a11ywatch/a11ywatch",
-  "version": "0.1.13",
+  "version": "0.1.34",
   "description": "A11yWatch nodejs side car",
   "main": "./server.js",
   "author": "Jeff Mendez <jeff@a11ywatch.com>",
   "scripts": {
-    "test": "jest",
+    "test": "jest --forceExit",
     "build": "tsc && tsc-alias",
     "dev": "ts-node-dev --transpile-only src/server.ts",
-    "start": "NODE_ENV=production node ./server.js",
+    "start": "NODE_ENV=production node --no-experimental-fetch ./server.js",
     "pub": "tsc && tsc-alias && cp package.json dist && cp package-lock.json dist && cp README.md dist && cp LICENSE dist && cd dist && npm publish --access public"
   },
   "dependencies": {
-    "@a11ywatch/core": "^0.4.16",
-    "@a11ywatch/crawler": "^0.4.4",
+    "@a11ywatch/core": "^0.4.27",
+    "@a11ywatch/crawler": "^0.4.9",
     "@a11ywatch/elastic-cdn": "^0.4.1",
-    "@a11ywatch/mav": "^0.4.0",
+    "@a11ywatch/mav": "^0.4.6",
     "@a11ywatch/pagemind": "^0.4.2",
     "@a11ywatch/protos": "^0.2.1",
     "mongodb-memory-server": "^8.7.2"

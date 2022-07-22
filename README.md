@@ -4,18 +4,37 @@ A11yWatch sidecar for web accessibility testing.
 
 ## Getting started
 
-1. `npm install @a11ywatch/a11ywatch` or skip all steps and use the docker image [`a11ywatch/a11ywatch`](https://hub.docker.com/r/a11ywatch/a11ywatch).
+Follow the instructions to get started with nodejs or bun.
+
 1. optional: start `mongodb` on port 27017.
 1. optional: start `redis` on 6379.
-1. import or require the module `require("@a11ywatch/a11ywatch");`.
-1. Use the package exported methods, use a [client](https://github.com/A11yWatch/a11ywatch/tree/main/clients), or your own handling of request like curl/fetch.
+1. optional: add `**/scripts/*` to .gitignore (auto generated fix scripts for the cdn)
+
+Env variables:
+
+```sh
+# unlock all features recommended
+process.env.SUPER_MODE = "true";
+```
+
+### nodejs
+
+node - v12.0 and up
+
+1. `npm install @a11ywatch/a11ywatch`.
+
+### bun
+
+1. `npm i puppeteer` # issue with chrome installing via bun
+1. `bun install @a11ywatch/a11ywatch`.
+
+Use the packages exported methods, use a [client](https://github.com/A11yWatch/a11ywatch/tree/main/clients), or your own handling of request like curl/fetch.
 
 Example below:
 
 ```ts
 import { scan, multiPageScan } from "@a11ywatch/a11ywatch";
 
-// wait about 3 seconds or until log output [chrome launched and connected on: ws://127.0.0.1:$port]
 const data = await scan({ url: "https://jeffmendez.com" }); // single page website scan.
 console.log(data);
 // {
@@ -67,12 +86,11 @@ console.log(data);
 
 // crawl a website entirely with options to include subdomains and tld. Scan prop defined for streams
 // all pages
-await multiPageScan({ url: "https://a11ywatch.com", scan: false });
+await multiPageScan({ url: "https://a11ywatch.com" });
 // all pages and subdomains
 await multiPageScan({
   url: "https://a11ywatch.com",
   subdomains: true,
-  scan: false,
 });
 // all pages and tld extensions
 await multiPageScan({ url: "https://a11ywatch.com", tld: true });
@@ -81,7 +99,6 @@ await multiPageScan({
   url: "https://a11ywatch.com",
   subdomains: true,
   tld: true,
-  scan: false,
 });
 ```
 
@@ -123,6 +140,25 @@ a11ywatch crawl -u https://a11ywatch.com
 You can get the [CLI](https://github.com/A11yWatch/a11ywatch/tree/main/cli) with `cargo install a11ywatch_cli` or `npm i a11ywatch-cli -g` to run scans in shell.
 
 View the [documentation](https://docs.a11ywatch.com/documentation/services/) for more information on ports and etc.
+
+## Packages exposed
+
+The following packages can be imported to use directly to extend the A11yWatch suite.
+
+1. `@a11ywatch/core`
+1. `@a11ywatch/mav`
+1. `@a11ywatch/pagemind`
+1. `@a11ywatch/crawler`
+1. `@a11ywatch/elastic-cdn`
+
+## Examples
+
+View the [basic example](./examples/basic/) or [bun example](./examples/basic/) for a getting started point.
+
+## Help
+
+If the scan fails initially its most likely due to chrome not being installed or the startup not finishing beforehand.
+We are working on adding chrome connection detection to prevent this from happening.
 
 ## TODO
 
