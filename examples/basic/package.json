@@ -9,7 +9,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "@a11ywatch/a11ywatch": "^0.1.32"
+    "@a11ywatch/a11ywatch": "^0.1.35"
   },
   "devDependencies": {
     "@types/node": "^18.0.0",

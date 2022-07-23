@@ -6,17 +6,6 @@ A11yWatch sidecar for web accessibility testing.
 
 Follow the instructions to get started with nodejs or bun.
 
-1. optional: start `mongodb` on port 27017.
-1. optional: start `redis` on 6379.
-1. optional: add `**/scripts/*` to .gitignore (auto generated fix scripts for the cdn)
-
-Env variables:
-
-```sh
-# unlock all features recommended
-process.env.SUPER_MODE = "true";
-```
-
 ### nodejs
 
 node - v12.0 and up
@@ -28,61 +17,20 @@ node - v12.0 and up
 1. `npm i puppeteer` # issue with chrome installing via bun
 1. `bun install @a11ywatch/a11ywatch`.
 
+#### optional
+
 Use the packages exported methods, use a [client](https://github.com/A11yWatch/a11ywatch/tree/main/clients), or your own handling of request like curl/fetch.
+
+1. optional: start `mongodb` on port 27017.
+1. optional: start `redis` on 6379.
+1. optional: add `**/scripts/*` to .gitignore (auto generated fix scripts for the cdn).
 
 Example below:
 
 ```ts
 import { scan, multiPageScan } from "@a11ywatch/a11ywatch";
 
-const data = await scan({ url: "https://jeffmendez.com" }); // single page website scan.
-console.log(data);
-// {
-//   data: {
-//     userId: undefined,
-//     url: 'https://a11ywatch.com',
-//     domain: 'a11ywatch.com',
-//     cdnConnected: false,
-//     pageInsights: false,
-//     pageHeaders: [],
-//     insight: null,
-//     pageLoadTime: {
-//       duration: '605',
-//       durationFormated: 'Very Fast',
-//       color: '#A5D6A7'
-//     },
-//     issuesInfo: {
-//       possibleIssuesFixedByCdn: 0,
-//       totalIssues: 161,
-//       issuesFixedByCdn: 0,
-//       errorCount: 0,
-//       warningCount: 161,
-//       noticeCount: 0,
-//       adaScore: 100,
-//       issueMeta: [Object]
-//     },
-//     lastScanDate: 'Wed, 29 Jun 2022 20:29:30 GMT',
-//     online: true,
-//     ua: '',
-//     mobile: false,
-//     standard: 'WCAG2AA',
-//     actionsEnabled: false,
-//     robots: true,
-//     subdomains: false,
-//     tld: false,
-//     timestamp: 1656534570739,
-//     script: null,
-//     issues: [
-//       [Object], [Object], [Object], [Object], [Object], [Object],
-//       [Object], [Object], [Object], [Object], [Object], [Object],
-//       [Object], [Object], [Object], [Object], [Object], [Object]
-//       ... 81 more items
-//     ]
-//   },
-//   success: true,
-//   code: 200,
-//   message: 'CRAWLER FINISHED SCAN'
-// }
+await scan({ url: "https://jeffmendez.com" }); // single page website scan.
 
 // crawl a website entirely with options to include subdomains and tld. Scan prop defined for streams
 // all pages
@@ -145,25 +93,15 @@ View the [documentation](https://docs.a11ywatch.com/documentation/services/) for
 
 The following packages can be imported to use directly to extend the A11yWatch suite.
 
-1. `@a11ywatch/core`
-1. `@a11ywatch/mav`
-1. `@a11ywatch/pagemind`
-1. `@a11ywatch/crawler`
-1. `@a11ywatch/elastic-cdn`
+1. [`@a11ywatch/core`](https://github.com/a11ywatch/a11ywatch-core)
+1. [`@a11ywatch/mav`](https://github.com/a11ywatch/mav)
+1. [`@a11ywatch/pagemind`](https://github.com/a11ywatch/pagemind)
+1. [`@a11ywatch/crawler`](https://github.com/a11ywatch/crawler)
+1. [`@a11ywatch/elastic-cdn`](https://github.com/a11ywatch/elastic-cdn)
 
 ## Examples
 
 View the [basic example](./examples/basic/) or [bun example](./examples/basic/) for a getting started point.
-
-## Help
-
-If the scan fails initially its most likely due to chrome not being installed or the startup not finishing beforehand.
-We are working on adding chrome connection detection to prevent this from happening.
-
-## TODO
-
-1. Keep track and cleanup processes correctly (mainly add way to cleanup crawler service).
-1. Add examples how to important certain libs from the sidecar.
 
 ## LICENSE
 
