@@ -1,13 +1,3 @@
-// TODO: configure envs proper via docker
-process.env.GRPC_HOST_PAGEMIND =
-  process.env.GRPC_HOST_PAGEMIND || "127.0.0.1:50052";
-process.env.GRPC_HOST_MAV = process.env.GRPC_HOST_MAV || "127.0.0.1:50053";
-process.env.GRPC_HOST_CRAWLER =
-  process.env.GRPC_HOST_CRAWLER || "127.0.0.1:50055";
-process.env.GRPC_HOST_CDN = process.env.GRPC_HOST_CDN || "127.0.0.1:50054";
-
-process.env.SUPER_MODE = process.env.SUPER_MODE || "true";
-
 import { scanWebsite } from "@a11ywatch/core/core/actions/crawl/scan";
 import { crawlMultiSiteWithEvent as scanMulti } from "@a11ywatch/core/core/utils"; // rename core double mapping
 import { client, initDbConnection } from "@a11ywatch/core/database/client";
@@ -17,6 +7,8 @@ import { wsChromeEndpointurl } from "@a11ywatch/pagemind/config/chrome";
 let startedApp = false;
 const production = process.env.NODE_ENV === "production";
 
+// detect if the suite is ready across all services.
+// @returns Promise<boolean>
 const appReady = async () => {
   await isReady();
   return new Promise((resolve) => {
@@ -115,4 +107,4 @@ async function multiPageScan(props) {
   }
 }
 
-export { scan, multiPageScan, initApplication };
+export { scan, multiPageScan, initApplication, appReady };

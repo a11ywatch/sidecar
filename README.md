@@ -101,7 +101,21 @@ The following packages can be imported to use directly to extend the A11yWatch s
 
 ## Examples
 
-View the [basic example](./examples/basic/) or [bun example](./examples/basic/) for a getting started point.
+View the [bun example](./examples/bun/) or [nodejs example](./examples/nodejs/) for a getting started point.
+
+## Environmental variables
+
+You can update the env variables below to adjust the gRPC server ports and other application features.
+
+```
+# grpc configs
+GRPC_HOST_PAGEMIND=127.0.0.1:50052
+GRPC_HOST_MAV=127.0.0.1:50053
+GRPC_HOST_CRAWLER=127.0.0.1:50055
+GRPC_HOST_CDN=127.0.0.1:50054
+# unlock all features
+SUPER_MODE=true
+```
 
 ## LICENSE
 

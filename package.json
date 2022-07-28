@@ -1,6 +1,6 @@
 {
   "name": "@a11ywatch/a11ywatch",
-  "version": "0.1.36",
+  "version": "0.1.40",
   "description": "A11yWatch nodejs side car",
   "main": "./server.js",
   "author": "Jeff Mendez <jeff@a11ywatch.com>",
@@ -16,7 +16,7 @@
     "@a11ywatch/crawler": "^0.4.9",
     "@a11ywatch/elastic-cdn": "^0.4.1",
     "@a11ywatch/mav": "^0.4.6",
-    "@a11ywatch/pagemind": "^0.4.2",
+    "@a11ywatch/pagemind": "^0.4.5",
     "@a11ywatch/protos": "^0.2.1",
     "mongodb-memory-server": "^8.7.2"
   },

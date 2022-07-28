@@ -9,7 +9,8 @@
     "test": "jest"
   },
   "dependencies": {
-    "@a11ywatch/a11ywatch": "^0.1.35"
+    "@a11ywatch/a11ywatch": "^0.1.40",
+    "puppeteer": "^15.5.0"
   },
   "devDependencies": {
     "typescript": "^4.7.4"
