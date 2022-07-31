@@ -1,26 +1,26 @@
 {
   "name": "@a11ywatch/a11ywatch",
-  "version": "0.1.40",
-  "description": "A11yWatch nodejs side car",
+  "version": "0.1.44",
+  "description": "Powerful web accessibility sidecar",
   "main": "./server.js",
   "author": "Jeff Mendez <jeff@a11ywatch.com>",
   "scripts": {
     "test": "jest --forceExit",
-    "build": "tsc && tsc-alias",
+    "build": "tsc",
     "dev": "ts-node-dev --transpile-only src/server.ts",
-    "start": "NODE_ENV=production node --no-experimental-fetch ./server.js",
-    "pub": "tsc && tsc-alias && cp package.json dist && cp package-lock.json dist && cp README.md dist && cp LICENSE dist && cd dist && npm publish --access public"
+    "start": "NODE_ENV=production node ./server.js",
+    "pub": "tsc && cp package.json dist && cp package-lock.json dist && cp README.md dist && cp LICENSE dist && cd dist && npm publish --access public"
   },
+  "license": "MIT",
   "dependencies": {
-    "@a11ywatch/core": "^0.4.31",
+    "@a11ywatch/core": "^0.4.36",
     "@a11ywatch/crawler": "^0.4.9",
     "@a11ywatch/elastic-cdn": "^0.4.1",
     "@a11ywatch/mav": "^0.4.6",
     "@a11ywatch/pagemind": "^0.4.5",
     "@a11ywatch/protos": "^0.2.1",
-    "mongodb-memory-server": "^8.7.2"
+    "mongodb-memory-server": "^8.8.0"
   },
-  "license": "MIT",
   "devDependencies": {
     "@swc/core": "^1.2.205",
     "@swc/jest": "^0.2.21",
@@ -28,9 +28,7 @@
     "jest": "^26.4.2",
     "prettier": "^2.0.5",
     "ts-node-dev": "^1.1.6",
-    "tsc-alias": "1.6.3",
-    "tsconfig-paths": "^3.9.0",
-    "typescript": "^4.2.0"
+    "typescript": "^4.7.4"
   },
   "repository": {
     "type": "git",

@@ -70,9 +70,6 @@ ENV PUPPETEER_EXECUTABLE_PATH="/usr/bin/chromium" \
  	MONGOMS_SYSTEM_BINARY="/usr/bin/mongod" \
 	MONGO_INITDB_DATABASE="a11ywatch" \
 	MONGOMS_VERSION="5.0.9" \
-	# GRPC_HOST_PAGEMIND="pagemind:50052" \
-	# GRPC_HOST_CRAWLER="crawler:50055" \
-	# GRPC_PORT_MAV="mav:50053" \ 
 	DB_URL="-mongodb://0.0.0.0:27017/?compressors=zlib&gssapiServiceName=mongodb" \
 	REDIS_CLIENT="redis://0.0.0.0:6379" \
     REDIS_HOST="0.0.0.0" \

@@ -26,6 +26,7 @@ const appReady = async () => {
   });
 };
 
+// prevent re-starting the application on re-imports
 const initApplication = async () => {
   if (!startedApp) {
     !production && console.log("starting a11ywatch...");
@@ -53,7 +54,6 @@ const initApplication = async () => {
           if (mongod) {
             dbUrl = mongod?.getUri();
           }
-          // @ts-ignore
           await initDbConnection(dbUrl);
           !production && console.log("connected to memory mongodb.");
         } catch (e) {
@@ -67,6 +67,8 @@ const initApplication = async () => {
         }
       }
     }, 250);
+
+    startedApp = true;
   }
 };
 
