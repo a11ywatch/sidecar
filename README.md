@@ -2,6 +2,8 @@
 
 A11yWatch sidecar for web accessibility testing.
 
+- Multithreading is done extremely fast natively using [Rust](https://www.rust-lang.org/) communicating through [gRPC async streams](https://grpc.io/).
+
 ## Getting started
 
 Follow the instructions to get started with nodejs or bun.
