@@ -115,6 +115,9 @@ GRPC_HOST_PAGEMIND=127.0.0.1:50052
 GRPC_HOST_MAV=127.0.0.1:50053
 GRPC_HOST_CRAWLER=127.0.0.1:50055
 GRPC_HOST_CDN=127.0.0.1:50054
+SCRIPTS_ENABLED=false
+# disabling AI may drastically improve performance across certain pages
+AI_DISABLED=false
 # unlock all features
 SUPER_MODE=true
 ```
