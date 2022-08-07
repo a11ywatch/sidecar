@@ -2,11 +2,11 @@
 
 A11yWatch sidecar for web accessibility testing.
 
-- Multithreading is done extremely fast natively using [Rust](https://www.rust-lang.org/) communicating through [gRPC async streams](https://grpc.io/).
+- Multithreading is done extremely fast built in [Rust](https://www.rust-lang.org/) communicating through [gRPC async streams](https://grpc.io/).
 
 ## Getting started
 
-Follow the instructions to get started with nodejs or bun.
+Make sure to have either [nodejs](https://nodejs.org/en/) or [bun](https://bun.sh/) installed.
 
 ### nodejs
 
@@ -27,7 +27,7 @@ Use the packages exported methods, use a [client](https://github.com/A11yWatch/a
 1. optional: start `redis` on 6379.
 1. optional: add `**/scripts/*` to .gitignore (auto generated fix scripts for the cdn).
 
-Example below:
+## Usage
 
 ```ts
 import { scan, multiPageScan } from "@a11ywatch/a11ywatch";

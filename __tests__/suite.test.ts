@@ -12,18 +12,16 @@ describe("suite", () => {
   const password = "mypass"; // test auth password
 
   // can scan a single website using enhanced scan
-  test("starts the server properly and run single page scan", async (done) => {
+  test("starts the server properly and run single page scan", async () => {
     const { scan } = await import("../src/server");
 
     const data = await scan({ url: "https://jeffmendez.com" });
 
     expect(data).toBeTruthy();
-
-    done();
   });
 
   // can register a user into the app
-  test("can register via email", async (done) => {
+  test("can register via email", async () => {
     const { appReady } = await import("../src/server");
 
     const { UsersController } = await import(
@@ -39,12 +37,10 @@ describe("suite", () => {
 
     expect(data.email).toEqual(email);
     expect(data.password).not.toEqual(password); // password is hashed!!
-
-    done();
   });
 
   // can sign on a user into the app
-  test("can login via email", async (done) => {
+  test("can login via email", async () => {
     const { appReady } = await import("../src/server");
 
     const { UsersController } = await import(
@@ -60,12 +56,10 @@ describe("suite", () => {
 
     expect(data.email).toEqual(email);
     expect(data.password).not.toEqual(password); // password is hashed!!
-
-    done();
   });
 
   // can run authenticated multi page crawl by user id
-  test("can multi page crawl by user", async (done) => {
+  test("can multi page crawl by user", async () => {
     const { appReady, multiPageScan } = await import("../src/server");
 
     await appReady();
@@ -88,7 +82,5 @@ describe("suite", () => {
     });
 
     expect(results.data[0].userId).toEqual(data.id);
-
-    done();
   });
 });
