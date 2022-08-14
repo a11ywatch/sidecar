@@ -46,8 +46,8 @@ const initApplication = async () => {
           const { MongoMemoryServer } = await import("mongodb-memory-server");
           const mongod = await MongoMemoryServer.create({
             instance: {
-              port: 27017, // by default choose any free port
-              ip: "127.0.0.1", // by default '127.0.0.1', for binding to all IP addresses set it to `::,0.0.0.0`,
+              port: 27017,
+              ip: "127.0.0.1",
               dbName: "a11ywatch",
             },
           });
