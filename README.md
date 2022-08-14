@@ -26,6 +26,7 @@ Use the packages exported methods, use a [client](https://github.com/A11yWatch/a
 1. optional: start `mongodb` on port 27017.
 1. optional: start `redis` on 6379.
 1. optional: add `**/scripts/*` to .gitignore (auto generated fix scripts for the cdn).
+1. optional: add `DISABLE_HTTP=true` env variable to prevent http server startup
 
 ## Usage
 
@@ -118,6 +119,8 @@ GRPC_HOST_CDN=127.0.0.1:50054
 SCRIPTS_ENABLED=false
 # disabling AI may drastically improve performance across certain pages
 AI_DISABLED=false
+# disable core http server API
+DISABLE_HTTP=true
 # unlock all features
 SUPER_MODE=true
 ```
