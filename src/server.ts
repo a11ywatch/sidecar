@@ -80,30 +80,28 @@ if (process.env.A11YWATCH_AUTO_START != "false") {
 /*
  * A11yWatch SideCar
  * export nice utility functions upfront.
- * This sidecar starts the A11yWatch suite on the machine and exports varius commands.
+ * This sidecar starts the A11yWatch suite on the machine and exports various commands.
  * All commands from the packages can be imported and used directly or handled,
- * via the methods gRPC, RESt, or graphQl.
+ * via the methods gRPC, OpenAPI, or graphQl.
  */
 
 // single page website scan
-async function scan(props) {
+async function scan(params) {
   try {
-    // wait till scan is ready
     await appReady();
 
-    return await scanWebsite({ noStore: true, ...props }); // a lot of props to fill so ignoring ts
+    return await scanWebsite({ noStore: true, ...params });
   } catch (e) {
     console.error(e);
   }
 }
 
-// single page website scan
-async function multiPageScan(props) {
+// multi page website scan
+async function multiPageScan(params) {
   try {
-    // wait till scan is ready
     await appReady();
 
-    return await scanMulti({ scan: false, ...props }); // a lot of props to fill so ignoring ts
+    return await scanMulti({ scan: false, ...params });
   } catch (e) {
     console.error(e);
   }
