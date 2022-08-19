@@ -1,27 +1,28 @@
 import { scanWebsite } from "@a11ywatch/core/core/actions/crawl/scan";
-import { crawlMultiSiteWithEvent as scanMulti } from "@a11ywatch/core/core/utils"; // rename core double mapping
-import { client, initDbConnection } from "@a11ywatch/core/database/client";
+import { crawlMultiSiteWithEvent } from "@a11ywatch/core/core/utils"; // rename core double mapping
+import { connected, initDbConnection } from "@a11ywatch/core/database/client";
 import { isReady } from "@a11ywatch/core/app";
 import { wsChromeEndpointurl } from "@a11ywatch/pagemind/config/chrome";
 
-let startedApp = false;
 const production = process.env.NODE_ENV === "production";
+let startedApp = false; // app ready to go!
 
 // detect if the suite is ready across all services.
 // @returns Promise<boolean>
 const appReady = async () => {
   await isReady();
   return new Promise((resolve) => {
-    if (wsChromeEndpointurl) {
+    if (wsChromeEndpointurl && startedApp) {
       resolve(true);
     } else {
+      // TODO: bind to event emit
       const checkChrome = setInterval(() => {
         // wait till value exists
-        if (wsChromeEndpointurl) {
+        if (wsChromeEndpointurl && startedApp) {
           clearInterval(checkChrome);
           resolve(true);
         }
-      }, 10);
+      }, 4);
     }
   });
 };
@@ -30,45 +31,79 @@ const appReady = async () => {
 const initApplication = async () => {
   if (!startedApp) {
     !production && console.log("starting a11ywatch...");
-    await import("@a11ywatch/elastic-cdn");
-    await import("@a11ywatch/mav");
-    await import("@a11ywatch/pagemind");
-    await import("@a11ywatch/crawler");
-    await import("@a11ywatch/core");
 
-    // if mongodb not connected use memory client
-    setTimeout(async () => {
-      if (!client?.isConnected()) {
-        !production && console.log("creating MongoDb memory server...");
-        let dbUrl = "mongodb://mongodb:27017/";
+    // cdn
+    try {
+      await import("@a11ywatch/elastic-cdn");
+    } catch (e) {
+      console.error(e);
+    }
 
-        try {
-          const { MongoMemoryServer } = await import("mongodb-memory-server");
-          const mongod = await MongoMemoryServer.create({
-            instance: {
-              port: 27017,
-              ip: "127.0.0.1",
-              dbName: "a11ywatch",
-            },
-          });
-          if (mongod) {
-            dbUrl = mongod?.getUri();
+    // ai
+    try {
+      await import("@a11ywatch/mav");
+    } catch (e) {
+      console.error(e);
+    }
+
+    // a11y
+    try {
+      await import("@a11ywatch/pagemind");
+    } catch (e) {
+      console.error(e);
+    }
+
+    // crawler
+    try {
+      await import("@a11ywatch/crawler");
+    } catch (e) {
+      console.error(e);
+    }
+
+    // core
+    try {
+      await import("@a11ywatch/core");
+    } catch (e) {
+      console.error(e);
+    }
+
+    // mongodb already connected
+    if (connected) {
+      startedApp = true;
+    } else {
+      // if mongodb not connected use memory client
+      setTimeout(async () => {
+        if (!connected) {
+          !production && console.log("creating MongoDb memory server...");
+          let dbUrl = "mongodb://mongodb:27017/";
+
+          try {
+            const { MongoMemoryServer } = await import("mongodb-memory-server");
+            const mongod = await MongoMemoryServer.create({
+              instance: {
+                port: 27017,
+                ip: "127.0.0.1",
+                dbName: "a11ywatch",
+              },
+            });
+            if (mongod) {
+              dbUrl = mongod?.getUri();
+            }
+            await initDbConnection(dbUrl);
+            !production && console.log("connected to memory mongodb.");
+          } catch (e) {
+            console.error(`MongoDBMemory Error: Please check your node version or add the following before startup on node v18.4.0 and up
+              import { TextEncoder, TextDecoder } from "util";
+  
+              global.TextEncoder = TextEncoder;
+              global.TextDecoder = TextDecoder;
+            `);
           }
-          await initDbConnection(dbUrl);
-          !production && console.log("connected to memory mongodb.");
-        } catch (e) {
-          console.error(e);
-          console.log(`Please check your node version or add the following before startup on node v18.4.0 and up
-            import { TextEncoder, TextDecoder } from "util";
 
-            global.TextEncoder = TextEncoder;
-            global.TextDecoder = TextDecoder;
-          `);
+          startedApp = true;
         }
-      }
-    }, 250);
-
-    startedApp = true;
+      }, 100);
+    }
   }
 };
 
@@ -78,7 +113,7 @@ if (process.env.A11YWATCH_AUTO_START != "false") {
 }
 
 /*
- * A11yWatch SideCar
+ * A11yWatch Sidecar
  * export nice utility functions upfront.
  * This sidecar starts the A11yWatch suite on the machine and exports various commands.
  * All commands from the packages can be imported and used directly or handled,
@@ -86,10 +121,9 @@ if (process.env.A11YWATCH_AUTO_START != "false") {
  */
 
 // single page website scan
-async function scan(params) {
+async function scan(params: Parameters<typeof scanWebsite>[0]) {
   try {
     await appReady();
-
     return await scanWebsite({ noStore: true, ...params });
   } catch (e) {
     console.error(e);
@@ -97,11 +131,12 @@ async function scan(params) {
 }
 
 // multi page website scan
-async function multiPageScan(params) {
+async function multiPageScan(
+  params: Parameters<typeof crawlMultiSiteWithEvent>[0]
+) {
   try {
     await appReady();
-
-    return await scanMulti({ scan: false, ...params });
+    return await crawlMultiSiteWithEvent(params);
   } catch (e) {
     console.error(e);
   }
