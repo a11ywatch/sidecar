@@ -1,0 +1,7 @@
+target
+tests
+docker-compose.yml
+.circleci
+.github
+dist
+coverage

@@ -23,7 +23,9 @@ RUN apt-get update && \
 	gcc \
 	curl \
 	libssl-dev \
-	cmake
+	cmake \
+	protobuf-compiler \
+	libprotobuf-dev
 	
 COPY package*.json ./
 

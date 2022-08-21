@@ -1,3 +1,6 @@
+// top level disable storage set `A11YWATCH_NO_STORE` to false to enable storage
+process.env.A11YWATCH_NO_STORE =
+  process.env.A11YWATCH_NO_STORE === "false" ? "false" : "true";
 import { scanWebsite } from "@a11ywatch/core/core/actions/crawl/scan";
 import {
   crawlMultiSiteWithEvent,
@@ -8,13 +11,37 @@ import { crawlEmitter } from "@a11ywatch/core/event";
 import { connected, initDbConnection } from "@a11ywatch/core/database/client";
 import { isReady } from "@a11ywatch/core/app";
 import { wsChromeEndpointurl } from "@a11ywatch/pagemind/config/chrome";
-import type { Results } from "./results";
 
-const production = process.env.NODE_ENV === "production";
+export type Issues = {
+  type: "error" | "warning" | "notice";
+  code?: string;
+  typeCode?: number;
+  message?: string;
+  context?: string;
+  selector?: string;
+  runner?: string;
+};
+// issue stats
+export type IssuesInfo = {
+  adaScoreAverage: number;
+  possibleIssuesFixedByCdn: number;
+  totalIssues: number;
+  issuesFixedByCdn: number;
+  errorCount: number;
+  warningCount: number;
+  noticeCount: number;
+  pageCount: number;
+};
+export type Results = {
+  domain: string;
+  url: string;
+  issues: Issues[];
+  issuesInfo: IssuesInfo;
+};
+
 let startedApp = false; // app ready to go!
 
-// detect if the suite is ready across all services.
-// waits until the app is ready
+// await till app is ready.
 // @returns Promise<true>
 const appReady = async () => {
   await isReady();
@@ -29,18 +56,22 @@ const appReady = async () => {
           clearInterval(checkChrome);
           resolve(true);
         }
-      }, 3);
+      }, 2);
     }
   });
 };
 
+// sidecar logger - disabled in production
 const logger = (
   value: string,
   fn: keyof Console = "log",
   optional: any[] = []
 ) => {
   // disable logging in production
-  if (!production && typeof console[fn] === "function") {
+  if (
+    process.env.NODE_ENV !== "production" &&
+    typeof console[fn] === "function"
+  ) {
     console[fn + ""](value, ...optional);
   }
 };
@@ -112,8 +143,7 @@ if (process.env.A11YWATCH_AUTO_START != "false") {
 // single page website scan
 async function scan(params: Parameters<typeof scanWebsite>[0]) {
   await appReady();
-
-  return await scanWebsite({ noStore: true, ...params });
+  return await scanWebsite(params);
 }
 
 /*
@@ -128,14 +158,12 @@ async function multiPageScan(
   cb?: (res: { data: Results }) => void
 ) {
   await appReady();
-
   if (typeof cb === "function") {
     crawlEmitter.on(
       `crawl-${domainName(getHostName(params.url))}-${params?.userId || 0}`,
       cb
     );
   }
-
   return await crawlMultiSiteWithEvent(params);
 }
 

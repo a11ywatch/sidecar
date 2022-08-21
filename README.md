@@ -2,7 +2,7 @@
 
 A11yWatch sidecar
 
-- Multithreading is done extremely fast built in [Rust](https://www.rust-lang.org/) communicating through [gRPC async streams](https://grpc.io/).
+- Multithreading is done extremely fast natively with [Rust](https://www.rust-lang.org/).
 
 ## Getting started
 
@@ -10,7 +10,7 @@ Make sure to have either [nodejs](https://nodejs.org/en/) or [bun](https://bun.s
 
 ### nodejs
 
-node - v12.0 and up
+node - v12.0 and up, pref node ^v18.
 
 1. `npm install @a11ywatch/a11ywatch`.
 
@@ -25,7 +25,7 @@ Use the packages exported methods, use a [client](https://github.com/A11yWatch/a
 
 1. optional: start `mongodb` on port 27017.
 1. optional: start `redis` on 6379.
-1. optional: add `**/scripts/*` to .gitignore (auto generated fix scripts for the cdn).
+1. optional: add `**/scripts/*` to .gitignore (auto generated fix scripts for the cdn) and the `A11YWATCH_NO_STORE=false` env variable.
 1. optional: add `DISABLE_HTTP=true` env variable to prevent http server startup
 
 ## Usage
@@ -176,6 +176,33 @@ DISABLE_HTTP=true
 SUPER_MODE=true
 # prevent auto starting suite - must use initApplication manually when ready
 A11YWATCH_AUTO_START=true
+# disable storing scripts
+A11YWATCH_NO_STORE=true
+```
+
+### Dependencies
+
+In order to build `@a11ywatch/crawler` >= 0.5.0, you need the `protoc` Protocol Buffers compiler, along with Protocol Buffers resource files.
+
+#### Ubuntu
+
+```bash
+sudo apt update && sudo apt upgrade -y
+sudo apt install -y protobuf-compiler libprotobuf-dev
+```
+
+#### Alpine Linux
+
+```sh
+sudo apk add protoc protobuf-dev
+```
+
+#### macOS
+
+Assuming [Homebrew](https://brew.sh/) is already installed. (If not, see instructions for installing Homebrew on [the Homebrew website](https://brew.sh/).)
+
+```zsh
+brew install protobuf
 ```
 
 ## Help
