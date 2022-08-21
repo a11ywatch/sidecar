@@ -1,5 +1,5 @@
 import { scanWebsite } from "@a11ywatch/core/core/actions/crawl/scan";
-import { crawlMultiSiteWithEvent } from "@a11ywatch/core/core/utils"; // rename core double mapping
+import { crawlMultiSiteWithEvent } from "@a11ywatch/core/core/utils";
 import { connected, initDbConnection } from "@a11ywatch/core/database/client";
 import { isReady } from "@a11ywatch/core/app";
 import { wsChromeEndpointurl } from "@a11ywatch/pagemind/config/chrome";
@@ -102,7 +102,7 @@ const initApplication = async () => {
 
           startedApp = true;
         }
-      }, 100);
+      }, 45);
     }
   }
 };
@@ -115,9 +115,6 @@ if (process.env.A11YWATCH_AUTO_START != "false") {
 /*
  * A11yWatch Sidecar
  * export nice utility functions upfront.
- * This sidecar starts the A11yWatch suite on the machine and exports various commands.
- * All commands from the packages can be imported and used directly or handled,
- * via the methods gRPC, OpenAPI, or graphQl.
  */
 
 // single page website scan

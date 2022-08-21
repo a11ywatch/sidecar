@@ -1,9 +1,9 @@
-import { TextEncoder, TextDecoder } from "util";
+// import { TextEncoder, TextDecoder } from "util";
 
-// jest setup for node v14.18.3
-global.TextEncoder = TextEncoder;
-// @ts-ignore
-global.TextDecoder = TextDecoder;
+// // jest setup for node v14.18.3
+// global.TextEncoder = TextEncoder;
+// // @ts-ignore
+// global.TextDecoder = TextDecoder;
 
 jest.setTimeout(60000);
 
@@ -15,9 +15,9 @@ describe("suite", () => {
   test("starts the server properly and run single page scan", async () => {
     const { scan } = await import("../src/server");
 
-    const data = await scan({ url: "https://jeffmendez.com" });
+    const results = await scan({ url: "https://jeffmendez.com" });
 
-    expect(data).toBeTruthy();
+    expect(results.data).toBeTruthy();
   });
 
   // can register a user into the app
@@ -78,6 +78,14 @@ describe("suite", () => {
       userId: data.id,
     });
 
-    expect(results.data[0].userId).toEqual(data.id);
+    results?.data?.forEach((page) => {
+      // test each page for issues
+      const issuesCount = page.issues.filter(
+        (issue) => issue.type === "error"
+      ).length;
+      console.info(`${page.url}: ${page.issues.length}`);
+
+      expect(issuesCount).toBeLessThan(2);
+    });
   });
 });

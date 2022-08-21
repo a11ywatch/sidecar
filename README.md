@@ -1,6 +1,6 @@
 # sidecar
 
-A11yWatch sidecar for web accessibility testing.
+A11yWatch sidecar
 
 - Multithreading is done extremely fast built in [Rust](https://www.rust-lang.org/) communicating through [gRPC async streams](https://grpc.io/).
 
@@ -67,7 +67,39 @@ await detectImage({
 });
 ```
 
-### Docker
+## Jest
+
+Here is an example of using A11yWatch with [jest](https://jestjs.io/).
+
+```ts
+describe("accessibility suite", () => {
+  // can scan a single website url
+  test("passes web accessibility test for home page", async () => {
+    const { scan } = await import("@a11ywatch/a11ywatch");
+
+    const results = await scan({ url: "https://a11ywatch.com" });
+
+    // expect to have no issues
+    expect(results.data.issues.length).toBe(0);
+  });
+
+  // can scan an entire website
+  test("passes web accessibility test entire website", async () => {
+    const { multiPageScan } = await import("@a11ywatch/a11ywatch");
+
+    const results = await multiPageScan({ url: "https://a11ywatch.com" });
+
+    // validate that each page passes test!
+    results.data.forEach((page) => {
+      const totalIssues = page.issues.length; // includes errors and warnings
+      console.info(`${page.url}: ${totalIssues}`);
+      expect(totalIssues).toBeLessThan(15);
+    });
+  });
+});
+```
+
+## Docker
 
 Example docker compose configuration:
 
@@ -123,6 +155,8 @@ AI_DISABLED=false
 DISABLE_HTTP=true
 # unlock all features
 SUPER_MODE=true
+# prevent auto starting suite - must use initApplication manually when ready
+A11YWATCH_AUTO_START=true
 ```
 
 ## LICENSE
