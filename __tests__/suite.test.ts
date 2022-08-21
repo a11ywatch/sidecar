@@ -1,5 +1,4 @@
 // import { TextEncoder, TextDecoder } from "util";
-
 // // jest setup for node v14.18.3
 // global.TextEncoder = TextEncoder;
 // // @ts-ignore
@@ -73,19 +72,18 @@ describe("suite", () => {
       password,
     });
 
-    const results = await multiPageScan({
-      url: "https://jeffmendez.com",
-      userId: data.id,
-    });
-
-    results?.data?.forEach((page) => {
-      // test each page for issues
-      const issuesCount = page.issues.filter(
-        (issue) => issue.type === "error"
-      ).length;
-      console.info(`${page.url}: ${page.issues.length}`);
-
-      expect(issuesCount).toBeLessThan(2);
-    });
+    await multiPageScan(
+      {
+        url: "https://jeffmendez.com",
+        userId: data.id,
+      },
+      ({ data }) => {
+        const issuesCount = data.issues.filter(
+          (issue) => issue.type === "error"
+        ).length;
+        console.info(`${data.url}: ${data.issues.length}`);
+        expect(issuesCount).toBeLessThan(2);
+      }
+    );
   });
 });

@@ -33,24 +33,38 @@ Use the packages exported methods, use a [client](https://github.com/A11yWatch/a
 ```ts
 import { scan, multiPageScan } from "@a11ywatch/a11ywatch";
 
-await scan({ url: "https://jeffmendez.com" }); // single page website scan.
+// single page website scan.
+await scan({ url: "https://jeffmendez.com" });
 
-// crawl a website entirely with options to include subdomains and tld. Scan prop defined for streams
 // all pages
 await multiPageScan({ url: "https://a11ywatch.com" });
+
 // all pages and subdomains
 await multiPageScan({
   url: "https://a11ywatch.com",
   subdomains: true,
 });
+
 // all pages and tld extensions
 await multiPageScan({ url: "https://a11ywatch.com", tld: true });
+
 // all pages, subdomains, and tld extensions
 await multiPageScan({
   url: "https://a11ywatch.com",
   subdomains: true,
   tld: true,
 });
+
+// multi page scan with callback on each result asynchronously
+const callback = ({ data }) => {
+  console.log(data);
+};
+await multiPageScan(
+  {
+    url: "https://a11ywatch.com",
+  },
+  callback
+);
 ```
 
 You can also drill in to the specific modules like `@a11ywatch/pagemind` (accessibility service) and etc.
@@ -87,14 +101,19 @@ describe("accessibility suite", () => {
   test("passes web accessibility test entire website", async () => {
     const { multiPageScan } = await import("@a11ywatch/a11ywatch");
 
-    const results = await multiPageScan({ url: "https://a11ywatch.com" });
-
-    // validate that each page passes test!
-    results.data.forEach((page) => {
-      const totalIssues = page.issues.length; // includes errors and warnings
-      console.info(`${page.url}: ${totalIssues}`);
-      expect(totalIssues).toBeLessThan(15);
-    });
+    await multiPageScan(
+      {
+        url: "https://jeffmendez.com",
+        userId: data.id,
+      },
+      ({ data }) => {
+        const issuesCount = data.issues.filter(
+          (issue) => issue.type === "error"
+        ).length;
+        console.info(`${data.url}: ${data.issues.length}`);
+        expect(issuesCount).toBeLessThan(4);
+      }
+    );
   });
 });
 ```
@@ -158,6 +177,13 @@ SUPER_MODE=true
 # prevent auto starting suite - must use initApplication manually when ready
 A11YWATCH_AUTO_START=true
 ```
+
+## Help
+
+When on node v18 and above the flag `--no-experimental-fetch` is required ex: `node --no-experimental-fetch server.js`.
+
+If you run into issues with modules not loading try deleting all of the `node_modules` and running `npm install` again.
+Upon switching node versions certain modules need to be re-installed for the native compilation to work.
 
 ## LICENSE
 
