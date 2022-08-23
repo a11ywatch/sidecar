@@ -1,6 +1,7 @@
 // top level disable storage set `A11YWATCH_NO_STORE` to false to enable storage
 process.env.A11YWATCH_NO_STORE =
   process.env.A11YWATCH_NO_STORE === "false" ? "false" : "true";
+
 import { scanWebsite } from "@a11ywatch/core/core/actions/crawl/scan";
 import {
   crawlMultiSiteWithEvent,
@@ -8,7 +9,10 @@ import {
   getHostName,
 } from "@a11ywatch/core/core/utils";
 import { crawlEmitter } from "@a11ywatch/core/event";
-import { connected, initDbConnection } from "@a11ywatch/core/database/client";
+import {
+  initDbConnection,
+  pollTillConnected,
+} from "@a11ywatch/core/database/client";
 import { isReady } from "@a11ywatch/core/app";
 import { wsChromeEndpointurl } from "@a11ywatch/pagemind/config/chrome";
 
@@ -107,7 +111,7 @@ const initApplication = async () => {
     }
 
     // app ready
-    if (connected) {
+    if (await pollTillConnected()) {
       startedApp = true;
     } else {
       logger("creating MongoDB memory server...");

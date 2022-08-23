@@ -120,6 +120,15 @@ describe("accessibility suite", () => {
 
 ## Docker
 
+You can run the suite with docker by running:
+
+```
+docker run -p 3280:3280 \
+  -v ${PWD}:/a11ywatch/conf \
+  -e SUPER_MODE=true \
+  a11ywatch/a11ywatch
+```
+
 Example docker compose configuration:
 
 ```yml
@@ -131,23 +140,26 @@ services:
       - 3280:3280
 ```
 
-Start the instance via docker:
+Validate scan:
 
 ```sh
-docker run -p 3280:3280 a11ywatch/a11ywatch
-# run scan on website if CLI installed after container starts
-a11ywatch crawl -u https://a11ywatch.com
+curl --location --request POST 'http://localhost:3280/api/crawl-stream' --header 'Authorization: $A11YWATCH_TOKEN' --header 'Content-Type: application/json'   -d '{ "url": "https://a11ywatch.com" }'
 ```
-
-You can get the [CLI](https://github.com/A11yWatch/a11ywatch/tree/main/cli) with `cargo install a11ywatch_cli` or `npm i a11ywatch-cli -g` to run scans in shell.
-
-View the [documentation](https://docs.a11ywatch.com/documentation/services/) for more information on ports and etc.
 
 ## Pipelines
 
 We use [dagger](https://docs.dagger.io/) to build pipelines for builds, test, and deploys.
 
-`dagger do build`
+```
+# deps check
+dagger do deps
+# build img
+dagger do build
+# push img locally
+# make sure to have localhost listening - `docker run -d -p 2222:5000 --restart=always --name localregistry registry:2`
+dagger do push
+# now you can run `docker run localhost:2222/a11ywatch:latest`
+```
 
 ## Packages exposed
 
@@ -184,6 +196,8 @@ SUPER_MODE=true
 A11YWATCH_AUTO_START=true
 # disable storing scripts
 A11YWATCH_NO_STORE=true
+# disable db install if already started locally
+DISABLE_POSTINSTALL=true
 ```
 
 ### Dependencies

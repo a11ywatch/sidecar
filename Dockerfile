@@ -31,7 +31,8 @@ COPY package*.json ./
 
 ENV PUPPETEER_EXECUTABLE_PATH="/usr/bin/chromium" \
 	PUPPETEER_SKIP_CHROMIUM_DOWNLOAD="true"  \
- 	MONGOMS_SYSTEM_BINARY="/usr/bin/mongod"
+ 	MONGOMS_SYSTEM_BINARY="/usr/bin/mongod" \
+	DISABLE_POSTINSTALL="true"
 
 ENV PATH="/root/.cargo/bin:${PATH}"
 
@@ -56,7 +57,8 @@ RUN apt-get update && \
 
 ENV PUPPETEER_EXECUTABLE_PATH="/usr/bin/chromium" \
 	PUPPETEER_SKIP_CHROMIUM_DOWNLOAD="true"  \
- 	MONGOMS_SYSTEM_BINARY="/usr/bin/mongod"
+ 	MONGOMS_SYSTEM_BINARY="/usr/bin/mongod" \
+	DISABLE_POSTINSTALL="true"
 
 COPY --from=installer /usr/src/app/node_modules ./node_modules
 COPY . .
@@ -72,7 +74,7 @@ ENV PUPPETEER_EXECUTABLE_PATH="/usr/bin/chromium" \
  	MONGOMS_SYSTEM_BINARY="/usr/bin/mongod" \
 	MONGO_INITDB_DATABASE="a11ywatch" \
 	MONGOMS_VERSION="5.0.9" \
-	DB_URL="-mongodb://0.0.0.0:27017/?compressors=zlib&gssapiServiceName=mongodb" \
+	DB_URL="mongodb://0.0.0.0:27017" \
 	REDIS_CLIENT="redis://0.0.0.0:6379" \
     REDIS_HOST="0.0.0.0" \
 	SUPER_MODE="true"
@@ -99,4 +101,4 @@ RUN mkdir ~/log
 # set volume
 VOLUME "/mongodb" "/data/db"
 
-CMD redis-server --daemonize yes && mongod --fork --logpath ~/log/mongodb.log && node --no-experimental-fetch ./dist/server.js
+CMD redis-server --daemonize yes && mongod --fork --bind_ip 0.0.0.0 --logpath ~/log/mongodb.log && node --no-experimental-fetch ./dist/server.js

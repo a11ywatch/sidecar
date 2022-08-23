@@ -1,9 +1,16 @@
 {
   "name": "@a11ywatch/a11ywatch",
-  "version": "0.1.93",
+  "version": "0.1.100",
   "description": "Powerful web accessibility sidecar",
   "main": "./server.js",
   "author": "Jeff Mendez <jeff@a11ywatch.com>",
+  "keywords": [
+    "accessibility",
+    "testing",
+    "WCAG",
+    "sidecar",
+    "a11ywatch"
+  ],
   "scripts": {
     "test": "jest --forceExit",
     "build": "tsc",
@@ -17,13 +24,13 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@a11ywatch/core": "^0.5.29",
+    "@a11ywatch/core": "^0.5.35",
     "@a11ywatch/crawler": "^0.4.33",
     "@a11ywatch/elastic-cdn": "^0.4.2",
     "@a11ywatch/mav": "^0.4.7",
     "@a11ywatch/pagemind": "^0.4.11",
     "@a11ywatch/protos": "^0.3.1",
-    "mongodb-memory-server": "^8.8.0"
+    "mongodb-memory-server": "^8.9.0"
   },
   "devDependencies": {
     "@swc/core": "^1.2.224",
@@ -35,7 +42,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/A11yWatch/sidecar.git"
+    "url": "git+https://github.com/a11ywatch/sidecar.git"
   },
   "jest": {
     "moduleNameMapper": {
@@ -47,10 +54,5 @@
     "verbose": true,
     "coverageDirectory": "./coverage/",
     "collectCoverage": true
-  },
-  "keywords": [
-    "accessibility",
-    "testing",
-    "WCAG"
-  ]
+  }
 }

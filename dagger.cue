@@ -8,8 +8,12 @@ import (
 )
 
 dagger.#Plan & {
+    client: filesystem: ".": read: contents: dagger.#FS
+    client: network: "unix:///var/run/docker.sock": connect: dagger.#Socket
+
 	actions: {
-		build: {
+        // build directly and check deps
+		deps: {
 			checkout: core.#Source & {
 				path: "."
 			}
@@ -33,5 +37,21 @@ dagger.#Plan & {
 					"""
 			}
 		}
+        // build from the Dockerfile
+        build: docker.#Dockerfile & {
+            source: client.filesystem.".".read.contents
+            dockerfile: path: "Dockerfile"
+        }
+        // push the docker container to localhost
+        push: docker.#Push & {
+            image: build.output
+            dest:  "localhost:2222/a11ywatch"
+        }
+        // deploy: {
+        //     local: {}
+        //     cloud: {}
+        //     npm: {}
+        //     docker: {}
+        // }
 	}
 }

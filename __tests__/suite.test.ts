@@ -14,7 +14,7 @@ describe("suite", () => {
   test("starts the server properly and run single page scan", async () => {
     const { scan } = await import("../src/server");
 
-    const results = await scan({ url: "https://jeffmendez.com" });
+    const results = await scan({ url: "https://a11ywatch.com" });
 
     expect(results.data).toBeTruthy();
   });
@@ -74,7 +74,7 @@ describe("suite", () => {
 
     await multiPageScan(
       {
-        url: "https://jeffmendez.com",
+        url: "https://a11ywatch.com",
         userId: data.id,
       },
       ({ data }) => {
@@ -82,7 +82,7 @@ describe("suite", () => {
           (issue) => issue.type === "error"
         ).length;
         console.info(`${data.url}: ${data.issues.length}`);
-        expect(issuesCount).toBeLessThan(2);
+        expect(issuesCount).toBeLessThan(30);
       }
     );
   });
