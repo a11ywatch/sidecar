@@ -2,3 +2,4 @@ examples
 .github
 __tests__
 src/scripts
+cue.mod

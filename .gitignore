@@ -8,3 +8,6 @@ coverage
 
 etc
 .DS_Store
+
+# dagger
+cue.mod

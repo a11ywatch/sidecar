@@ -143,6 +143,12 @@ You can get the [CLI](https://github.com/A11yWatch/a11ywatch/tree/main/cli) with
 
 View the [documentation](https://docs.a11ywatch.com/documentation/services/) for more information on ports and etc.
 
+## Pipelines
+
+We use [dagger](https://docs.dagger.io/) to build pipelines for builds, test, and deploys.
+
+`dagger do build`
+
 ## Packages exposed
 
 The following packages can be imported to use directly to extend the A11yWatch suite.
