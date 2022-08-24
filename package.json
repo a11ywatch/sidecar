@@ -12,7 +12,9 @@
     "a11ywatch"
   ],
   "scripts": {
-    "test": "jest --forceExit",
+    "test": "npm run test:unit && npm run test:e2e",
+    "test:unit": "jest --forceExit",
+    "test:ci": "jest --testPathPattern=ispec\\.js$ --forceExit",
     "build": "tsc",
     "dev": "ts-node-dev --transpile-only src/server.ts",
     "dev:node18": "ts-node-dev --transpile-only --no-experimental-fetch src/server.ts",
@@ -33,7 +35,7 @@
     "mongodb-memory-server": "^8.9.0"
   },
   "devDependencies": {
-    "@swc/core": "^1.2.224",
+    "@swc/core": "^1.2.242",
     "@swc/jest": "^0.2.22",
     "@types/node": "^18.6.4",
     "jest": "^28.1.3",

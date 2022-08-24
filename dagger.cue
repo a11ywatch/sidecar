@@ -11,6 +11,11 @@ dagger.#Plan & {
     client: filesystem: ".": read: contents: dagger.#FS
     client: network: "unix:///var/run/docker.sock": connect: dagger.#Socket
 
+    _local: "Local FS": {
+        dest: "/usr/src/app/"
+        contents: client.filesystem.".".read.contents
+    }
+
 	actions: {
         // build directly and check deps
 		deps: {
@@ -37,21 +42,55 @@ dagger.#Plan & {
 					"""
 			}
 		}
-        // build from the Dockerfile
+        // build docker image
         build: docker.#Dockerfile & {
             source: client.filesystem.".".read.contents
             dockerfile: path: "Dockerfile"
         }
-        // push the docker container to localhost
-        push: docker.#Push & {
-            image: build.output
-            dest:  "localhost:2222/a11ywatch"
+		// test against the image
+		test: {
+			integration: {
+				docker.#Run & {
+					input: build.output
+					command: {
+						name: "/bin/bash"
+						args: ["-c", "npm i && npm run test:ci"]
+					}
+					mounts: _local
+				}
+			}
+			unit: {
+				docker.#Run & {
+					input: build.output
+					command: {
+						name: "/bin/bash"
+						args: ["-c", "npm i && npm run test:unit"]
+					}
+					mounts: _local
+				}
+			}
+		}
+        // push container to localhost registry
+        push: {
+            _op: docker.#Push & {
+                image: build.output
+                dest:  "localhost:2222/a11ywatch"
+            }
+            digest: _op.result
+            path: _op.image.config.env.PATH
         }
-        // deploy: {
-        //     local: {}
-        //     cloud: {}
-        //     npm: {}
-        //     docker: {}
-        // }
+		// deploy services - not exposed on macos
+        deploy: {
+			local: docker.#Run & {
+				input: build.output
+				ports: docker: {
+					frontend: client.network."unix:///var/run/docker.sock".connect
+					backend: {
+						protocol: "tcp"
+						address:  "3280"
+					}
+				}
+			}
+        }
 	}
 }

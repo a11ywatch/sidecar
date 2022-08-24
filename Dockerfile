@@ -86,10 +86,14 @@ RUN apt-get update && \
 	curl \
 	redis-server
 	
+COPY --from=dbinstaller /usr/bin/mongod /usr/bin/mongod
 COPY --from=builder /usr/src/app/dist ./dist
 COPY --from=builder /usr/src/app/node_modules ./node_modules
 COPY --from=installer /root/.cargo/bin/website_crawler /usr/bin/website_crawler
-COPY --from=dbinstaller /usr/bin/mongod /usr/bin/mongod
+# # test
+# COPY --from=builder /usr/src/app/__tests__ ./__tests__
+# COPY --from=builder /usr/src/app/package.json ./package.json
+# COPY --from=builder /usr/src/app/package-lock.json ./package-lock.json
 
 EXPOSE 27017
 EXPOSE 3280
