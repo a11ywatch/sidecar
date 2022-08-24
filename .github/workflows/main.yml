@@ -1,0 +1,23 @@
+name: github.com/a11ywatch/a11ywatch
+
+on:
+  push:
+    branches: [main]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_SHA: ${{ github.sha }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Install Dagger
+        uses: dagger/dagger-for-github@v3
+        with:
+          install-only: true
+      - name: Dagger project update
+        run: dagger project update
+      - name: Dagger do test
+        run: dagger do test --log-format plain
+      # - name: Dagger do deploy
+      #   run: dagger do deploy --log-format plain

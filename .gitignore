@@ -10,4 +10,4 @@ etc
 .DS_Store
 
 # dagger
-cue.mod
+cue.mod/pkg

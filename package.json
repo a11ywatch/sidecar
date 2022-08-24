@@ -12,9 +12,9 @@
     "a11ywatch"
   ],
   "scripts": {
-    "test": "npm run test:unit && npm run test:e2e",
+    "test": "npm run test:unit && npm run test:ci",
     "test:unit": "jest --forceExit",
-    "test:ci": "jest --testPathPattern=ispec\\.js$ --forceExit",
+    "test:ci": "jest --testPathPattern=ispec\\.js$ --forceExit --passWithNoTests",
     "build": "tsc",
     "dev": "ts-node-dev --transpile-only src/server.ts",
     "dev:node18": "ts-node-dev --transpile-only --no-experimental-fetch src/server.ts",
