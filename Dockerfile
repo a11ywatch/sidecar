@@ -42,7 +42,7 @@ RUN curl https://sh.rustup.rs -sSf | bash -s -- -y
 
 RUN cargo install website_crawler
 
-FROM node:18.4-buster-slim AS builder 
+FROM node:18.7-buster-slim AS builder 
 
 WORKDIR /usr/src/app
 
@@ -66,7 +66,7 @@ RUN  npm run build
 RUN rm -R ./node_modules
 RUN npm install --production
 
-FROM node:18.4-buster-slim
+FROM node:18.7-buster-slim
 
 WORKDIR /usr/src/app
 
