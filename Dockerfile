@@ -1,4 +1,4 @@
-FROM debian:buster-slim AS dbinstaller 
+FROM node:18.7-buster-slim AS dbinstaller 
 
 RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
 
@@ -11,7 +11,7 @@ RUN apt-get install -y mongodb-org
 
 RUN sed -i "s,\\(^[[:blank:]]*bindIp:\\) .*,\\1 0.0.0.0," /etc/mongod.conf
 
-FROM node:18.4-buster-slim AS installer 
+FROM node:18.7-buster-slim AS installer 
 
 WORKDIR /usr/src/app
 
@@ -90,6 +90,7 @@ COPY --from=dbinstaller /usr/bin/mongod /usr/bin/mongod
 COPY --from=builder /usr/src/app/dist ./dist
 COPY --from=builder /usr/src/app/node_modules ./node_modules
 COPY --from=installer /root/.cargo/bin/website_crawler /usr/bin/website_crawler
+
 # # test
 # COPY --from=builder /usr/src/app/__tests__ ./__tests__
 # COPY --from=builder /usr/src/app/package.json ./package.json
