@@ -6,6 +6,15 @@
 
 jest.setTimeout(120000);
 
+const noop = () => {};
+
+const _log = (() => {
+  if (process.env.DEBUG) {
+    return console;
+  }
+  return { info: noop, log: noop, error: noop, warn: noop };
+})();
+
 describe("suite", () => {
   const email = "myemail@gmail.com"; // test auth email
   const password = "mypass"; // test auth password
@@ -59,7 +68,9 @@ describe("suite", () => {
 
   // can run authenticated multi page crawl by user id
   test("can multi page crawl by user", async () => {
-    const { appReady, multiPageScan } = await import("../src/server");
+    const { appReady, multiPageScan, crawlList } = await import(
+      "../src/server"
+    );
 
     await appReady();
 
@@ -81,9 +92,27 @@ describe("suite", () => {
         const issuesCount = data.issues.filter(
           (issue) => issue.type === "error"
         ).length;
-        console.info(`${data.url}: ${data.issues.length}`);
+        _log.info(`${data.url}: ${data.issues.length}`);
         expect(issuesCount).toBeLessThan(30);
       }
     );
+
+    const pageList = [
+      "https://a11ywatch.com",
+      "https://a11ywatch.com/website-accessibility-checker",
+      "https://a11ywatch.com/faq",
+      "https://a11ywatch.com/contact",
+      "https://a11ywatch.com/terms-of-service",
+      "https://a11ywatch.com/inactivity-policy",
+      "https://a11ywatch.com/register",
+      "https://b.com",
+    ];
+
+    const pages = await crawlList({
+      pages: pageList,
+      userId: 0,
+    });
+
+    expect(pages.length).toBe(pageList.length);
   });
 });

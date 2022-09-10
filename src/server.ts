@@ -3,6 +3,8 @@ process.env.A11YWATCH_NO_STORE =
   process.env.A11YWATCH_NO_STORE === "false" ? "false" : "true";
 
 import { scanWebsite } from "@a11ywatch/core/core/actions/crawl/scan";
+import { crawlMultiSite } from "@a11ywatch/core/core/actions/accessibility/crawl";
+
 import {
   crawlMultiSiteWithEvent,
   domainName,
@@ -171,4 +173,15 @@ async function multiPageScan(
   return await crawlMultiSiteWithEvent(params);
 }
 
-export { scan, multiPageScan, initApplication, appReady };
+/*
+ * Crawl a list of urls passed
+ * @param { pages: string[], userId: number } - object with pages and userId for the crawl to store and send events
+ *
+ * @return Promise<Website[]>
+ */
+async function crawlList(params: Parameters<typeof crawlMultiSite>[0]) {
+  await appReady();
+  return await crawlMultiSite(params);
+}
+
+export { scan, multiPageScan, initApplication, crawlList, appReady };

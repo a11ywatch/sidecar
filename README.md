@@ -31,7 +31,7 @@ Use the packages exported methods, use a [client](https://github.com/A11yWatch/a
 ## Usage
 
 ```ts
-import { scan, multiPageScan } from "@a11ywatch/a11ywatch";
+import { scan, multiPageScan, crawlList } from "@a11ywatch/a11ywatch";
 
 // single page website scan.
 await scan({ url: "https://jeffmendez.com" });
@@ -65,6 +65,17 @@ await multiPageScan(
   },
   callback
 );
+
+// crawl a list of static urls - does not perform site wide scans
+const pages = await crawlList({
+  pages: [
+    "https://a11ywatch.com",
+    "https://newegg.com",
+    "https://bun.sh",
+    "https://nodejs.org",
+  ],
+  userId: 0,
+});
 ```
 
 You can also drill in to the specific modules like `@a11ywatch/pagemind` (accessibility service) and etc.
