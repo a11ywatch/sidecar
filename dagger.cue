@@ -23,7 +23,7 @@ dagger.#Plan & {
 				path: "."
 			}
 			pull: docker.#Pull & {
-				source: "node:latest"
+				source: "node:18.9-bullseye-slim"
 			}
 			copy: docker.#Copy & {
 				input:    pull.output
@@ -64,7 +64,7 @@ dagger.#Plan & {
 					input: build.output
 					command: {
 						name: "/bin/bash"
-						args: ["-c", "npm i && npm run test:unit"]
+						args: ["-c", "npm i && A11YWATCH_MEMORY_ONLY=true npm run test:unit"]
 					}
 					mounts: _local
 				}

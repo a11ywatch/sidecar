@@ -1,4 +1,4 @@
-// top level disable storage set `A11YWATCH_NO_STORE` to false to enable storage
+// top level disable storage set `A11YWATCH_NO_STORE` to false to enable storage - todo: A11YWATCH_MEMORY_ONLY
 process.env.A11YWATCH_NO_STORE =
   process.env.A11YWATCH_NO_STORE === "false" ? "false" : "true";
 
@@ -55,7 +55,7 @@ const appReady = async () => {
     if (wsChromeEndpointurl && startedApp) {
       resolve(true);
     } else {
-      // TODO: bind to event emit
+      // todo: bind to event emit
       const checkChrome = setInterval(() => {
         // wait till value exists
         if (wsChromeEndpointurl && startedApp) {
@@ -85,35 +85,25 @@ const logger = (
 // prevent re-starting the application on re-imports
 const initApplication = async () => {
   if (!startedApp) {
-    logger("starting a11ywatch...");
+    await Promise.all(
+      ["elastic-cdn", "mav", "pagemind", "crawler"].map(
+        (mname) => import(`@a11ywatch/${mname}`)
+      )
+    );
+
     try {
-      await import("@a11ywatch/elastic-cdn"); // cdn
-    } catch (e) {
-      logger(e, "error");
-    }
-    try {
-      await import("@a11ywatch/mav"); // ai
-    } catch (e) {
-      logger(e, "error");
-    }
-    try {
-      await import("@a11ywatch/pagemind"); // a11y
-    } catch (e) {
-      logger(e, "error");
-    }
-    try {
-      await import("@a11ywatch/crawler"); // crawler
-    } catch (e) {
-      logger(e, "error");
-    }
-    try {
-      await import("@a11ywatch/core"); // core
+      await import("@a11ywatch/core");
     } catch (e) {
       logger(e, "error");
     }
 
+    const extDb =
+      process.env.A11YWATCH_MEMORY_ONLY === "true"
+        ? false
+        : await pollTillConnected();
+
     // app ready
-    if (await pollTillConnected()) {
+    if (extDb) {
       startedApp = true;
     } else {
       logger("creating MongoDB memory server...");
@@ -137,7 +127,7 @@ const initApplication = async () => {
 };
 
 // auto init the suite.
-if (process.env.A11YWATCH_AUTO_START != "false") {
+if (process.env.A11YWATCH_AUTO_START !== "false") {
   initApplication();
 }
 

@@ -1,8 +1,6 @@
 # sidecar
 
-A11yWatch sidecar
-
-- Multithreading is done extremely fast natively with [Rust](https://www.rust-lang.org/).
+A11yWatch system sidecar
 
 ## Getting started
 
@@ -157,21 +155,6 @@ Validate scan:
 curl --location --request POST 'http://localhost:3280/api/crawl-stream' --header 'Authorization: $A11YWATCH_TOKEN' --header 'Content-Type: application/json'   -d '{ "url": "https://a11ywatch.com" }'
 ```
 
-## Pipelines
-
-We use [dagger](https://docs.dagger.io/) to build pipelines for builds, test, and deploys.
-
-```
-# deps check
-dagger do deps
-# build img
-dagger do build
-# push img locally
-# make sure to have localhost listening - `docker run -d -p 2222:5000 --restart=always --name localregistry registry:2`
-dagger do push
-# now you can run `docker run localhost:2222/a11ywatch:latest`
-```
-
 ## Packages exposed
 
 The following packages can be imported to use directly to extend the A11yWatch suite.
@@ -209,6 +192,8 @@ A11YWATCH_AUTO_START=true
 A11YWATCH_NO_STORE=true
 # disable db install if already started locally
 DISABLE_POSTINSTALL=true
+# do not store data and use memory db
+A11YWATCH_MEMORY_ONLY=true
 ```
 
 ### Dependencies
@@ -235,6 +220,24 @@ Assuming [Homebrew](https://brew.sh/) is already installed. (If not, see instruc
 ```zsh
 brew install protobuf
 ```
+
+## Pipelines
+
+We use [dagger](https://docs.dagger.io/) to build pipelines for builds, test, and deploys.
+
+```
+# deps check
+dagger do deps
+# build img
+dagger do build
+# push img locally
+# make sure to have localhost listening - `docker run -d -p 2222:5000 --restart=always --name localregistry registry:2`
+dagger do push
+# now you can run `docker run localhost:2222/a11ywatch:latest`
+```
+
+The dagger test currently use `A11YWATCH_MEMORY_ONLY=true` enabling the memory database. The network isolation in dagger is not
+currently set to handle the network isolation for the test.
 
 ## Help
 

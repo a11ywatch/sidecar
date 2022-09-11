@@ -1,17 +1,16 @@
-FROM node:18.7-buster-slim AS dbinstaller 
+FROM node:18.9-bullseye-slim AS dbinstaller 
 
 RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
 
 RUN apt-get update && apt-get install -y apt-utils wget gnupg gnupg2 curl
 
-RUN wget -qO - https://www.mongodb.org/static/pgp/server-5.0.asc | apt-key add -
-RUN echo "deb https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/5.0 multiverse" | tee /etc/apt/sources.list.d/mongodb-org-5.0.list
-RUN apt-get update
-RUN apt-get install -y mongodb-org
+RUN wget -qO - https://www.mongodb.org/static/pgp/server-6.0.asc | apt-key add -
+RUN echo "deb https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/6.0 multiverse" | tee /etc/apt/sources.list.d/mongodb-org-6.0.list
+RUN apt-get update && apt-get install -y mongodb-org
 
 RUN sed -i "s,\\(^[[:blank:]]*bindIp:\\) .*,\\1 0.0.0.0," /etc/mongod.conf
 
-FROM node:18.7-buster-slim AS installer 
+FROM node:18.9-bullseye-slim AS installer 
 
 WORKDIR /usr/src/app
 
@@ -42,7 +41,7 @@ RUN curl https://sh.rustup.rs -sSf | bash -s -- -y
 
 RUN cargo install website_crawler
 
-FROM node:18.7-buster-slim AS builder 
+FROM node:18.9-bullseye-slim AS builder 
 
 WORKDIR /usr/src/app
 
@@ -52,7 +51,6 @@ RUN apt-get update && \
 	pkg-config \
 	make \
 	gcc \
-	libcurl4 \
 	curl
 
 ENV PUPPETEER_EXECUTABLE_PATH="/usr/bin/chromium" \
@@ -66,7 +64,7 @@ RUN  npm run build
 RUN rm -R ./node_modules
 RUN npm install --production
 
-FROM node:18.7-buster-slim
+FROM node:18.9-bullseye-slim
 
 WORKDIR /usr/src/app
 
@@ -91,10 +89,9 @@ COPY --from=builder /usr/src/app/dist ./dist
 COPY --from=builder /usr/src/app/node_modules ./node_modules
 COPY --from=installer /root/.cargo/bin/website_crawler /usr/bin/website_crawler
 
-# # test
-# COPY --from=builder /usr/src/app/__tests__ ./__tests__
-# COPY --from=builder /usr/src/app/package.json ./package.json
-# COPY --from=builder /usr/src/app/package-lock.json ./package-lock.json
+# test
+COPY --from=builder /usr/src/app/__tests__ ./__tests__
+COPY --from=builder /usr/src/app/package*.json ./
 
 EXPOSE 27017
 EXPOSE 3280
@@ -106,4 +103,5 @@ RUN mkdir ~/log
 # set volume
 VOLUME "/mongodb" "/data/db"
 
-CMD redis-server --daemonize yes && mongod --fork --bind_ip 0.0.0.0 --logpath ~/log/mongodb.log && node --no-experimental-fetch ./dist/server.js
+# wait for fork to finish
+CMD mongod --fork --bind_ip 0.0.0.0 --logpath ~/log/mongodb.log && redis-server --daemonize yes && node --no-experimental-fetch ./dist/server.js

@@ -4,16 +4,10 @@
 // // @ts-ignore
 // global.TextDecoder = TextDecoder;
 
+import { scan, appReady, multiPageScan, crawlList } from "../src/server";
+import { UsersController } from "@a11ywatch/core/core/controllers";
+
 jest.setTimeout(120000);
-
-const noop = () => {};
-
-const _log = (() => {
-  if (process.env.DEBUG) {
-    return console;
-  }
-  return { info: noop, log: noop, error: noop, warn: noop };
-})();
 
 describe("suite", () => {
   const email = "myemail@gmail.com"; // test auth email
@@ -21,8 +15,6 @@ describe("suite", () => {
 
   // can scan a single website using enhanced scan
   test("starts the server properly and run single page scan", async () => {
-    const { scan } = await import("../src/server");
-
     const results = await scan({ url: "https://a11ywatch.com" });
 
     expect(results.data).toBeTruthy();
@@ -30,12 +22,6 @@ describe("suite", () => {
 
   // can register a user into the app
   test("can register via email", async () => {
-    const { appReady } = await import("../src/server");
-
-    const { UsersController } = await import(
-      "@a11ywatch/core/core/controllers"
-    );
-
     await appReady();
 
     const data = await UsersController().createUser({
@@ -49,12 +35,6 @@ describe("suite", () => {
 
   // can sign on a user into the app
   test("can login via email", async () => {
-    const { appReady } = await import("../src/server");
-
-    const { UsersController } = await import(
-      "@a11ywatch/core/core/controllers"
-    );
-
     await appReady();
 
     const data = await UsersController().verifyUser({
@@ -68,15 +48,7 @@ describe("suite", () => {
 
   // can run authenticated multi page crawl by user id
   test("can multi page crawl by user", async () => {
-    const { appReady, multiPageScan, crawlList } = await import(
-      "../src/server"
-    );
-
     await appReady();
-
-    const { UsersController } = await import(
-      "@a11ywatch/core/core/controllers"
-    );
 
     const data = await UsersController().verifyUser({
       email,
@@ -92,7 +64,6 @@ describe("suite", () => {
         const issuesCount = data.issues.filter(
           (issue) => issue.type === "error"
         ).length;
-        _log.info(`${data.url}: ${data.issues.length}`);
         expect(issuesCount).toBeLessThan(30);
       }
     );
