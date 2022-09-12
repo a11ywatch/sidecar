@@ -89,9 +89,9 @@ COPY --from=builder /usr/src/app/dist ./dist
 COPY --from=builder /usr/src/app/node_modules ./node_modules
 COPY --from=installer /root/.cargo/bin/website_crawler /usr/bin/website_crawler
 
-# test
-COPY --from=builder /usr/src/app/__tests__ ./__tests__
-COPY --from=builder /usr/src/app/package*.json ./
+# # test
+# COPY --from=builder /usr/src/app/__tests__ ./__tests__
+# COPY --from=builder /usr/src/app/package*.json ./
 
 EXPOSE 27017
 EXPOSE 3280

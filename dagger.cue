@@ -11,20 +11,40 @@ dagger.#Plan & {
     client: filesystem: ".": read: contents: dagger.#FS
     client: network: "unix:///var/run/docker.sock": connect: dagger.#Socket
 
-    _local: "Local FS": {
-        dest: "/usr/src/app/"
-        contents: client.filesystem.".".read.contents
+    _local: {
+		"Local FS": {
+			dest: "/usr/src/app/"
+			contents: client.filesystem.".".read.contents
+		}
+		docker: {
+            dest: "/var/run/docker.sock"
+            contents: client.network."unix:///var/run/docker.sock".connect
+        }
     }
 
+	_build: docker.#Dockerfile & {
+		source: client.filesystem.".".read.contents
+		dockerfile: path: "Dockerfile"
+	}
+		
+	_pull: docker.#Pull & {
+		source: "node:18.9-bullseye-slim"
+	}
+
+	_copy: docker.#Copy & {
+		input: _build.output
+		contents: client.filesystem.".".read.contents
+		include: ["__tests__", "package*.json"]
+		exclude: ["src"]
+	}
+
 	actions: {
-        // build directly and check deps
+        // build directly and check deps against debian
 		deps: {
 			checkout: core.#Source & {
 				path: "."
 			}
-			pull: docker.#Pull & {
-				source: "node:18.9-bullseye-slim"
-			}
+			pull: _pull
 			copy: docker.#Copy & {
 				input:    pull.output
 				contents: checkout.output
@@ -43,30 +63,29 @@ dagger.#Plan & {
 			}
 		}
         // build docker image
-        build: docker.#Dockerfile & {
-            source: client.filesystem.".".read.contents
-            dockerfile: path: "Dockerfile"
-        }
+        build: _build
+
 		// test against the image
 		test: {
+
 			integration: {
 				docker.#Run & {
-					input: build.output
+					input: _copy.output
+					mounts: _local
 					command: {
 						name: "/bin/bash"
-						args: ["-c", "npm i && npm run test:ci"]
+						args: ["-c", "npm ci && npm run test:ci"]
 					}
-					mounts: _local
 				}
 			}
 			unit: {
 				docker.#Run & {
-					input: build.output
+					input: _copy.output
+					mounts: _local
 					command: {
 						name: "/bin/bash"
-						args: ["-c", "npm i && A11YWATCH_MEMORY_ONLY=true npm run test:unit"]
+						args: ["-c", "npm ci && A11YWATCH_MEMORY_ONLY=true npm run test:unit"]
 					}
-					mounts: _local
 				}
 			}
 		}
