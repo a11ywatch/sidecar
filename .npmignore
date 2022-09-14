@@ -1,5 +1,5 @@
 examples
 .github
 __tests__
-src/scripts
+scripts
 cue.mod

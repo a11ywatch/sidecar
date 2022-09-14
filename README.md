@@ -14,7 +14,7 @@ node - v12.0 and up, pref node ^v18.
 
 ### bun
 
-1. `npm i puppeteer` # issue with chrome installing via bun
+1. `npm i puppeteer` # we need pre-install scripts
 1. `bun install @a11ywatch/a11ywatch`.
 
 #### optional
@@ -23,8 +23,8 @@ Use the packages exported methods, use a [client](https://github.com/A11yWatch/a
 
 1. optional: start `mongodb` on port 27017.
 1. optional: start `redis` on 6379.
-1. optional: add `**/scripts/*` to .gitignore (auto generated fix scripts for the cdn) and the `A11YWATCH_NO_STORE=false` env variable.
-1. optional: add `DISABLE_HTTP=true` env variable to prevent http server startup
+1. optional: add `scripts` to .gitignore (auto generated javascript page fixes) or `A11YWATCH_NO_STORE=false` to disable storage.
+1. optional: add `DISABLE_HTTP=true` env variable to prevent http server startup (disables OpenAPI & GraphQL)
 
 ## Usage
 

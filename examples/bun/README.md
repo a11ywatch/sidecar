@@ -20,3 +20,10 @@ Theres an issue with bun not installing chromium to the right location. Work aro
 ## Usage
 
 In order to have it ready at runtime `import "@a11ywatch/a11ywatch"` at the top location of your application.
+
+## Todo
+
+The track list for running bun need the following:
+
+1. `dns` polyfill
+2. `tls` polyfill
