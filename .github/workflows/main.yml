@@ -15,6 +15,10 @@ jobs:
         uses: dagger/dagger-for-github@v3
         with:
           install-only: true
+      - name: Build deps
+        run: |
+          sudo apt update && sudo apt upgrade -y
+          sudo apt install -y protobuf-compiler libprotobuf-dev
       - name: Dagger project update
         run: dagger project update
       - name: Dagger do test

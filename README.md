@@ -1,6 +1,6 @@
 # sidecar
 
-A11yWatch system sidecar
+A11yWatch native javascript sidecar
 
 ## Getting started
 
@@ -16,6 +16,29 @@ node - v12.0 and up, pref node ^v18.
 
 1. `npm i puppeteer` # we need pre-install scripts
 1. `bun install @a11ywatch/a11ywatch`.
+
+In order to build `@a11ywatch/crawler` >= 0.5.0, you need the `protoc` Protocol Buffers compiler, along with Protocol Buffers resource files.
+
+#### Ubuntu
+
+```bash
+sudo apt update && sudo apt upgrade -y
+sudo apt install -y protobuf-compiler libprotobuf-dev
+```
+
+#### Alpine Linux
+
+```sh
+sudo apk add protoc protobuf-dev
+```
+
+#### macOS
+
+Assuming [Homebrew](https://brew.sh/) is already installed. (If not, see instructions for installing Homebrew on [the Homebrew website](https://brew.sh/).)
+
+```zsh
+brew install protobuf
+```
 
 #### optional
 
@@ -194,31 +217,6 @@ A11YWATCH_NO_STORE=true
 DISABLE_POSTINSTALL=true
 # do not store data and use memory db
 A11YWATCH_MEMORY_ONLY=true
-```
-
-### Dependencies
-
-In order to build `@a11ywatch/crawler` >= 0.5.0, you need the `protoc` Protocol Buffers compiler, along with Protocol Buffers resource files.
-
-#### Ubuntu
-
-```bash
-sudo apt update && sudo apt upgrade -y
-sudo apt install -y protobuf-compiler libprotobuf-dev
-```
-
-#### Alpine Linux
-
-```sh
-sudo apk add protoc protobuf-dev
-```
-
-#### macOS
-
-Assuming [Homebrew](https://brew.sh/) is already installed. (If not, see instructions for installing Homebrew on [the Homebrew website](https://brew.sh/).)
-
-```zsh
-brew install protobuf
 ```
 
 ## Pipelines
