@@ -107,20 +107,29 @@ const initApplication = async () => {
       startedApp = true;
     } else {
       logger("creating MongoDB memory server...");
+
+      let mongod = null;
+
       try {
         const { MongoMemoryServer } = await import("mongodb-memory-server");
-        const mongod = await MongoMemoryServer.create({
+        mongod = await MongoMemoryServer.create({
           instance: {
             port: 27017,
             ip: "127.0.0.1",
             dbName: "a11ywatch",
           },
         });
+      } catch (e) {
+        logger(e, "error");
+      }
+
+      try {
         await initDbConnection(mongod?.getUri() || "mongodb://mongodb:27017");
         logger("connected to memory MongoDB.");
       } catch (e) {
         logger(e, "error");
       }
+
       startedApp = true;
     }
   }
