@@ -16,7 +16,6 @@ WORKDIR /usr/src/app
 
 RUN apt-get update && \ 
 	apt-get install -y build-essential \
-	python3 \
 	pkg-config \
 	make \
 	gcc \
@@ -75,7 +74,8 @@ ENV PUPPETEER_EXECUTABLE_PATH="/usr/bin/chromium" \
 	DB_URL="mongodb://0.0.0.0:27017" \
 	REDIS_CLIENT="redis://0.0.0.0:6379" \
     REDIS_HOST="0.0.0.0" \
-	SUPER_MODE="true"
+	SUPER_MODE="true" \
+	CHROME_HOST="host.docker.internal"
 
 # required runtime deps
 RUN apt-get update && \
