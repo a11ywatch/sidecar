@@ -38,6 +38,7 @@ RUN npm ci
 
 RUN curl https://sh.rustup.rs -sSf | bash -s -- -y
 
+RUN rustup update
 RUN cargo install website_crawler
 
 FROM node:18.9-bullseye-slim AS builder 
