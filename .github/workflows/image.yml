@@ -9,30 +9,17 @@ env:
 
 jobs:
   build:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
       - uses: docker/setup-qemu-action@v2.1.0
-        with:
-          platforms: arm64
       - uses: docker/setup-buildx-action@v2.2.0
+      - uses: actions/checkout@v3
       - name: login to docker hub
         run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
-      - name: Build deps
-        run: |
-          sudo apt update && sudo apt upgrade -y
-          sudo apt install -y protobuf-compiler libprotobuf-dev
-      - name: build image amd64
+      - name: build and deploy images
         run: |
           docker buildx build \
-            --memory="2g" \
+            --memory="1g" \
             -t a11ywatch/a11ywatch:latest \
-            --platform linux/amd64 \
-            --push .
-      - name: build image arm64
-        run: |
-          docker buildx build \
-            --memory="1.5g" \
-            -t a11ywatch/a11ywatch:latest \
-            --platform linux/arm64 \
+            --platform linux/amd64,linux/arm64 \
             --push .
