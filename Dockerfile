@@ -60,8 +60,7 @@ ENV PUPPETEER_EXECUTABLE_PATH="/usr/bin/chromium" \
 
 COPY --from=installer /usr/src/app/node_modules ./node_modules
 COPY . .
-RUN  yarn build
-RUN rm -R ./node_modules
+RUN yarn build && rm -R ./node_modules && yarn config set network-timeout 300000
 RUN yarn install --production
 
 FROM node:19.2-bullseye-slim
