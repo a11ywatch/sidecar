@@ -28,13 +28,13 @@ dagger.#Plan & {
 	}
 		
 	_pull: docker.#Pull & {
-		source: "node:18.9-bullseye-slim"
+		source: "node:19.2-bullseye-slim"
 	}
 
 	_copy: docker.#Copy & {
 		input: _build.output
 		contents: client.filesystem.".".read.contents
-		include: ["__tests__", "package*.json"]
+		include: ["__tests__", "package*.json", "yarn.lock"]
 		exclude: ["src"]
 	}
 
@@ -52,13 +52,13 @@ dagger.#Plan & {
 			install: bash.#Run & {
 				input: copy.output
 				script: contents: """
-					PUPPETEER_SKIP_DOWNLOAD=true npm ci
+					PUPPETEER_SKIP_DOWNLOAD=true yarn install --frozen-lockfile
 					"""
 			}
 			build: bash.#Run & {
 				input: install.output
 				script: contents: """
-					npm run build
+					yarn build
 					"""
 			}
 		}
@@ -74,7 +74,7 @@ dagger.#Plan & {
 					mounts: _local
 					command: {
 						name: "/bin/bash"
-						args: ["-c", "npm ci && npm run test:ci"]
+						args: ["-c", "yarn install --frozen-lockfile && yarn test:ci"]
 					}
 				}
 			}
@@ -84,7 +84,7 @@ dagger.#Plan & {
 					mounts: _local
 					command: {
 						name: "/bin/bash"
-						args: ["-c", "npm ci && A11YWATCH_MEMORY_ONLY=true npm run test:unit"]
+						args: ["-c", "yarn install --frozen-lockfile && A11YWATCH_MEMORY_ONLY=true yarn test:unit"]
 					}
 				}
 			}
