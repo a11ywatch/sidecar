@@ -1,4 +1,4 @@
-FROM node:19.1-bullseye-slim AS dbinstaller 
+FROM node:19.2-bullseye-slim AS dbinstaller 
 
 RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
 
@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install -y mongodb-org
 
 RUN sed -i "s,\\(^[[:blank:]]*bindIp:\\) .*,\\1 0.0.0.0," /etc/mongod.conf
 
-FROM --platform=$BUILDPLATFORM node:19.1-bullseye-slim AS installer 
+FROM --platform=$BUILDPLATFORM node:19.2-bullseye-slim AS installer 
 
 WORKDIR /usr/src/app
 
@@ -25,7 +25,7 @@ RUN apt-get update && \
 	protobuf-compiler \
 	libprotobuf-dev
 	
-COPY package*.json ./
+COPY package*.json yarn.lock ./
 
 ENV PUPPETEER_EXECUTABLE_PATH="/usr/bin/chromium" \
 	PUPPETEER_SKIP_CHROMIUM_DOWNLOAD="true"  \
@@ -34,14 +34,14 @@ ENV PUPPETEER_EXECUTABLE_PATH="/usr/bin/chromium" \
 
 ENV PATH="/root/.cargo/bin:${PATH}"
 
-RUN npm ci
+RUN yarn install --frozen-lockfile
 
 RUN curl https://sh.rustup.rs -sSf | bash -s -- -y
 
 RUN rustup update
 RUN cargo install website_crawler
 
-FROM node:19.1-bullseye-slim AS builder 
+FROM node:19.2-bullseye-slim AS builder 
 
 WORKDIR /usr/src/app
 
@@ -60,11 +60,11 @@ ENV PUPPETEER_EXECUTABLE_PATH="/usr/bin/chromium" \
 
 COPY --from=installer /usr/src/app/node_modules ./node_modules
 COPY . .
-RUN  npm run build
+RUN  yarn build
 RUN rm -R ./node_modules
-RUN npm install --production
+RUN yarn install --production
 
-FROM node:19.1-bullseye-slim
+FROM node:19.2-bullseye-slim
 
 WORKDIR /usr/src/app
 

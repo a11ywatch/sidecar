@@ -8,9 +8,9 @@ Make sure to have either [nodejs](https://nodejs.org/en/) or [bun](https://bun.s
 
 ### nodejs
 
-node - v12.0 and up, pref node ^v18.
+node - v14.0 and up, pref node ^v18.
 
-1. `npm install @a11ywatch/a11ywatch`.
+1. `yarn add @a11ywatch/a11ywatch`.
 
 ### bun
 
@@ -42,7 +42,7 @@ brew install protobuf
 
 #### optional
 
-Use the packages exported methods, use a [client](https://github.com/A11yWatch/a11ywatch/tree/main/clients), or your own handling of request like curl/fetch.
+Use the packages exported methods, use a [client](https://github.com/a11ywatch/a11ywatch/tree/main/clients), or your own handling of request like curl/fetch.
 
 1. optional: start `mongodb` on port 27017.
 1. optional: start `redis` on 6379.
@@ -202,6 +202,7 @@ GRPC_HOST_PAGEMIND=127.0.0.1:50052
 GRPC_HOST_MAV=127.0.0.1:50053
 GRPC_HOST_CRAWLER=127.0.0.1:50055
 GRPC_HOST_CDN=127.0.0.1:50054
+# store js scripts for CDN
 SCRIPTS_ENABLED=false
 # disabling AI may drastically improve performance across certain pages
 AI_DISABLED=false

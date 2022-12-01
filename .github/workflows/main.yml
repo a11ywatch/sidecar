@@ -5,23 +5,13 @@ on:
     branches: [main]
 jobs:
   deploy:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     env:
       GITHUB_SHA: ${{ github.sha }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-      - name: Install Dagger
+      - name: Dagger
         uses: dagger/dagger-for-github@v3
         with:
-          install-only: true
-      - name: Build deps
-        run: |
-          sudo apt update && sudo apt upgrade -y
-          sudo apt install -y protobuf-compiler libprotobuf-dev
-      - name: Dagger project update
-        run: dagger project update
-      - name: Dagger do test
-        run: dagger do test --log-format plain
-      # - name: Dagger do deploy
-      #   run: dagger do deploy --log-format plain
+          cmds: do test

@@ -7,7 +7,7 @@
 import { scan, appReady, multiPageScan, crawlList } from "../src/server";
 import { UsersController } from "@a11ywatch/core/core/controllers";
 
-jest.setTimeout(120000);
+jest.setTimeout(300000);
 
 describe("suite", () => {
   const email = "myemail@gmail.com"; // test auth email

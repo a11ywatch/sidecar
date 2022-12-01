@@ -1,6 +1,6 @@
 {
   "name": "@a11ywatch/a11ywatch",
-  "version": "0.2.44",
+  "version": "0.2.46",
   "description": "Powerful web accessibility sidecar",
   "main": "./server.js",
   "author": "Jeff Mendez <jeff@a11ywatch.com>",
@@ -22,7 +22,7 @@
     "start:prod": "NODE_ENV=production node ./dist/server.js",
     "start:node19": "NODE_ENV=production node --no-experimental-fetch ./server.js",
     "start:prod:node19": "NODE_ENV=production node --no-experimental-fetch ./dist/server.js",
-    "pub": "tsc && cp package.json dist && cp package-lock.json dist && cp README.md dist && cp LICENSE dist && cd dist && npm publish --access public"
+    "pub": "tsc && cp package.json dist && cp yarn.lock dist && cp README.md dist && cp LICENSE dist && cd dist && npm publish --access public"
   },
   "license": "MIT",
   "dependencies": {
@@ -30,7 +30,7 @@
     "@a11ywatch/crawler": "^0.6.36",
     "@a11ywatch/elastic-cdn": "^0.5.4",
     "@a11ywatch/mav": "^0.5.4",
-    "@a11ywatch/pagemind": "^0.5.66",
+    "@a11ywatch/pagemind": "^0.5.67",
     "@a11ywatch/protos": "^0.3.6",
     "mongodb-memory-server": "^8.9.1"
   },
