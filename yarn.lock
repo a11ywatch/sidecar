@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@a11ywatch/core@^0.5.212":
-  version "0.5.212"
-  resolved "https://registry.yarnpkg.com/@a11ywatch/core/-/core-0.5.212.tgz#4e979493fc21296bb691d617ea0fb138768dd206"
-  integrity sha512-DxJvOJ+hcBa6jh0Bi5YvTCEgHN/rlFVGIz/bJGE4oXKZ4AV44LngxK4gjwQNKli1KDVGpPIcw18mzt8ySMgoPg==
+"@a11ywatch/core@^0.6.0":
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/@a11ywatch/core/-/core-0.6.0.tgz#74d18018aa399dcdde66b1876688cd4a009ed259"
+  integrity sha512-lkUTko+ScV2PzS6VVK+IaqWbMPThlDZSGWSq+y7si0N2JBrV0r/jRtmBrWUA9eXOvpZEm2g28VDfC2SwDuyulQ==
   dependencies:
     "@a11ywatch/protos" "^0.3.6"
     "@a11ywatch/website-source-builder" "^0.0.32"
@@ -33,7 +33,7 @@
     ioredis "5.2.4"
     jsonwebtoken "8.5.1"
     mongodb "4.12.0"
-    node-iframe "1.8.5"
+    node-iframe "1.9.1"
     nodemailer "6.8.0"
     pb-util "1.0.3"
     stripe "11.1.0"
@@ -3823,6 +3823,11 @@ flatstr@^1.0.12:
   resolved "https://registry.yarnpkg.com/flatstr/-/flatstr-1.0.12.tgz#c2ba6a08173edbb6c9640e3055b95e287ceb5931"
   integrity sha512-4zPxDyhCyiN2wIAtSLI6gc82/EjqZc1onI4Mz/l0pWrAlsSfYH/2ZIcU+e3oA2wDwbzIWNKwa23F8rh6+DRWkw==
 
+follow-redirects@^1.15.2:
+  version "1.15.2"
+  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.15.2.tgz#b460864144ba63f2681096f274c4e57026da2c13"
+  integrity sha512-VQLG33o04KaQ8uYi2tVNbdrWp1QWxNNea+nmIB4EVM28v0hmP17z7aG1+wAkNzVq4KeXTq3221ye5qTJP91JwA==
+
 for-each@^0.3.3:
   version "0.3.3"
   resolved "https://registry.yarnpkg.com/for-each/-/for-each-0.3.3.tgz#69b447e88a0a5d32c3e7084f3f1710034b21376e"
@@ -5417,12 +5422,13 @@ node-fetch@2.6.7, node-fetch@^2.6.7, node-fetch@~2.6.1:
   dependencies:
     whatwg-url "^5.0.0"
 
-node-iframe@1.8.5:
-  version "1.8.5"
-  resolved "https://registry.yarnpkg.com/node-iframe/-/node-iframe-1.8.5.tgz#8a93b8e0a38f34b4a6f52bc5a9ef2805ab7f3a9d"
-  integrity sha512-9UzM0COEhosQe4OsLXxQQ1q5fvyf7GH5S8ns/kfah5iPImZuoDBB++k2JYRrDTodxv9jBxPD86PUEfYiiuTJIg==
+node-iframe@1.9.1:
+  version "1.9.1"
+  resolved "https://registry.yarnpkg.com/node-iframe/-/node-iframe-1.9.1.tgz#392285cbc89babb9fde20708f0435bbdf2cd650d"
+  integrity sha512-NgG6T+lTbQvlVVvgzknLWbu4kQ4zRCOE1Wd71vXpP3cx1eCTYYv4fa1ZH747tWjbYoFQ31PB0ldvRP4pWi3avQ==
   dependencies:
     cheerio "^1.0.0-rc.3"
+    follow-redirects "^1.15.2"
 
 node-int64@^0.4.0:
   version "0.4.0"
