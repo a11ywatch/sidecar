@@ -73,22 +73,22 @@
     jpeg-js "^0.4.4"
     tensornet "1.0.14"
 
-"@a11ywatch/pagemind@^0.5.68":
-  version "0.5.68"
-  resolved "https://registry.yarnpkg.com/@a11ywatch/pagemind/-/pagemind-0.5.68.tgz#b776d57f879c9ce74b77cc5bbcdf22b0f94da06d"
-  integrity sha512-mH6AxtfR8QsY3ELLRzGFEzuO1NX2w/wGBW1P8YIY21zrbGOFhqCZNamXHAkNUj5yXyXshHaSW6/LbUotpLajLw==
+"@a11ywatch/pagemind@^0.5.76":
+  version "0.5.76"
+  resolved "https://registry.yarnpkg.com/@a11ywatch/pagemind/-/pagemind-0.5.76.tgz#5fd74e271d35532663c93b95d82a4eaff8d67a9f"
+  integrity sha512-Tz8lZrKLS14AV6UolcAw4+zRxGLryw3rvrsQ4lQ2GquKFXZ12NvySSUiKzugYGfF5omiIxLGNPszmV8R86QRqg==
   dependencies:
     "@a11ywatch/protos" "^0.3.6"
     "@a11ywatch/website-source-builder" "^0.0.32"
     "@grpc/grpc-js" "1.7.3"
     "@grpc/proto-loader" "0.7.3"
-    a11y-puppeteer "0.0.4"
-    fastq "1.13.0"
+    a11y-puppeteer "0.0.6"
+    fastq "1.14.0"
     get-page-speed "1.0.1"
     lighthouse "9.6.8"
     pb-util "1.0.3"
     puppeteer "19.2.0"
-    user-agents "^1.0.1215"
+    user-agents "^1.0.1219"
 
 "@a11ywatch/protos@^0.3.6":
   version "0.3.6"
@@ -2279,10 +2279,10 @@
   resolved "https://registry.yarnpkg.com/@webgpu/types/-/types-0.1.21.tgz#b181202daec30d66ccd67264de23814cfd176d3a"
   integrity sha512-pUrWq3V5PiSGFLeLxoGqReTZmiiXwY3jRkIG5sLLKjyqNxrwm/04b4nw7LSmGWJcKk59XOM/YRTUwOzo4MMlow==
 
-a11y-puppeteer@0.0.4:
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/a11y-puppeteer/-/a11y-puppeteer-0.0.4.tgz#de71825e7f957a1fd99611ab75b6afba968e8e06"
-  integrity sha512-O4AP+beHv7EVSmxnFpn0kPeqnaAXf6MucMdOSf1+HM4LgjbXId/LknSOlWNli9A7mged+7DH6Zs0NCMiHRHApQ==
+a11y-puppeteer@0.0.6:
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/a11y-puppeteer/-/a11y-puppeteer-0.0.6.tgz#f3985d537ddf9277c1e6d2d1ea5cee602a46b547"
+  integrity sha512-6OZp81JooqoF2+E6zvlzbsJ0ZJMUKlTcuEoQcoyhRbdcALDfh57pAn6xlOh/esBYOlq0wcx/VJl4XHusXLiQ8Q==
   dependencies:
     axe-core "4.2.1"
     html_codesniffer_fork "2.7.1"
@@ -3754,6 +3754,13 @@ fastq@1.13.0, fastq@^1.6.1:
   version "1.13.0"
   resolved "https://registry.yarnpkg.com/fastq/-/fastq-1.13.0.tgz#616760f88a7526bdfc596b7cab8c18938c36b98c"
   integrity sha512-YpkpUnK8od0o1hmeSc7UUs/eB/vIPWJYjKck2QKIzAf71Vm1AAQ3EbuZB3g2JIy+pg+ERD0vqI79KyZiB2e2Nw==
+  dependencies:
+    reusify "^1.0.4"
+
+fastq@1.14.0:
+  version "1.14.0"
+  resolved "https://registry.yarnpkg.com/fastq/-/fastq-1.14.0.tgz#107f69d7295b11e0fccc264e1fc6389f623731ce"
+  integrity sha512-eR2D+V9/ExcbF9ls441yIuN6TI2ED1Y2ZcA5BmMtJsOkWOFRJQ0Jt0g1UwqXJJVAb+V+umH5Dfr8oh4EVP7VVg==
   dependencies:
     reusify "^1.0.4"
 
@@ -6720,10 +6727,10 @@ url@0.10.3:
     punycode "1.3.2"
     querystring "0.2.0"
 
-user-agents@^1.0.1215:
-  version "1.0.1216"
-  resolved "https://registry.yarnpkg.com/user-agents/-/user-agents-1.0.1216.tgz#6e16aa3667a47739272aa7c6a4c628356ff4d8c8"
-  integrity sha512-vOFGhPzmc2Xzy/Y9sSlwRcfV0H+c1Ez5ZNSGp5gM4UMK6Syuhs16EWv96uaUbcQ8uh4H5Bpr/MZUztPq+uQq9w==
+user-agents@^1.0.1219:
+  version "1.0.1221"
+  resolved "https://registry.yarnpkg.com/user-agents/-/user-agents-1.0.1221.tgz#1c6d74ac41df0e925131a8a404206eb01c566539"
+  integrity sha512-Lj+XjhlF+SzR8+33MtpQG1zKdDvxnvy5CJ53Ff+z1MbqCbn2aFAYH0aP2f0RMvpYVU9ymHkvOr8wgeekzOJCBQ==
   dependencies:
     dot-json "^1.2.2"
     lodash.clonedeep "^4.5.0"
