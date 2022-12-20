@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@a11ywatch/core@^0.6.42":
-  version "0.6.42"
-  resolved "https://registry.yarnpkg.com/@a11ywatch/core/-/core-0.6.42.tgz#0856d75b68c640a08878bbd157c89723eebfbbc1"
-  integrity sha512-S77I5gca4KGf6ihs3vVJK71DwAcy04mjoK9aAkEt5rBLMkBfttmTQfdE44RBavSmCBEhbwz5TmdWLd+avVI+zQ==
+"@a11ywatch/core@^0.6.60":
+  version "0.6.60"
+  resolved "https://registry.yarnpkg.com/@a11ywatch/core/-/core-0.6.60.tgz#6971a41ce801abef16b97f83a1228d286888507a"
+  integrity sha512-QRUEhIn7Urz6+Fu3ILGY2owLuDkTGifJC9fpWYzmg0ecjIPsA9xDCfw4xKV7Fo6HGHpy9j3GHqcHEm4Sal1mEg==
   dependencies:
     "@a11ywatch/protos" "^0.3.9"
     "@a11ywatch/website-source-builder" "^0.0.34"
@@ -21,7 +21,7 @@
     cron "2.1.0"
     date-fns "2.29.3"
     exceljs "4.3.0"
-    fastify "^3.29.3"
+    fastify "^3.29.4"
     fastq "1.14.0"
     graphql "^15.5.0"
     graphql-middleware "^6.1.33"
@@ -32,7 +32,7 @@
     graphql-ws "^5.11.2"
     ioredis "5.2.4"
     jsonwebtoken "8.5.1"
-    mongodb "4.12.0"
+    mongodb "4.12.1"
     node-iframe "1.9.1"
     nodemailer "6.8.0"
     pb-util "1.0.3"
@@ -73,22 +73,27 @@
     jpeg-js "^0.4.4"
     tensornet "1.0.14"
 
-"@a11ywatch/pagemind@^0.5.87":
-  version "0.5.87"
-  resolved "https://registry.yarnpkg.com/@a11ywatch/pagemind/-/pagemind-0.5.87.tgz#df699ae6001315843ff43328cf337bd29b15bdea"
-  integrity sha512-8Wa8Kgf915Bu8qbR92UYRuKaND4lb7JEXQYgol/YvqNoE88jp1e/IPMFAmcR7AIQP9o0UrEducS4B+/F3QGxvg==
+"@a11ywatch/pagemind@^0.5.89":
+  version "0.5.89"
+  resolved "https://registry.yarnpkg.com/@a11ywatch/pagemind/-/pagemind-0.5.89.tgz#89a829ad4eebda88380f28e0056f188f85f7f510"
+  integrity sha512-vcYcxoANYIiTczvG0IY8DXkqdo4n4RjVfSBv9WN/offYrF3JXsdoRnGvSl5mHwvxEe0q9qpYaTDk8p5XXvnb0w==
   dependencies:
-    "@a11ywatch/protos" "^0.3.9"
-    "@a11ywatch/website-source-builder" "^0.0.33"
-    "@grpc/grpc-js" "1.7.3"
-    "@grpc/proto-loader" "0.7.3"
+    "@a11ywatch/protos" "^0.3.10"
+    "@a11ywatch/website-source-builder" "^0.0.34"
+    "@grpc/grpc-js" "1.8.0"
+    "@grpc/proto-loader" "0.7.4"
     a11y-puppeteer "0.0.11"
     fastq "1.14.0"
     get-page-speed "1.0.1"
     lighthouse "9.6.8"
     pb-util "1.0.3"
-    puppeteer "19.4.0"
-    user-agents "^1.0.1219"
+    puppeteer "19.4.1"
+    user-agents "^1.0.1233"
+
+"@a11ywatch/protos@^0.3.10":
+  version "0.3.10"
+  resolved "https://registry.yarnpkg.com/@a11ywatch/protos/-/protos-0.3.10.tgz#f4869e251d3a40ae304e09d78dc23a241fd96040"
+  integrity sha512-/nLBtZHd1rqM43FjCrLjsRXol8ivwsAkwrPTRvhKV19cqBhWRR+PZLZpcs5QxLGXQHYa9Zutr5q1fp3WrVd3Xg==
 
 "@a11ywatch/protos@^0.3.6":
   version "0.3.6"
@@ -99,11 +104,6 @@
   version "0.3.9"
   resolved "https://registry.yarnpkg.com/@a11ywatch/protos/-/protos-0.3.9.tgz#4b85f748ddf3952851beaafccc3211af3c2ae70b"
   integrity sha512-V4ox3+Q/RoDdqHtNSORW/f569alIBnTwihBDnjbticUUu9KzeuVQwpQ7PFEnPV3ack55LhgdhbnQCe5L6s2Igw==
-
-"@a11ywatch/website-source-builder@^0.0.33":
-  version "0.0.33"
-  resolved "https://registry.yarnpkg.com/@a11ywatch/website-source-builder/-/website-source-builder-0.0.33.tgz#f79a07a6aea9c6fbbc20d255512230a4ab99e9bc"
-  integrity sha512-pINcOtsgkQVdHh1yZdqdCDq9KMhRg3I90lGzDMuxmXrSWUoXtSPCGsGGuHCxC4axUlSbJTBgtwMReqAjca/diA==
 
 "@a11ywatch/website-source-builder@^0.0.34":
   version "0.0.34"
@@ -3786,7 +3786,7 @@ fastify-plugin@^3.0.0, fastify-plugin@^3.0.1:
   resolved "https://registry.yarnpkg.com/fastify-plugin/-/fastify-plugin-3.0.1.tgz#79e84c29f401020f38b524f59f2402103fd21ed2"
   integrity sha512-qKcDXmuZadJqdTm6vlCqioEbyewF60b/0LOFCcYN1B6BIZGlYJumWWOYs70SFYLDAH4YqdE1cxH/RKMG7rFxgA==
 
-fastify@^3.29.3:
+fastify@^3.29.4:
   version "3.29.4"
   resolved "https://registry.yarnpkg.com/fastify/-/fastify-3.29.4.tgz#294e33017b55f3cb72f315c41cf51431bc9b7a34"
   integrity sha512-BEyKidZQvscNaiF1BLh+YLE7AzHH03NexhPzrwZP6KBQ+jG2czdgq72X+RFB5rK9hbqdaafVb5yiWN+hCvHfYg==
@@ -5412,10 +5412,10 @@ mongodb-memory-server@^8.9.1:
     mongodb-memory-server-core "8.10.1"
     tslib "^2.4.1"
 
-mongodb@4.12.0:
-  version "4.12.0"
-  resolved "https://registry.yarnpkg.com/mongodb/-/mongodb-4.12.0.tgz#cbf14d4bc7f9d320d16e5971f76d8b8a36af7752"
-  integrity sha512-ssWod7DqVE4faluZESdOqYhV1BI5CQA5c31sr+zxDLJDBX9EA5VJLo8RNSItPTwxExmuGn/T6MbETQWjywNehA==
+mongodb@4.12.1:
+  version "4.12.1"
+  resolved "https://registry.yarnpkg.com/mongodb/-/mongodb-4.12.1.tgz#224eb39b8784af835b515aa687c6010cecaabb1a"
+  integrity sha512-koT87tecZmxPKtxRQD8hCKfn+ockEL2xBiUvx3isQGI6mFmagWt4f4AyCE9J4sKepnLhMacoCTQQA6SLAI2L6w==
   dependencies:
     bson "^4.7.0"
     mongodb-connection-string-url "^2.5.4"
@@ -5866,10 +5866,10 @@ punycode@^2.1.0, punycode@^2.1.1:
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-2.1.1.tgz#b58b010ac40c22c5657616c8d2c2c02c7bf479ec"
   integrity sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A==
 
-puppeteer-core@19.4.0:
-  version "19.4.0"
-  resolved "https://registry.yarnpkg.com/puppeteer-core/-/puppeteer-core-19.4.0.tgz#3f52945d8cfa20cf8721a7902afcd8a1a299b54d"
-  integrity sha512-gG/jxseleZStinBn86x8r7trjcE4jcjx1hIQWOpACQhquHYMuKnrWxkzg+EDn8sN3wUtF/Ry9mtJgjM49oUOFQ==
+puppeteer-core@19.4.1:
+  version "19.4.1"
+  resolved "https://registry.yarnpkg.com/puppeteer-core/-/puppeteer-core-19.4.1.tgz#f4875943841ebdb6fc2ad7a475add958692b0237"
+  integrity sha512-JHIuqtqrUAx4jGOTxXu4ilapV2jabxtVMA/e4wwFUMvtSsqK4nVBSI+Z1SKDoz7gRy/JUIc8WzmfocCa6SIZ1w==
   dependencies:
     cross-fetch "3.1.5"
     debug "4.3.4"
@@ -5880,7 +5880,7 @@ puppeteer-core@19.4.0:
     rimraf "3.0.2"
     tar-fs "2.1.1"
     unbzip2-stream "1.4.3"
-    ws "8.10.0"
+    ws "8.11.0"
 
 puppeteer-core@^13.7.0:
   version "13.7.0"
@@ -5900,17 +5900,16 @@ puppeteer-core@^13.7.0:
     unbzip2-stream "1.4.3"
     ws "8.5.0"
 
-puppeteer@19.4.0:
-  version "19.4.0"
-  resolved "https://registry.yarnpkg.com/puppeteer/-/puppeteer-19.4.0.tgz#3adfcb415e96d7b5900a66a1097947272313ee9f"
-  integrity sha512-sRzWEfFSZCCcFUJflGtYI2V7A6qK4Jht+2JiI2LZgn+Nv/LOZZsBDEaGl98ZrS8oEcUA5on4p2yJbE0nzHNzIg==
+puppeteer@19.4.1:
+  version "19.4.1"
+  resolved "https://registry.yarnpkg.com/puppeteer/-/puppeteer-19.4.1.tgz#cac7d3f0084badebb8ebacbe6f4d7262e7f21818"
+  integrity sha512-PCnrR13B8A+VSEDXRmrNXRZbrkF1tfsI1hKSC7vs13eNS6CUD3Y4FA8SF8/VZy+Pm1kg5AggJT2Nu3HLAtGkFg==
   dependencies:
     cosmiconfig "8.0.0"
-    devtools-protocol "0.0.1068969"
     https-proxy-agent "5.0.1"
     progress "2.0.3"
     proxy-from-env "1.1.0"
-    puppeteer-core "19.4.0"
+    puppeteer-core "19.4.1"
 
 qs@6.11.0, qs@^6.11.0:
   version "6.11.0"
@@ -6792,10 +6791,10 @@ url@0.10.3:
     punycode "1.3.2"
     querystring "0.2.0"
 
-user-agents@^1.0.1219:
-  version "1.0.1221"
-  resolved "https://registry.yarnpkg.com/user-agents/-/user-agents-1.0.1221.tgz#1c6d74ac41df0e925131a8a404206eb01c566539"
-  integrity sha512-Lj+XjhlF+SzR8+33MtpQG1zKdDvxnvy5CJ53Ff+z1MbqCbn2aFAYH0aP2f0RMvpYVU9ymHkvOr8wgeekzOJCBQ==
+user-agents@^1.0.1233:
+  version "1.0.1235"
+  resolved "https://registry.yarnpkg.com/user-agents/-/user-agents-1.0.1235.tgz#1482bf29f02ae0a4bed61e6684cf79ddc70b35c7"
+  integrity sha512-x3ZBrEfYzg5zeZZdy48fLZJ76idOufxb1IfGhMKmeJWD5up9rTidDsXkhKV0ogtEYKtHN0sJQz2vaX/uPFS/3g==
   dependencies:
     dot-json "^1.2.2"
     lodash.clonedeep "^4.5.0"
@@ -6982,11 +6981,6 @@ write-file-atomic@^4.0.1:
   dependencies:
     imurmurhash "^0.1.4"
     signal-exit "^3.0.7"
-
-ws@8.10.0:
-  version "8.10.0"
-  resolved "https://registry.yarnpkg.com/ws/-/ws-8.10.0.tgz#00a28c09dfb76eae4eb45c3b565f771d6951aa51"
-  integrity sha512-+s49uSmZpvtAsd2h37vIPy1RBusaLawVe8of+GyEPsaJTCMpj/2v8NpeK1SHXjBlQ95lQTmQofOJnFiLoaN3yw==
 
 ws@8.11.0, ws@^8.2.3:
   version "8.11.0"
