@@ -67,6 +67,10 @@ describe("suite", () => {
         expect(issuesCount).toBeLessThan(30);
       }
     );
+  });
+
+  test("can multi page crawl a list of urls", async () => {
+    await appReady();
 
     const pageList = [
       "https://a11ywatch.com",
@@ -86,4 +90,5 @@ describe("suite", () => {
 
     expect(pages.length).toBe(pageList.length);
   });
+
 });
