@@ -1,6 +1,6 @@
 # sidecar
 
-A11yWatch native javascript sidecar
+A11yWatch native javascript [sidecar](https://learn.microsoft.com/en-us/azure/architecture/patterns/sidecar)
 
 ## Getting started
 
@@ -244,6 +244,9 @@ When on node v18 and above the flag `--no-experimental-fetch` is required ex: `n
 
 If you run into issues with modules not loading try deleting all of the `node_modules` and running `npm install` again.
 Upon switching node versions certain modules need to be re-installed for the native compilation to work.
+
+
+The project starts a valid [A11yWatch](https://github.com/a11ywatch/a11ywatch) instance and does not require using the CLI or any method outside.
 
 ## LICENSE
 
