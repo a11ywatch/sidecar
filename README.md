@@ -175,7 +175,16 @@ services:
 Validate scan:
 
 ```sh
-curl --location --request POST 'http://localhost:3280/api/crawl-stream' --header 'Authorization: $A11YWATCH_TOKEN' --header 'Content-Type: application/json'   -d '{ "url": "https://a11ywatch.com" }'
+curl --location --request POST 'http://localhost:3280/api/crawl' \
+--header 'Transfer-Encoding: chunked' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: $A11YWATCH_TOKEN' \
+--data-raw '{
+    "websiteUrl": "https://a11ywatch.com",
+    "subdomains": false,
+    "tld": false,
+    "robots": false
+}'
 ```
 
 ## Packages exposed
