@@ -83,56 +83,61 @@ const logger = (
 };
 
 // prevent re-starting the application on re-imports
-const initApplication = async () => {
-  if (!startedApp) {
-    await Promise.all(
-      ["elastic-cdn", "mav", "pagemind", "crawler"].map(
-        (mname) => import(`@a11ywatch/${mname}`)
-      )
-    );
+const initApplication = () => {
+    return new Promise(async (resolve) => {
+      if (!startedApp) {
+        await Promise.all(
+          ["elastic-cdn", "mav", "pagemind", "crawler"].map(
+            (mname) => import(`@a11ywatch/${mname}`)
+          )
+        );
+          
+        try {
+          await import("@a11ywatch/core");
+        } catch(e) {
+          logger(e);
+        }
 
-    try {
-      await import("@a11ywatch/core");
-    } catch (e) {
-      logger(e, "error");
-    }
-
-    const extDb =
-      process.env.A11YWATCH_MEMORY_ONLY === "true"
-        ? false
-        : await pollTillConnected();
-
-    // app ready
-    if (extDb) {
-      startedApp = true;
-    } else {
-      logger("creating MongoDB memory server...");
-
-      let mongod = null;
-
-      try {
-        const { MongoMemoryServer } = await import("mongodb-memory-server");
-        mongod = await MongoMemoryServer.create({
-          instance: {
-            port: 27017,
-            ip: "127.0.0.1",
-            dbName: "a11ywatch",
-          },
-        });
-      } catch (e) {
-        logger(e, "error");
+        const extDb =
+          process.env.A11YWATCH_MEMORY_ONLY === "true"
+            ? false
+            : await pollTillConnected();
+  
+        // app ready
+        if (extDb) {
+          startedApp = true;
+        } else {
+          logger("creating MongoDB memory server...");
+  
+          let mongod = null;
+  
+          try {
+            const { MongoMemoryServer } = await import("mongodb-memory-server");
+            
+            mongod = await MongoMemoryServer.create({
+              instance: {
+                port: 27017,
+                ip: "127.0.0.1",
+                dbName: "a11ywatch",
+              },
+            });
+          } catch (e) {
+            logger(e, "error");
+          }
+  
+          try {
+            await initDbConnection(mongod?.getUri() || process.env.DB_URL || "mongodb://0.0.0.0:27017");
+            logger("connected to memory MongoDB.");
+          } catch (e) {
+            logger(e, "error");
+          }
+  
+          startedApp = true;
+        }
       }
 
-      try {
-        await initDbConnection(mongod?.getUri() || "mongodb://mongodb:27017");
-        logger("connected to memory MongoDB.");
-      } catch (e) {
-        logger(e, "error");
-      }
-
-      startedApp = true;
-    }
-  }
+      resolve(true)
+    })
 };
 
 // auto init the suite.
