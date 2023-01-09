@@ -44,10 +44,10 @@
   resolved "https://registry.yarnpkg.com/@a11ywatch/crawler/-/crawler-0.6.48.tgz#8377fa398ddf53916445b0e8ce20395830dd388b"
   integrity sha512-F1rrvTKlokiIr/qTgxwuAjNjyGRiDEC7zPGvVd1Prz9/XinNMXO8iDmLJljXhCHRIUie/FMC9kgbC0JHoNdrJA==
 
-"@a11ywatch/elastic-cdn@^0.5.11":
-  version "0.5.11"
-  resolved "https://registry.yarnpkg.com/@a11ywatch/elastic-cdn/-/elastic-cdn-0.5.11.tgz#c44843b45f37cf71fb832088d4ca19b8b6ad9ed0"
-  integrity sha512-oB23R4tqcCsyfIa76sH9ljU3G3POi8FwY1YwtXFsurd5xF/rI6SgjIrrKEz1u8mG4sjnRttUJMsO1TD8Kst/6g==
+"@a11ywatch/elastic-cdn@^0.5.12":
+  version "0.5.12"
+  resolved "https://registry.yarnpkg.com/@a11ywatch/elastic-cdn/-/elastic-cdn-0.5.12.tgz#d6db75063c4ad7d995af3876f005cbe0c9562796"
+  integrity sha512-kJRPBvH0p+gmi0vOc7hT+jHbvdWe7+sn38316JvCeSNpGyvCgISvlomiT8h4j30AQy4f7ifZHBZhDJ6j/IhoCQ==
   dependencies:
     "@a11ywatch/protos" "^0.3.12"
     "@a11ywatch/website-source-builder" "^0.0.37"
