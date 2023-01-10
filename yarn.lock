@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@a11ywatch/core@^0.6.91":
-  version "0.6.91"
-  resolved "https://registry.yarnpkg.com/@a11ywatch/core/-/core-0.6.91.tgz#2597624a0b30e0a8b5440d57c4c187052b9d1a14"
-  integrity sha512-LLuv2TVnxFhWDnqxRFs0vzcFDHC+xd+XjHksQgkyU0RwsMadzgNm8meUiz2vqUgm6OyzEg9r67mE1JMZqIPasg==
+"@a11ywatch/core@^0.6.92":
+  version "0.6.92"
+  resolved "https://registry.yarnpkg.com/@a11ywatch/core/-/core-0.6.92.tgz#91b9e31c6c5135e0bba8bf3e28b9759a575b63ef"
+  integrity sha512-7JDQ5TK1wPfmtNqOCd65pg0WosYszfAGiYBJz8zLiAuOnaeqmZSS5U+IL264LvBSKOzAUtm94WhP30jyYYDg6g==
   dependencies:
     "@a11ywatch/protos" "^0.3.12"
     "@a11ywatch/website-source-builder" "^0.0.37"
@@ -44,14 +44,14 @@
   resolved "https://registry.yarnpkg.com/@a11ywatch/crawler/-/crawler-0.6.49.tgz#4e43fa3e77026ea05eea0b5a8279bb2085fb071a"
   integrity sha512-JMBrSaL4s8TulWW/JVrAnUrtXieeHha9dPrG8ssNfH4yZCU5AYI5DTF5zgsL2cbCdpBO2JTWw99DUdsoDTySwA==
 
-"@a11ywatch/elastic-cdn@^0.5.12":
-  version "0.5.12"
-  resolved "https://registry.yarnpkg.com/@a11ywatch/elastic-cdn/-/elastic-cdn-0.5.12.tgz#d6db75063c4ad7d995af3876f005cbe0c9562796"
-  integrity sha512-kJRPBvH0p+gmi0vOc7hT+jHbvdWe7+sn38316JvCeSNpGyvCgISvlomiT8h4j30AQy4f7ifZHBZhDJ6j/IhoCQ==
+"@a11ywatch/elastic-cdn@^0.5.13":
+  version "0.5.13"
+  resolved "https://registry.yarnpkg.com/@a11ywatch/elastic-cdn/-/elastic-cdn-0.5.13.tgz#cfc55129c581577254ce1cb212a21f285de14e87"
+  integrity sha512-JWEmHGDhrdh65XZS4cl9uukxZkU3WMWaanBjbzqj7v8yK7OmMblH7BQN8qGPUrk2WxRPpbAojARtEc3wtD1nkw==
   dependencies:
     "@a11ywatch/protos" "^0.3.12"
     "@a11ywatch/website-source-builder" "^0.0.37"
-    "@grpc/grpc-js" "1.8.1"
+    "@grpc/grpc-js" "1.8.2"
     "@grpc/proto-loader" "0.7.4"
     "@swc/core" "^1.3.22"
     aws-sdk "^2.1273.0"
@@ -1477,6 +1477,14 @@
   version "1.8.1"
   resolved "https://registry.yarnpkg.com/@grpc/grpc-js/-/grpc-js-1.8.1.tgz#71f809c148e52ac9c15da4b8d4a65ecd7063dff7"
   integrity sha512-mdqYADWl/9Kb75XLstt6pvBnS1DpxSDFRKrbadkY1ymUd29hq49nP6tLcL7a7qLydgqFCpjNwa2RsyrqB3MsXA==
+  dependencies:
+    "@grpc/proto-loader" "^0.7.0"
+    "@types/node" ">=12.12.47"
+
+"@grpc/grpc-js@1.8.2":
+  version "1.8.2"
+  resolved "https://registry.yarnpkg.com/@grpc/grpc-js/-/grpc-js-1.8.2.tgz#7f2d18a32a45624174444c915d0fc26fc0c5179c"
+  integrity sha512-5cqCjUvDKJWHGeu1prlrFOUmjuML0NequZKJ38PsCkfwIqPnZq4Q9burPP3It7/+46wpl0KsqVN3s6Te3B9Qtw==
   dependencies:
     "@grpc/proto-loader" "^0.7.0"
     "@types/node" ">=12.12.47"
