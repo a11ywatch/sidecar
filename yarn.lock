@@ -2,12 +2,12 @@
 # yarn lockfile v1
 
 
-"@a11ywatch/core@^0.6.94":
-  version "0.6.94"
-  resolved "https://registry.yarnpkg.com/@a11ywatch/core/-/core-0.6.94.tgz#2ed80c5b7ef20f89fe88c56b8fd7bf26fe662285"
-  integrity sha512-nwxdoNWxZ568Uk4yotoQOa8SWrfgT4sfiz0v3biQUPyzF789IT9BWsCa7dSWqjp3+kBJ7gigyP0yLvOoo6XZ9w==
+"@a11ywatch/core@^0.6.97":
+  version "0.6.97"
+  resolved "https://registry.yarnpkg.com/@a11ywatch/core/-/core-0.6.97.tgz#b7e65485e6f83e363763315356f5eeaaf1830975"
+  integrity sha512-jW2uIMTCy0aOfIF+41OHr3Y24EGX49GfB/BBm9FbbFZ5GaabmVimcJGA8EZ7boaylpktxSQ4UkRiIFmLELPtNw==
   dependencies:
-    "@a11ywatch/protos" "^0.3.14"
+    "@a11ywatch/protos" "^0.3.15"
     "@a11ywatch/website-source-builder" "^0.0.37"
     "@fastify/cookie" "^6.0.0"
     "@fastify/cors" "^7.0.0"
@@ -39,10 +39,10 @@
     stripe "11.1.0"
     ws "8.12.0"
 
-"@a11ywatch/crawler@^0.6.52":
-  version "0.6.52"
-  resolved "https://registry.yarnpkg.com/@a11ywatch/crawler/-/crawler-0.6.52.tgz#0a28751250dfdb73f0908b87ebe0d059cbabd82d"
-  integrity sha512-dMdrWCOOtbd1VhrNkRU8zQJT/CrKtDIWp8u/T2DuIvkyN1x3PVCtxGv93zCAMMuAa0HtTcisgeNhazi/n1i0+w==
+"@a11ywatch/crawler@^0.6.54":
+  version "0.6.54"
+  resolved "https://registry.yarnpkg.com/@a11ywatch/crawler/-/crawler-0.6.54.tgz#cf3be414bac4d5c8c15793048d4a3b63c89c75cf"
+  integrity sha512-EGyHpbRfsBRa/J6TSDZoSamSulwDKda3rmQxjNp3sYxgZCiCdumSs+cTjEa6rSoXJDteVQ7YwFW6uHxpwSgqXA==
 
 "@a11ywatch/elastic-cdn@^0.5.13":
   version "0.5.13"
@@ -100,6 +100,11 @@
   version "0.3.14"
   resolved "https://registry.yarnpkg.com/@a11ywatch/protos/-/protos-0.3.14.tgz#d4817e17de0718d23a4660bc7055809290f5f68c"
   integrity sha512-L9thahUJvkLmwytV9qGPaPGBDHVL7DPg73NxjuqdaIRnrJGWQ+67TNpQHUzgMVrehKwV3KrOsD/6zNyugUnQ2Q==
+
+"@a11ywatch/protos@^0.3.15":
+  version "0.3.15"
+  resolved "https://registry.yarnpkg.com/@a11ywatch/protos/-/protos-0.3.15.tgz#55f53c60e7b7e14ab1048f62739f048b1cbbb71b"
+  integrity sha512-QMtsOPoAz0lcgX0lnBEfArNjNCNMPwjakrzJr5UlUQ5qYCg2cppliONktqPhvFGupPjWjTS6NEX7JslIo8UflQ==
 
 "@a11ywatch/website-source-builder@^0.0.37":
   version "0.0.37"
