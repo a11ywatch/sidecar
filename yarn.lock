@@ -75,16 +75,16 @@
     jpeg-js "^0.4.4"
     tensornet "1.0.14"
 
-"@a11ywatch/pagemind@^0.5.104":
-  version "0.5.104"
-  resolved "https://registry.yarnpkg.com/@a11ywatch/pagemind/-/pagemind-0.5.104.tgz#b614030fc2070241d1ee053611ce515445e75dc6"
-  integrity sha512-FDLeWTmresE5XHKpXJ0heAy5llBEQrhUcvOWphkSOTOgVjFtATCIQCJzocdjnK3hsFJL3m7CIlo4mvnv0EM5vw==
+"@a11ywatch/pagemind@^0.5.106":
+  version "0.5.106"
+  resolved "https://registry.yarnpkg.com/@a11ywatch/pagemind/-/pagemind-0.5.106.tgz#85f65752df29c36d37970c3d0006a5cf0c1054c3"
+  integrity sha512-+XLkZ3S4bXxNB70RMyRDra3EYmkLOS9aFvLi8hJGUybT5RXo+RqTudCzX0NOpKkuqyMhCpmCW+7VHfxnHjVTnw==
   dependencies:
-    "@a11ywatch/protos" "^0.3.14"
+    "@a11ywatch/protos" "^0.3.15"
     "@a11ywatch/website-source-builder" "^0.0.37"
     "@grpc/grpc-js" "1.8.2"
     "@grpc/proto-loader" "0.7.4"
-    a11y-js "0.0.13"
+    a11y-js "0.0.14"
     fastq "1.15.0"
     get-page-speed "1.0.1"
     lighthouse "9.6.8"
@@ -2319,12 +2319,12 @@
   resolved "https://registry.yarnpkg.com/@webgpu/types/-/types-0.1.21.tgz#b181202daec30d66ccd67264de23814cfd176d3a"
   integrity sha512-pUrWq3V5PiSGFLeLxoGqReTZmiiXwY3jRkIG5sLLKjyqNxrwm/04b4nw7LSmGWJcKk59XOM/YRTUwOzo4MMlow==
 
-a11y-js@0.0.13:
-  version "0.0.13"
-  resolved "https://registry.yarnpkg.com/a11y-js/-/a11y-js-0.0.13.tgz#26017d2d94ca3c58b032734621d09c41462f49c7"
-  integrity sha512-dah0JVIsAYTLYU+9zgofQ48VmtTywBRUOEOuPLsYajKDflWeh869is2WUd3O7m81ALm7SE8kQ2DxIKvskGbtOQ==
+a11y-js@0.0.14:
+  version "0.0.14"
+  resolved "https://registry.yarnpkg.com/a11y-js/-/a11y-js-0.0.14.tgz#1410fb447e8a3c9cf4b215b5b320be7745c35bdf"
+  integrity sha512-OHjcAV/uai//7sJwBX2dwxAOP+cLKzoNyzdMWMA9YtCYD7uK8DutAcQax/rIo5F3tzAKXsmnpYB/BCyb1sFY5g==
   dependencies:
-    axe-core "4.2.1"
+    axe-core "4.5.1"
     html_codesniffer_fork "2.7.1"
     jsdom "21.0.0"
 
@@ -2668,15 +2668,15 @@ aws-sdk@^2.1273.0:
     uuid "8.0.0"
     xml2js "0.4.19"
 
-axe-core@4.2.1:
-  version "4.2.1"
-  resolved "https://registry.yarnpkg.com/axe-core/-/axe-core-4.2.1.tgz#2e50bcf10ee5b819014f6e342e41e45096239e34"
-  integrity sha512-evY7DN8qSIbsW2H/TWQ1bX3sXN1d4MNb5Vb4n7BzPuCwRHdkZ1H2eNLuSh73EoQqkGKUtju2G2HCcjCfhvZIAA==
-
 axe-core@4.4.1:
   version "4.4.1"
   resolved "https://registry.yarnpkg.com/axe-core/-/axe-core-4.4.1.tgz#7dbdc25989298f9ad006645cd396782443757413"
   integrity sha512-gd1kmb21kwNuWr6BQz8fv6GNECPBnUasepcoLbekws23NVBLODdsClRZ+bQ8+9Uomf3Sm3+Vwn0oYG9NvwnJCw==
+
+axe-core@4.5.1:
+  version "4.5.1"
+  resolved "https://registry.yarnpkg.com/axe-core/-/axe-core-4.5.1.tgz#04d561c11b6d76d096d34e9d14ba2c294fb20cdc"
+  integrity sha512-1exVbW0X1O/HSr/WMwnaweyqcWOgZgLiVxdLG34pvSQk4NlYQr9OUy0JLwuhFfuVNQzzqgH57eYzkFBCb3bIsQ==
 
 babel-jest@^28.1.3:
   version "28.1.3"

@@ -1,6 +1,6 @@
 {
   "name": "@a11ywatch/a11ywatch",
-  "version": "0.2.82",
+  "version": "0.2.83",
   "description": "Powerful web accessibility sidecar",
   "main": "./server.js",
   "author": "Jeff Mendez <jeff@a11ywatch.com>",
@@ -30,7 +30,7 @@
     "@a11ywatch/crawler": "^0.6.54",
     "@a11ywatch/elastic-cdn": "^0.5.13",
     "@a11ywatch/mav": "^0.5.12",
-    "@a11ywatch/pagemind": "^0.5.104",
+    "@a11ywatch/pagemind": "^0.5.106",
     "@a11ywatch/protos": "^0.3.14",
     "mongodb-memory-server": "8.10.2"
   },
