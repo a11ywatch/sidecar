@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@a11ywatch/core@^0.6.101":
-  version "0.6.101"
-  resolved "https://registry.yarnpkg.com/@a11ywatch/core/-/core-0.6.101.tgz#b1a1bb1b7b5834c8f966ea8eea957c74f03f4393"
-  integrity sha512-mGHICuMOdRbVV/w1imIkrO4Ber7caEwE8aObi2+vmidXfhe8l+Xv/nLdAAt72akTQqJMDcn2EVx4EnflR0w+YQ==
+"@a11ywatch/core@^0.6.109":
+  version "0.6.109"
+  resolved "https://registry.yarnpkg.com/@a11ywatch/core/-/core-0.6.109.tgz#f4a458cadcd712f652b6d5a5d376071b1c472fd1"
+  integrity sha512-v864sq50hdbNsS0/uSdSRqOQncDRaMjfcOfM5nrEA2eSZ2/EaLFtE9U173IER7KuhynfXAKcqLQEbXwK084j3g==
   dependencies:
     "@a11ywatch/protos" "^0.3.15"
     "@a11ywatch/website-source-builder" "^0.0.37"
@@ -13,7 +13,7 @@
     "@fastify/cors" "^7.0.0"
     "@fastify/rate-limit" "^6.0.1"
     "@graphql-tools/schema" "^9.0.12"
-    "@grpc/grpc-js" "1.8.2"
+    "@grpc/grpc-js" "1.8.4"
     "@grpc/proto-loader" "0.7.4"
     apollo-server "3.11.1"
     apollo-server-core "3.11.1"
@@ -75,16 +75,16 @@
     jpeg-js "^0.4.4"
     tensornet "1.0.14"
 
-"@a11ywatch/pagemind@^0.5.107":
-  version "0.5.107"
-  resolved "https://registry.yarnpkg.com/@a11ywatch/pagemind/-/pagemind-0.5.107.tgz#ff7cb69f2ba79f01b78b316c6f5556f89b4af7c3"
-  integrity sha512-n4Nh/RwH6cViiMGb9kQSSpaOTHKYunZHbSls58PwH+EcjuBSpGQGuRHYVCS4QF+jzxr+c6LQ9WYWSQCE8pxA+w==
+"@a11ywatch/pagemind@^0.5.108":
+  version "0.5.108"
+  resolved "https://registry.yarnpkg.com/@a11ywatch/pagemind/-/pagemind-0.5.108.tgz#87c060d259b30254b1a43802cc024227d6051f86"
+  integrity sha512-XYWT2tHWBbUa4OrUGMv6cLSLwg+47qWdE9KVCqNDJA8HW22P7qqQ6+2505V8VlsMTOq+bK/n+6htL80OvCNHGQ==
   dependencies:
     "@a11ywatch/protos" "^0.3.15"
     "@a11ywatch/website-source-builder" "^0.0.37"
     "@grpc/grpc-js" "1.8.2"
     "@grpc/proto-loader" "0.7.4"
-    a11y-js "0.0.15"
+    a11y-js "0.0.16"
     fastq "1.15.0"
     get-page-speed "1.0.1"
     lighthouse "9.6.8"
@@ -1490,6 +1490,14 @@
     "@grpc/proto-loader" "^0.7.0"
     "@types/node" ">=12.12.47"
 
+"@grpc/grpc-js@1.8.4":
+  version "1.8.4"
+  resolved "https://registry.yarnpkg.com/@grpc/grpc-js/-/grpc-js-1.8.4.tgz#316674e8905e2dd310d8aa60331e05b32584e6ad"
+  integrity sha512-oaETBotls7FTBpySg5dhyUCyXSxSeCMmkBBXHXG1iw57MiNoB6D7VRhkrXYbwyHM3Q3Afjp4KlsBX0Zb+ELZXw==
+  dependencies:
+    "@grpc/proto-loader" "^0.7.0"
+    "@types/node" ">=12.12.47"
+
 "@grpc/proto-loader@0.7.4", "@grpc/proto-loader@^0.7.0":
   version "0.7.4"
   resolved "https://registry.yarnpkg.com/@grpc/proto-loader/-/proto-loader-0.7.4.tgz#4946a84fbf47c3ddd4e6a97acb79d69a9f47ebf2"
@@ -2319,10 +2327,10 @@
   resolved "https://registry.yarnpkg.com/@webgpu/types/-/types-0.1.21.tgz#b181202daec30d66ccd67264de23814cfd176d3a"
   integrity sha512-pUrWq3V5PiSGFLeLxoGqReTZmiiXwY3jRkIG5sLLKjyqNxrwm/04b4nw7LSmGWJcKk59XOM/YRTUwOzo4MMlow==
 
-a11y-js@0.0.15:
-  version "0.0.15"
-  resolved "https://registry.yarnpkg.com/a11y-js/-/a11y-js-0.0.15.tgz#406c6d55e8c01e1fbd5abb85948146b81a5e98ed"
-  integrity sha512-2Y3N7b5+5qX1KJ/5koWjNfzEqoy/BW5X1gsGaT1jGUkTGkU+Glto4P/rP/pJGm8nMCRx6Hu8WlqQ33ffOelRiQ==
+a11y-js@0.0.16:
+  version "0.0.16"
+  resolved "https://registry.yarnpkg.com/a11y-js/-/a11y-js-0.0.16.tgz#1571dc9569d2def16fdf9dd27c6c6788144d4847"
+  integrity sha512-cA1jWkQvnbLieiNJVgpsxhxhukWphgsYXrQ4xhSZoky0F3cmKPIggv5FqNcx7QFqGtf6Dz3F1kBh+pdS/+I5JA==
   dependencies:
     axe-core "4.5.1"
     html_codesniffer_fork "2.7.1"
