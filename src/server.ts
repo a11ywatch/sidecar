@@ -29,7 +29,7 @@ export type Issues = {
 };
 // issue stats
 export type IssuesInfo = {
-  adaScoreAverage: number;
+  accessScoreAverage: number;
   possibleIssuesFixedByCdn: number;
   totalIssues: number;
   issuesFixedByCdn: number;
