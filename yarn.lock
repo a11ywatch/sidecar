@@ -2,13 +2,13 @@
 # yarn lockfile v1
 
 
-"@a11ywatch/core@^0.6.109":
-  version "0.6.109"
-  resolved "https://registry.yarnpkg.com/@a11ywatch/core/-/core-0.6.109.tgz#f4a458cadcd712f652b6d5a5d376071b1c472fd1"
-  integrity sha512-v864sq50hdbNsS0/uSdSRqOQncDRaMjfcOfM5nrEA2eSZ2/EaLFtE9U173IER7KuhynfXAKcqLQEbXwK084j3g==
+"@a11ywatch/core@^0.6.110":
+  version "0.6.110"
+  resolved "https://registry.yarnpkg.com/@a11ywatch/core/-/core-0.6.110.tgz#ce80b89ffe1b0e43e67371ee8c4361c7d4e47bd0"
+  integrity sha512-RSj0zGQc0mSF5X786j0aR+Md20uUKx/XO9NO5pngJ7Hkvcp1Y7U+LtQUCDdO1NzSxSJviFzdJ4iIYDIMySJ1wQ==
   dependencies:
     "@a11ywatch/protos" "^0.3.15"
-    "@a11ywatch/website-source-builder" "^0.0.37"
+    "@a11ywatch/website-source-builder" "^0.0.38"
     "@fastify/cookie" "^6.0.0"
     "@fastify/cors" "^7.0.0"
     "@fastify/rate-limit" "^6.0.1"
@@ -44,27 +44,27 @@
   resolved "https://registry.yarnpkg.com/@a11ywatch/crawler/-/crawler-0.6.54.tgz#cf3be414bac4d5c8c15793048d4a3b63c89c75cf"
   integrity sha512-EGyHpbRfsBRa/J6TSDZoSamSulwDKda3rmQxjNp3sYxgZCiCdumSs+cTjEa6rSoXJDteVQ7YwFW6uHxpwSgqXA==
 
-"@a11ywatch/elastic-cdn@^0.5.13":
-  version "0.5.13"
-  resolved "https://registry.yarnpkg.com/@a11ywatch/elastic-cdn/-/elastic-cdn-0.5.13.tgz#cfc55129c581577254ce1cb212a21f285de14e87"
-  integrity sha512-JWEmHGDhrdh65XZS4cl9uukxZkU3WMWaanBjbzqj7v8yK7OmMblH7BQN8qGPUrk2WxRPpbAojARtEc3wtD1nkw==
+"@a11ywatch/elastic-cdn@^0.5.14":
+  version "0.5.14"
+  resolved "https://registry.yarnpkg.com/@a11ywatch/elastic-cdn/-/elastic-cdn-0.5.14.tgz#8ffeb826fafba47e66a6c2bd593c21cac41b18ad"
+  integrity sha512-hmJ0adD1xxRapRjE2naJCWw4HxrtLKwjz2F+n76gCkSUyaxaL/JWpJGVlQ3nQdOz5bk63HF78GVaZ1AcYgr/Sg==
   dependencies:
-    "@a11ywatch/protos" "^0.3.12"
+    "@a11ywatch/protos" "^0.3.15"
     "@a11ywatch/website-source-builder" "^0.0.37"
-    "@grpc/grpc-js" "1.8.2"
+    "@grpc/grpc-js" "1.8.4"
     "@grpc/proto-loader" "0.7.4"
     "@swc/core" "^1.3.22"
     aws-sdk "^2.1273.0"
 
-"@a11ywatch/mav@^0.5.12":
-  version "0.5.12"
-  resolved "https://registry.yarnpkg.com/@a11ywatch/mav/-/mav-0.5.12.tgz#63a0b1f7cde3cf16c2a1f52377c0163b2a733519"
-  integrity sha512-7rxLBaqOz6WluFbS38TXMgmh7ceuyWgnQ9CsNJEu4wXllCtpzgKt74rxCNmXM3XMLZqFtH1MUU/yKQWGwRH4Rw==
+"@a11ywatch/mav@^0.5.13":
+  version "0.5.13"
+  resolved "https://registry.yarnpkg.com/@a11ywatch/mav/-/mav-0.5.13.tgz#6362c09f39e95c6c6c2812b96795943e450e39f0"
+  integrity sha512-vrHd6otJvLqnWWb1Q2LSmt1suU9sm/w43fRDXbWoB5B5fWJxrJmnX2NbcSPuHGt2/LqjeFQdObWtLsVhyL7i1w==
   dependencies:
-    "@a11ywatch/protos" "^0.3.12"
+    "@a11ywatch/protos" "^0.3.15"
     "@a11ywatch/website-source-builder" "^0.0.37"
     "@azure/cognitiveservices-computervision" "^8.2.0"
-    "@grpc/grpc-js" "1.8.1"
+    "@grpc/grpc-js" "1.8.4"
     "@grpc/proto-loader" "0.7.4"
     "@tensorflow-models/coco-ssd" "2.2.2"
     "@tensorflow-models/mobilenet" "2.1.0"
@@ -75,26 +75,21 @@
     jpeg-js "^0.4.4"
     tensornet "1.0.14"
 
-"@a11ywatch/pagemind@^0.5.108":
-  version "0.5.108"
-  resolved "https://registry.yarnpkg.com/@a11ywatch/pagemind/-/pagemind-0.5.108.tgz#87c060d259b30254b1a43802cc024227d6051f86"
-  integrity sha512-XYWT2tHWBbUa4OrUGMv6cLSLwg+47qWdE9KVCqNDJA8HW22P7qqQ6+2505V8VlsMTOq+bK/n+6htL80OvCNHGQ==
+"@a11ywatch/pagemind@^0.5.111":
+  version "0.5.111"
+  resolved "https://registry.yarnpkg.com/@a11ywatch/pagemind/-/pagemind-0.5.111.tgz#3b73e3c85ad550067ab775ecea3139066f1b6b6d"
+  integrity sha512-tpjTNWyfITC45Ur+pmEfrL4qoycQN5m45AdRasFSFge3gCPdkuPM3auJl28wOsXwXFhba2JzXZ5pVb9Wvn9pMQ==
   dependencies:
     "@a11ywatch/protos" "^0.3.15"
     "@a11ywatch/website-source-builder" "^0.0.37"
-    "@grpc/grpc-js" "1.8.2"
+    "@grpc/grpc-js" "1.8.4"
     "@grpc/proto-loader" "0.7.4"
-    a11y-js "0.0.16"
+    a11y-js "0.0.18"
     fastq "1.15.0"
     get-page-speed "1.0.1"
     lighthouse "9.6.8"
     pb-util "1.0.3"
     puppeteer "19.4.1"
-
-"@a11ywatch/protos@^0.3.12":
-  version "0.3.12"
-  resolved "https://registry.yarnpkg.com/@a11ywatch/protos/-/protos-0.3.12.tgz#249d17a20fa0dc7fdbf1a23f4a2250b8f4cbf054"
-  integrity sha512-SozJgq5RdZ6idl7ovo7vzJpggYYQ0L6X/okW8ZQi3nBpXc7vnSowh7NIzpe8o5j+X4yf1aiAD9b5vHSaaKwbcQ==
 
 "@a11ywatch/protos@^0.3.14":
   version "0.3.14"
@@ -110,6 +105,11 @@
   version "0.0.37"
   resolved "https://registry.yarnpkg.com/@a11ywatch/website-source-builder/-/website-source-builder-0.0.37.tgz#96d5a9dae2dfe184ad5d7a3f554d9ffba0d6f911"
   integrity sha512-YKw2nYq9RvUrTXEjoD5emRJsHCtYuX1fdHvX9mtqKg2vR85OMRLJSGMbV/kHCkpWWcK/VtOlollG51OcSSfqpA==
+
+"@a11ywatch/website-source-builder@^0.0.38":
+  version "0.0.38"
+  resolved "https://registry.yarnpkg.com/@a11ywatch/website-source-builder/-/website-source-builder-0.0.38.tgz#e30cdbbd70cd53c134e682b99a549a72d92732db"
+  integrity sha512-+K321VrCbtKeVZDxDLujkSvxxeQ8K4pevi3UkSd0IYb1RZUB0F9rqaiejnPtiqa+c0YEogMS2qG0HB46Ed+CpA==
 
 "@ampproject/remapping@^2.1.0":
   version "2.2.0"
@@ -1474,22 +1474,6 @@
     camel-case "4.1.2"
     tslib "~2.2.0"
 
-"@grpc/grpc-js@1.8.1":
-  version "1.8.1"
-  resolved "https://registry.yarnpkg.com/@grpc/grpc-js/-/grpc-js-1.8.1.tgz#71f809c148e52ac9c15da4b8d4a65ecd7063dff7"
-  integrity sha512-mdqYADWl/9Kb75XLstt6pvBnS1DpxSDFRKrbadkY1ymUd29hq49nP6tLcL7a7qLydgqFCpjNwa2RsyrqB3MsXA==
-  dependencies:
-    "@grpc/proto-loader" "^0.7.0"
-    "@types/node" ">=12.12.47"
-
-"@grpc/grpc-js@1.8.2":
-  version "1.8.2"
-  resolved "https://registry.yarnpkg.com/@grpc/grpc-js/-/grpc-js-1.8.2.tgz#7f2d18a32a45624174444c915d0fc26fc0c5179c"
-  integrity sha512-5cqCjUvDKJWHGeu1prlrFOUmjuML0NequZKJ38PsCkfwIqPnZq4Q9burPP3It7/+46wpl0KsqVN3s6Te3B9Qtw==
-  dependencies:
-    "@grpc/proto-loader" "^0.7.0"
-    "@types/node" ">=12.12.47"
-
 "@grpc/grpc-js@1.8.4":
   version "1.8.4"
   resolved "https://registry.yarnpkg.com/@grpc/grpc-js/-/grpc-js-1.8.4.tgz#316674e8905e2dd310d8aa60331e05b32584e6ad"
@@ -2327,10 +2311,10 @@
   resolved "https://registry.yarnpkg.com/@webgpu/types/-/types-0.1.21.tgz#b181202daec30d66ccd67264de23814cfd176d3a"
   integrity sha512-pUrWq3V5PiSGFLeLxoGqReTZmiiXwY3jRkIG5sLLKjyqNxrwm/04b4nw7LSmGWJcKk59XOM/YRTUwOzo4MMlow==
 
-a11y-js@0.0.16:
-  version "0.0.16"
-  resolved "https://registry.yarnpkg.com/a11y-js/-/a11y-js-0.0.16.tgz#1571dc9569d2def16fdf9dd27c6c6788144d4847"
-  integrity sha512-cA1jWkQvnbLieiNJVgpsxhxhukWphgsYXrQ4xhSZoky0F3cmKPIggv5FqNcx7QFqGtf6Dz3F1kBh+pdS/+I5JA==
+a11y-js@0.0.18:
+  version "0.0.18"
+  resolved "https://registry.yarnpkg.com/a11y-js/-/a11y-js-0.0.18.tgz#b459b69441127ca2e1f55876e8c590ecdfc498af"
+  integrity sha512-DohpRq1ndJ/U0UFurWAc57S2iVJP6YDl9Smp3xbd4CfuA686loDaZCtiy/N8hExBJABg1N7WnZRkYTqClsEv5w==
   dependencies:
     axe-core "4.5.1"
     html_codesniffer_fork "2.7.1"
