@@ -4,7 +4,9 @@ A11yWatch native javascript [sidecar](https://learn.microsoft.com/en-us/azure/ar
 
 ## Getting started
 
-Make sure to have either [nodejs](https://nodejs.org/en/) or [bun](https://bun.sh/) installed.
+Make sure to have either [nodejs](https://nodejs.org/en/) or [bun](https://bun.sh/) installed. 
+[Protoc](https://grpc.io/docs/protoc-installation/#install-pre-compiled-binaries-any-os) is required to install the crawler, depending on the 
+OS an automatic installation is performed.
 
 ### nodejs
 
