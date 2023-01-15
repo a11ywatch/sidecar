@@ -5,14 +5,10 @@
 // global.TextDecoder = TextDecoder;
 
 import { scan, appReady, multiPageScan, crawlList } from "../src/server";
-import { UsersController } from "@a11ywatch/core/core/controllers";
 
 jest.setTimeout(300000);
 
 describe("suite", () => {
-  const email = "myemail@gmail.com"; // test auth email
-  const password = "mypass"; // test auth password
-
   // can scan a single website using enhanced scan
   test("starts the server properly and run single page scan", async () => {
     const results = await scan({ url: "https://a11ywatch.com" });
@@ -20,45 +16,14 @@ describe("suite", () => {
     expect(results.data).toBeTruthy();
   });
 
-  // can register a user into the app
-  test("can register via email", async () => {
-    await appReady();
-
-    const data = await UsersController().createUser({
-      email,
-      password,
-    });
-
-    expect(data.email).toEqual(email);
-    expect(data.password).not.toEqual(password); // password is hashed!!
-  });
-
-  // can sign on a user into the app
-  test("can login via email", async () => {
-    await appReady();
-
-    const data = await UsersController().verifyUser({
-      email,
-      password,
-    });
-
-    expect(data.email).toEqual(email);
-    expect(data.password).not.toEqual(password); // password is hashed!!
-  });
-
   // can run authenticated multi page crawl by user id
   test("can multi page crawl by user", async () => {
     await appReady();
 
-    const data = await UsersController().verifyUser({
-      email,
-      password,
-    });
-
     await multiPageScan(
       {
         url: "https://a11ywatch.com",
-        userId: data.id,
+        userId: 1,
       },
       ({ data }) => {
         const issuesCount = data.issues.filter(

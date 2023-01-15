@@ -12,7 +12,6 @@ import {
 } from "@a11ywatch/core/core/utils";
 import { crawlEmitter } from "@a11ywatch/core/event";
 import {
-  initDbConnection,
   pollTillConnected,
 } from "@a11ywatch/core/database/client";
 import { isReady } from "@a11ywatch/core/app";
@@ -98,42 +97,12 @@ const initApplication = () => {
           logger(e);
         }
 
-        const extDb =
-          process.env.A11YWATCH_MEMORY_ONLY === "true"
-            ? false
-            : await pollTillConnected();
-  
-        // app ready
-        if (extDb) {
-          startedApp = true;
-        } else {
-          logger("creating MongoDB memory server...");
-  
-          let mongod = null;
-  
-          try {
-            const { MongoMemoryServer } = await import("mongodb-memory-server");
-            
-            mongod = await MongoMemoryServer.create({
-              instance: {
-                port: 27017,
-                ip: "127.0.0.1",
-                dbName: "a11ywatch",
-              },
-            });
-          } catch (e) {
-            logger(e, "error");
-          }
-  
-          try {
-            await initDbConnection(mongod?.getUri() || process.env.DB_URL || "mongodb://0.0.0.0:27017");
-            logger("connected to memory MongoDB.");
-          } catch (e) {
-            logger(e, "error");
-          }
-  
-          startedApp = true;
+        if(process.env.A11YWATCH_MEMORY_ONLY !== "true") {
+          await pollTillConnected();
         }
+
+        // app ready
+        startedApp = true;
       }
 
       resolve(true)
