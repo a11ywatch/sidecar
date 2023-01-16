@@ -75,16 +75,16 @@
     jpeg-js "^0.4.4"
     tensornet "1.0.14"
 
-"@a11ywatch/pagemind@^0.5.115":
-  version "0.5.115"
-  resolved "https://registry.yarnpkg.com/@a11ywatch/pagemind/-/pagemind-0.5.115.tgz#d07007783743b5ad82c19d5902b96d7e692af597"
-  integrity sha512-V3Fde5HvVU4+Vfe/f7U9W49xBZycf4V39X0LoI9sh+I4qIDK2+xFyuIGxrhuvGO/Lz23seE602WmusU8IX1xYA==
+"@a11ywatch/pagemind@^0.5.116":
+  version "0.5.116"
+  resolved "https://registry.yarnpkg.com/@a11ywatch/pagemind/-/pagemind-0.5.116.tgz#69ad24fbb1b5d6ec3b5188307a66409d117489ae"
+  integrity sha512-0i9cq7UHaeST57MGL7EYiGoYXEzp7YNFnQRE5QuyxF3AuyOn00KvJSXkbOLiGt+whOzNJ+uO50+lZIPs7J7wgA==
   dependencies:
     "@a11ywatch/protos" "^0.3.16"
     "@a11ywatch/website-source-builder" "^0.0.37"
     "@grpc/grpc-js" "1.8.4"
     "@grpc/proto-loader" "0.7.4"
-    a11y-js "0.0.23"
+    a11y-js "0.0.25"
     fastq "1.15.0"
     get-page-speed "1.0.1"
     lighthouse "9.6.8"
@@ -2307,13 +2307,13 @@
   resolved "https://registry.yarnpkg.com/@webgpu/types/-/types-0.1.21.tgz#b181202daec30d66ccd67264de23814cfd176d3a"
   integrity sha512-pUrWq3V5PiSGFLeLxoGqReTZmiiXwY3jRkIG5sLLKjyqNxrwm/04b4nw7LSmGWJcKk59XOM/YRTUwOzo4MMlow==
 
-a11y-js@0.0.23:
-  version "0.0.23"
-  resolved "https://registry.yarnpkg.com/a11y-js/-/a11y-js-0.0.23.tgz#12857b1a2656a44b6ddbafd5dd795604d9255763"
-  integrity sha512-UzdZkV5vM4pKZ0er6cWTex8VK9E2xK89R+iXKk15KQ1cLjUm++gGblVzFw5t+8nxCWwg8c+tj1NZ+OVYhYcsrg==
+a11y-js@0.0.25:
+  version "0.0.25"
+  resolved "https://registry.yarnpkg.com/a11y-js/-/a11y-js-0.0.25.tgz#90c35493b3b497e40ab9c96c3dc8ffd2dcd1e199"
+  integrity sha512-CANblTfYwJ9dNGF8oPoWetHnCfR8HGS+WxiWDoeM4R3qa8dc4qfhGwX757az5lHaYoP1WpqsXjVOSCZgZqLj2Q==
   dependencies:
     axe-core "4.5.1"
-    html_codesniffer_fork "2.7.1"
+    html_codesniffer_fork "2.7.5"
     jsdom "21.0.0"
 
 abab@^2.0.6:
@@ -4052,10 +4052,10 @@ html-escaper@^2.0.0:
   resolved "https://registry.yarnpkg.com/html-escaper/-/html-escaper-2.0.2.tgz#dfd60027da36a36dfcbe236262c00a5822681453"
   integrity sha512-H2iMtd0I4Mt5eYiapRdIDjp+XzelXQ0tFE4JS7YFwFevXXMmOp9myNrUvCg0D6ws8iqkRPBfKHgbwig1SmlLfg==
 
-html_codesniffer_fork@2.7.1:
-  version "2.7.1"
-  resolved "https://registry.yarnpkg.com/html_codesniffer_fork/-/html_codesniffer_fork-2.7.1.tgz#bf4a5fb9218820120c899843a05175dce2b1fd6e"
-  integrity sha512-Tsddw+1Rx93TbrENtIFh32OW138HGx9Ppk22skUpSO4ZMN5H11vdjC10zwKJigUxxG5Sr/gqpggfU58XJwiOKQ==
+html_codesniffer_fork@2.7.5:
+  version "2.7.5"
+  resolved "https://registry.yarnpkg.com/html_codesniffer_fork/-/html_codesniffer_fork-2.7.5.tgz#e3d3374be64ad042730c1d130854a3d5aea0c873"
+  integrity sha512-1nrhB/AcAWrxHWpViEQQrAI5C+963sFQQTBCwhGpahRtqiooxZpv0Sn3SIzH9FKc0eLCf+X053pI5Z400rACGA==
 
 htmlparser2@^8.0.1:
   version "8.0.1"
