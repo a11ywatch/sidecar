@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@a11ywatch/core@^0.6.118":
-  version "0.6.118"
-  resolved "https://registry.yarnpkg.com/@a11ywatch/core/-/core-0.6.118.tgz#2b07a550155a7ed877c668d53bedaa0da65f848e"
-  integrity sha512-x5A54UtdmNX/jYEBPJUEs4nIiIFCW/wl26sy4414UPeqZpzknR+P9ooI4uFMbtcoHBWToT9S/O4UH1qoCsKtig==
+"@a11ywatch/core@^0.6.119":
+  version "0.6.119"
+  resolved "https://registry.yarnpkg.com/@a11ywatch/core/-/core-0.6.119.tgz#7ea5c443cd9413c14d173fd15ba2347bdc4d486c"
+  integrity sha512-6Nh4dUi8FHwg8P00LpQgR3X6R+EbfUJoEjnQZIN4sflRb8DWTLdQRiZ3K/kKwT/DD2fRHcv8l1kovgPgD/1OOw==
   dependencies:
     "@a11ywatch/protos" "^0.3.16"
     "@a11ywatch/website-source-builder" "^0.0.41"
@@ -75,16 +75,16 @@
     jpeg-js "^0.4.4"
     tensornet "1.0.14"
 
-"@a11ywatch/pagemind@^0.5.116":
-  version "0.5.116"
-  resolved "https://registry.yarnpkg.com/@a11ywatch/pagemind/-/pagemind-0.5.116.tgz#69ad24fbb1b5d6ec3b5188307a66409d117489ae"
-  integrity sha512-0i9cq7UHaeST57MGL7EYiGoYXEzp7YNFnQRE5QuyxF3AuyOn00KvJSXkbOLiGt+whOzNJ+uO50+lZIPs7J7wgA==
+"@a11ywatch/pagemind@^0.5.121":
+  version "0.5.121"
+  resolved "https://registry.yarnpkg.com/@a11ywatch/pagemind/-/pagemind-0.5.121.tgz#391811222d82bbccd89d9f8e5f98cfacbf9f4929"
+  integrity sha512-kCSmhsFZeA82Wv1iR+yI5yXnA/52XLrSTZFxmtzN3YElovZ/DP9p9bjoAGaPddAyWYv2ZyKB4I646mV2nG9+ig==
   dependencies:
     "@a11ywatch/protos" "^0.3.16"
     "@a11ywatch/website-source-builder" "^0.0.37"
     "@grpc/grpc-js" "1.8.4"
     "@grpc/proto-loader" "0.7.4"
-    a11y-js "0.0.25"
+    a11y-js "0.0.30"
     fastq "1.15.0"
     get-page-speed "1.0.1"
     lighthouse "9.6.8"
@@ -2307,13 +2307,13 @@
   resolved "https://registry.yarnpkg.com/@webgpu/types/-/types-0.1.21.tgz#b181202daec30d66ccd67264de23814cfd176d3a"
   integrity sha512-pUrWq3V5PiSGFLeLxoGqReTZmiiXwY3jRkIG5sLLKjyqNxrwm/04b4nw7LSmGWJcKk59XOM/YRTUwOzo4MMlow==
 
-a11y-js@0.0.25:
-  version "0.0.25"
-  resolved "https://registry.yarnpkg.com/a11y-js/-/a11y-js-0.0.25.tgz#90c35493b3b497e40ab9c96c3dc8ffd2dcd1e199"
-  integrity sha512-CANblTfYwJ9dNGF8oPoWetHnCfR8HGS+WxiWDoeM4R3qa8dc4qfhGwX757az5lHaYoP1WpqsXjVOSCZgZqLj2Q==
+a11y-js@0.0.30:
+  version "0.0.30"
+  resolved "https://registry.yarnpkg.com/a11y-js/-/a11y-js-0.0.30.tgz#952a25f21ab983aacb768be9165802b8e24e0e0f"
+  integrity sha512-O53lxFz4dmIKxAceFkHxVtV209nr8kW1c3ZQ1eluY0vkSiyPSMi7n6s/+irsC7/udKD55bgqahBemUbqCLwJkQ==
   dependencies:
     axe-core "4.5.1"
-    html_codesniffer_fork "2.7.5"
+    html_codesniffer_fork "3.0.2"
     jsdom "21.0.0"
 
 abab@^2.0.6:
@@ -4052,10 +4052,10 @@ html-escaper@^2.0.0:
   resolved "https://registry.yarnpkg.com/html-escaper/-/html-escaper-2.0.2.tgz#dfd60027da36a36dfcbe236262c00a5822681453"
   integrity sha512-H2iMtd0I4Mt5eYiapRdIDjp+XzelXQ0tFE4JS7YFwFevXXMmOp9myNrUvCg0D6ws8iqkRPBfKHgbwig1SmlLfg==
 
-html_codesniffer_fork@2.7.5:
-  version "2.7.5"
-  resolved "https://registry.yarnpkg.com/html_codesniffer_fork/-/html_codesniffer_fork-2.7.5.tgz#e3d3374be64ad042730c1d130854a3d5aea0c873"
-  integrity sha512-1nrhB/AcAWrxHWpViEQQrAI5C+963sFQQTBCwhGpahRtqiooxZpv0Sn3SIzH9FKc0eLCf+X053pI5Z400rACGA==
+html_codesniffer_fork@3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/html_codesniffer_fork/-/html_codesniffer_fork-3.0.2.tgz#c04039a7265c1cd5403e58c63102bf63275f296e"
+  integrity sha512-xoLyEqC44sHAd4cH0yRJRT29nUHnLofkLpI6wOEodPuRML/78bUxzi/ylTjWOPhaGaHiPzBHTVV1066lQtbdhw==
 
 htmlparser2@^8.0.1:
   version "8.0.1"
