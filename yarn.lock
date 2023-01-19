@@ -2,12 +2,12 @@
 # yarn lockfile v1
 
 
-"@a11ywatch/core@^0.6.119":
-  version "0.6.119"
-  resolved "https://registry.yarnpkg.com/@a11ywatch/core/-/core-0.6.119.tgz#7ea5c443cd9413c14d173fd15ba2347bdc4d486c"
-  integrity sha512-6Nh4dUi8FHwg8P00LpQgR3X6R+EbfUJoEjnQZIN4sflRb8DWTLdQRiZ3K/kKwT/DD2fRHcv8l1kovgPgD/1OOw==
+"@a11ywatch/core@^0.6.122":
+  version "0.6.122"
+  resolved "https://registry.yarnpkg.com/@a11ywatch/core/-/core-0.6.122.tgz#02d12b72240e9961ce6ee19d725247fd6cc1f2cc"
+  integrity sha512-2InQ7aw2vU8FvWnpnk0eg/6V4qq62JURrVB2U+gSlmggiyPDnHLoTELq1OSprVs4rLHb57TMMi831ycc26fZrA==
   dependencies:
-    "@a11ywatch/protos" "^0.3.16"
+    "@a11ywatch/protos" "^0.3.18"
     "@a11ywatch/website-source-builder" "^0.0.41"
     "@fastify/cookie" "^6.0.0"
     "@fastify/cors" "^7.0.0"
@@ -39,10 +39,10 @@
     stripe "11.1.0"
     ws "8.12.0"
 
-"@a11ywatch/crawler@^0.6.55":
-  version "0.6.55"
-  resolved "https://registry.yarnpkg.com/@a11ywatch/crawler/-/crawler-0.6.55.tgz#1253b3095b9d3da987fd8e6edf87c1461679ef7c"
-  integrity sha512-aIfLvqbNj7y3TqZlXQNu6FlnuIWIikuXbme+DnFxp/F42aRp3+A3JoshgHILI4kyTnRf0MD0/O+pyfQRbadUpQ==
+"@a11ywatch/crawler@^0.6.56":
+  version "0.6.56"
+  resolved "https://registry.yarnpkg.com/@a11ywatch/crawler/-/crawler-0.6.56.tgz#3713c97e684d0ae493214ff301c323a5c8187944"
+  integrity sha512-tuuQh8IRGtN3ecHPTOoENsd6f3eBGZLjVI53Hd0f8Tko3tSnwkzv7Dd1xn8hR67v4oZqWoY1f0PkzntYC7TAkA==
 
 "@a11ywatch/elastic-cdn@^0.5.15":
   version "0.5.15"
@@ -95,6 +95,11 @@
   version "0.3.16"
   resolved "https://registry.yarnpkg.com/@a11ywatch/protos/-/protos-0.3.16.tgz#0c1ca00077c576c1521a6cb0e705fb203be3a107"
   integrity sha512-+Pp8a3wsm6o/QtqCr/GcP27JJYb+4XPVii1aKxtSYeNGs0XTwULJ7m1cdYg4U91NVZgNyQ2Z392zo8m5wMLztA==
+
+"@a11ywatch/protos@^0.3.18":
+  version "0.3.18"
+  resolved "https://registry.yarnpkg.com/@a11ywatch/protos/-/protos-0.3.18.tgz#53ae2fdfcb67ed5582ad94a2755e42b7991f54dc"
+  integrity sha512-w61pSzbbPS1ycyPvYefPrbfQ/+77c04xKtv9PBSt05rBicVp9Ad4TmTJug9cNDDBJEjhdoQWMPwRiuw+dktTBg==
 
 "@a11ywatch/website-source-builder@^0.0.37":
   version "0.0.37"
