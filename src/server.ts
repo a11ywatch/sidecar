@@ -1,6 +1,3 @@
-// top level disable storage set `A11YWATCH_NO_STORE` to false to enable storage - todo: A11YWATCH_MEMORY_ONLY
-process.env.A11YWATCH_NO_STORE =
-  process.env.A11YWATCH_NO_STORE === "false" ? "false" : "true";
 
 import { scanWebsite } from "@a11ywatch/core/core/actions/crawl/scan";
 import { crawlMultiSite } from "@a11ywatch/core/core/actions/accessibility/crawl";
@@ -86,7 +83,7 @@ const initApplication = () => {
     return new Promise(async (resolve) => {
       if (!startedApp) {
         await Promise.all(
-          ["elastic-cdn", "mav", "pagemind", "crawler"].map(
+          ["mav", "pagemind", "crawler"].map(
             (mname) => import(`@a11ywatch/${mname}`)
           )
         );
