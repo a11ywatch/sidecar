@@ -2,18 +2,18 @@
 # yarn lockfile v1
 
 
-"@a11ywatch/core@^0.7.3":
-  version "0.7.3"
-  resolved "https://registry.yarnpkg.com/@a11ywatch/core/-/core-0.7.3.tgz#204014d43ed4213d796805ce7b1841fa385d3411"
-  integrity sha512-V2GVdLoTmS2ADrUlvo/S2FBen2FtEACPB/d0DrX7auQYdgHVfVRhzJMRjQEZxSoB3VxjdvKBHhwzpGp0oLqtpw==
+"@a11ywatch/core@^0.7.29":
+  version "0.7.29"
+  resolved "https://registry.yarnpkg.com/@a11ywatch/core/-/core-0.7.29.tgz#999bacccda3731a81cccade3b0b10771ba17db89"
+  integrity sha512-DNAUkRJrzZp/NU6bDZBlRoe9/qyFK6eEd4GfSE84H5PLVVVxThJ5AZeEMZr7kqdV5opGT81D//T5d326uDYYvg==
   dependencies:
     "@a11ywatch/protos" "^0.4.3"
-    "@a11ywatch/website-source-builder" "^0.0.41"
+    "@a11ywatch/website-source-builder" "^0.1.8"
     "@fastify/cookie" "^6.0.0"
     "@fastify/cors" "^7.0.0"
     "@fastify/rate-limit" "^6.0.1"
     "@graphql-tools/schema" "^9.0.12"
-    "@grpc/grpc-js" "1.8.4"
+    "@grpc/grpc-js" "1.8.5"
     "@grpc/proto-loader" "0.7.4"
     apollo-server "3.11.1"
     apollo-server-core "3.11.1"
@@ -39,10 +39,10 @@
     stripe "11.1.0"
     ws "8.12.0"
 
-"@a11ywatch/crawler@^0.6.58":
-  version "0.6.58"
-  resolved "https://registry.yarnpkg.com/@a11ywatch/crawler/-/crawler-0.6.58.tgz#455d7e87993972ea03a0700e78da31bebd6566fd"
-  integrity sha512-2qVnQp1EpNho6+S/z8mI/pjSXVXoeVk9xjXLxR3hfh5s02HRRxk/pj4yPqKBxmVoWbUlNhRf8ozDysRbuMau6Q==
+"@a11ywatch/crawler@^0.6.61":
+  version "0.6.61"
+  resolved "https://registry.yarnpkg.com/@a11ywatch/crawler/-/crawler-0.6.61.tgz#eedf6a306a8eb6bad99317ff6f694c6ffdbcbc04"
+  integrity sha512-pQECcClDw3nDqW8cPTNExxbpMT1bLRGFBwCY97u1Uko+sVCcgamBmvn8lxvZQ/brtlNLN0AQ9WWry0syQTs3kA==
 
 "@a11ywatch/mav@^0.5.14":
   version "0.5.14"
@@ -63,16 +63,16 @@
     jpeg-js "^0.4.4"
     tensornet "1.0.14"
 
-"@a11ywatch/pagemind@^0.7.3":
-  version "0.7.3"
-  resolved "https://registry.yarnpkg.com/@a11ywatch/pagemind/-/pagemind-0.7.3.tgz#c93c6f5818e4f1adcdb85d50561cfef460015728"
-  integrity sha512-mg0dpckN/t305k6RBYQQ2Prujer1bW8ypQK2A9CMg7b3YxLOkc8FBHYOJeclZdY0fODeJ9gKU+JHuna3gX9J1A==
+"@a11ywatch/pagemind@^0.7.8":
+  version "0.7.8"
+  resolved "https://registry.yarnpkg.com/@a11ywatch/pagemind/-/pagemind-0.7.8.tgz#20e1b0e4b7e1bb39b488eca6b9fd2fff6e70367e"
+  integrity sha512-9Zl9YxOKFRUESkcX3F7VOgNupTb7o+19jWB051Lm++CLAKqhI5KDL3th4T+/NEA8+llZ5VZZhR3hv4okKAKovw==
   dependencies:
     "@a11ywatch/protos" "^0.4.3"
-    "@a11ywatch/website-source-builder" "^0.0.43"
-    "@grpc/grpc-js" "1.8.4"
+    "@a11ywatch/website-source-builder" "^0.1.8"
+    "@grpc/grpc-js" "1.8.5"
     "@grpc/proto-loader" "0.7.4"
-    a11y-js "0.0.30"
+    a11y-js "0.1.2"
     fastq "1.15.0"
     get-page-speed "1.0.1"
     lighthouse "9.6.8"
@@ -94,15 +94,10 @@
   resolved "https://registry.yarnpkg.com/@a11ywatch/website-source-builder/-/website-source-builder-0.0.37.tgz#96d5a9dae2dfe184ad5d7a3f554d9ffba0d6f911"
   integrity sha512-YKw2nYq9RvUrTXEjoD5emRJsHCtYuX1fdHvX9mtqKg2vR85OMRLJSGMbV/kHCkpWWcK/VtOlollG51OcSSfqpA==
 
-"@a11ywatch/website-source-builder@^0.0.41":
-  version "0.0.41"
-  resolved "https://registry.yarnpkg.com/@a11ywatch/website-source-builder/-/website-source-builder-0.0.41.tgz#c5bb7062a51d298e61a9e59d0331ce62b921cbd1"
-  integrity sha512-Uzw2PQ2KIyaXtVlCCQKmQ5AJeThz388S7+uiJjbv+JiJ91Wo/NsaURdrRhms62ZYuQof9iOzisS+GfE1E06c2w==
-
-"@a11ywatch/website-source-builder@^0.0.43":
-  version "0.0.43"
-  resolved "https://registry.yarnpkg.com/@a11ywatch/website-source-builder/-/website-source-builder-0.0.43.tgz#a8beefb2e18fed20b7c5eb5e171af4b2e6944fa6"
-  integrity sha512-IzfMJjkKJ8AMxA0ivxqAbZTWde3ePzAvDpF+uAY7T8mDYa/LW+395N/KSnNHT7PGptOb3hJfptQz3ShuuHTirA==
+"@a11ywatch/website-source-builder@^0.1.8":
+  version "0.1.8"
+  resolved "https://registry.yarnpkg.com/@a11ywatch/website-source-builder/-/website-source-builder-0.1.8.tgz#646f6231fb207b4daf230c9a00aa84fc78314327"
+  integrity sha512-QK+lL6PB+NosUlJQ9Y5mToQu0I7LoAL1w1+8DctPr5jNH2i6tEuMzzl3Ko9DexqEp/dADBaWc929a39gSlT8Zw==
 
 "@ampproject/remapping@^2.1.0":
   version "2.2.0"
@@ -1482,6 +1477,14 @@
     "@grpc/proto-loader" "^0.7.0"
     "@types/node" ">=12.12.47"
 
+"@grpc/grpc-js@1.8.5":
+  version "1.8.5"
+  resolved "https://registry.yarnpkg.com/@grpc/grpc-js/-/grpc-js-1.8.5.tgz#54409ae33db7ae2130a8f0187b62facbdec41ef4"
+  integrity sha512-+hpNMAz+RdeckGdGRSHj8gjBEv8crcrTZjsagOZtYqCoWu4JXuNqRlxniwxhKFWxNrxZpSMQLmAjIkoDIgFjyQ==
+  dependencies:
+    "@grpc/proto-loader" "^0.7.0"
+    "@types/node" ">=12.12.47"
+
 "@grpc/proto-loader@0.7.4", "@grpc/proto-loader@^0.7.0":
   version "0.7.4"
   resolved "https://registry.yarnpkg.com/@grpc/proto-loader/-/proto-loader-0.7.4.tgz#4946a84fbf47c3ddd4e6a97acb79d69a9f47ebf2"
@@ -2305,13 +2308,13 @@
   resolved "https://registry.yarnpkg.com/@webgpu/types/-/types-0.1.21.tgz#b181202daec30d66ccd67264de23814cfd176d3a"
   integrity sha512-pUrWq3V5PiSGFLeLxoGqReTZmiiXwY3jRkIG5sLLKjyqNxrwm/04b4nw7LSmGWJcKk59XOM/YRTUwOzo4MMlow==
 
-a11y-js@0.0.30:
-  version "0.0.30"
-  resolved "https://registry.yarnpkg.com/a11y-js/-/a11y-js-0.0.30.tgz#952a25f21ab983aacb768be9165802b8e24e0e0f"
-  integrity sha512-O53lxFz4dmIKxAceFkHxVtV209nr8kW1c3ZQ1eluY0vkSiyPSMi7n6s/+irsC7/udKD55bgqahBemUbqCLwJkQ==
+a11y-js@0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/a11y-js/-/a11y-js-0.1.2.tgz#26169a77bb9d4e1016237cbc32fdba2c8c12a180"
+  integrity sha512-Zt/H0M2PDCr5y2iu0KQMwDaSnq/AvG1EQdadmHBt+igsd0A2s73zgT2ByFJp6+ncTxLjkVCX/crM8gCcZ61DFA==
   dependencies:
     axe-core "4.5.1"
-    html_codesniffer_fork "3.0.2"
+    html_codesniffer_fork "3.0.3-canary-1"
     jsdom "21.0.0"
 
 abab@^2.0.6:
@@ -3994,10 +3997,10 @@ html-escaper@^2.0.0:
   resolved "https://registry.yarnpkg.com/html-escaper/-/html-escaper-2.0.2.tgz#dfd60027da36a36dfcbe236262c00a5822681453"
   integrity sha512-H2iMtd0I4Mt5eYiapRdIDjp+XzelXQ0tFE4JS7YFwFevXXMmOp9myNrUvCg0D6ws8iqkRPBfKHgbwig1SmlLfg==
 
-html_codesniffer_fork@3.0.2:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/html_codesniffer_fork/-/html_codesniffer_fork-3.0.2.tgz#c04039a7265c1cd5403e58c63102bf63275f296e"
-  integrity sha512-xoLyEqC44sHAd4cH0yRJRT29nUHnLofkLpI6wOEodPuRML/78bUxzi/ylTjWOPhaGaHiPzBHTVV1066lQtbdhw==
+html_codesniffer_fork@3.0.3-canary-1:
+  version "3.0.3-canary-1"
+  resolved "https://registry.yarnpkg.com/html_codesniffer_fork/-/html_codesniffer_fork-3.0.3-canary-1.tgz#3eb8757e931d5335ce8e2fda8f4ae32a6a357582"
+  integrity sha512-08o5i4J81RjYo0kboni6KD9qjGP+zi7m4Fk/X3hWHYv7Uosm4k/H7UuCh/vIFqK84aI1r4GfRCejQ+qxkEnIJQ==
 
 htmlparser2@^8.0.1:
   version "8.0.1"
