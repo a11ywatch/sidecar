@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@a11ywatch/core@^0.7.29":
-  version "0.7.29"
-  resolved "https://registry.yarnpkg.com/@a11ywatch/core/-/core-0.7.29.tgz#999bacccda3731a81cccade3b0b10771ba17db89"
-  integrity sha512-DNAUkRJrzZp/NU6bDZBlRoe9/qyFK6eEd4GfSE84H5PLVVVxThJ5AZeEMZr7kqdV5opGT81D//T5d326uDYYvg==
+"@a11ywatch/core@^0.7.31":
+  version "0.7.31"
+  resolved "https://registry.yarnpkg.com/@a11ywatch/core/-/core-0.7.31.tgz#6cae7cd919f82c0b523e4091973a467069c2be58"
+  integrity sha512-97gDof1vExkS3fsAuGLuVtwbCHUHSW4lMsbPoGCx9JCBWvYDGzmrKr19R13whtGAE5wpy6tC2SBaiwzuVWnlhQ==
   dependencies:
     "@a11ywatch/protos" "^0.4.3"
     "@a11ywatch/website-source-builder" "^0.1.8"
@@ -13,7 +13,7 @@
     "@fastify/cors" "^7.0.0"
     "@fastify/rate-limit" "^6.0.1"
     "@graphql-tools/schema" "^9.0.12"
-    "@grpc/grpc-js" "1.8.5"
+    "@grpc/grpc-js" "1.8.7"
     "@grpc/proto-loader" "0.7.4"
     apollo-server "3.11.1"
     apollo-server-core "3.11.1"
@@ -44,15 +44,15 @@
   resolved "https://registry.yarnpkg.com/@a11ywatch/crawler/-/crawler-0.6.70.tgz#98b6a909ac6ceac4fbbe436c40b9cd830caf9d80"
   integrity sha512-+oz2bAhvnkkZu0WxQUynzeZGuIEODAkHSc/LsglUVaE9TcC+dUeFrdUvqcpVMnYQbEtk5I7PJHrbGR3B7HBuKg==
 
-"@a11ywatch/mav@^0.5.14":
-  version "0.5.14"
-  resolved "https://registry.yarnpkg.com/@a11ywatch/mav/-/mav-0.5.14.tgz#41fbe9219e692eb7ec0e5a8a8e2cc3cb87950788"
-  integrity sha512-yT3ZOkQ7nmjiGRW/vyeen/X9LSt+RjW+UkymQLV7+adM8iFEtl+AiZnvtsepXdoxfgSPoZ96aZv4L5nOxPHbNg==
+"@a11ywatch/mav@^0.7.12":
+  version "0.7.12"
+  resolved "https://registry.yarnpkg.com/@a11ywatch/mav/-/mav-0.7.12.tgz#b404ef86fd6113ffb65c47322cc7951128c813aa"
+  integrity sha512-OH6b4msFEQGmZgK0MAOf55nrtbZ3D7a3PMgbEm8QIhjb/6NunZuHHul+NLu5mmvZHVuJI5Ve5TmTMu4AR+FUPQ==
   dependencies:
-    "@a11ywatch/protos" "^0.3.16"
+    "@a11ywatch/protos" "^0.4.3"
     "@a11ywatch/website-source-builder" "^0.0.37"
     "@azure/cognitiveservices-computervision" "^8.2.0"
-    "@grpc/grpc-js" "1.8.4"
+    "@grpc/grpc-js" "1.8.7"
     "@grpc/proto-loader" "0.7.4"
     "@tensorflow-models/coco-ssd" "2.2.2"
     "@tensorflow-models/mobilenet" "2.1.0"
@@ -63,26 +63,21 @@
     jpeg-js "^0.4.4"
     tensornet "1.0.14"
 
-"@a11ywatch/pagemind@^0.7.8":
-  version "0.7.8"
-  resolved "https://registry.yarnpkg.com/@a11ywatch/pagemind/-/pagemind-0.7.8.tgz#20e1b0e4b7e1bb39b488eca6b9fd2fff6e70367e"
-  integrity sha512-9Zl9YxOKFRUESkcX3F7VOgNupTb7o+19jWB051Lm++CLAKqhI5KDL3th4T+/NEA8+llZ5VZZhR3hv4okKAKovw==
+"@a11ywatch/pagemind@^0.7.14":
+  version "0.7.14"
+  resolved "https://registry.yarnpkg.com/@a11ywatch/pagemind/-/pagemind-0.7.14.tgz#dfccbde092c7647d58c52f36aacbfc1dd6cc5655"
+  integrity sha512-/JcocFKlfaIYHzAPPLsswIRjD+3hGycdXzThid31NmDktv6BfOFx7bMJC1vVdjrC6AfNzky8GH+miXv6gwg2bg==
   dependencies:
     "@a11ywatch/protos" "^0.4.3"
     "@a11ywatch/website-source-builder" "^0.1.8"
-    "@grpc/grpc-js" "1.8.5"
+    "@grpc/grpc-js" "1.8.7"
     "@grpc/proto-loader" "0.7.4"
-    a11y-js "0.1.2"
+    a11y-js "0.1.8"
     fastq "1.15.0"
     get-page-speed "1.0.1"
     lighthouse "9.6.8"
     pb-util "1.0.3"
-    puppeteer "19.4.1"
-
-"@a11ywatch/protos@^0.3.16":
-  version "0.3.16"
-  resolved "https://registry.yarnpkg.com/@a11ywatch/protos/-/protos-0.3.16.tgz#0c1ca00077c576c1521a6cb0e705fb203be3a107"
-  integrity sha512-+Pp8a3wsm6o/QtqCr/GcP27JJYb+4XPVii1aKxtSYeNGs0XTwULJ7m1cdYg4U91NVZgNyQ2Z392zo8m5wMLztA==
+    puppeteer "19.6.0"
 
 "@a11ywatch/protos@^0.4.3":
   version "0.4.3"
@@ -1469,18 +1464,10 @@
     camel-case "4.1.2"
     tslib "~2.2.0"
 
-"@grpc/grpc-js@1.8.4":
-  version "1.8.4"
-  resolved "https://registry.yarnpkg.com/@grpc/grpc-js/-/grpc-js-1.8.4.tgz#316674e8905e2dd310d8aa60331e05b32584e6ad"
-  integrity sha512-oaETBotls7FTBpySg5dhyUCyXSxSeCMmkBBXHXG1iw57MiNoB6D7VRhkrXYbwyHM3Q3Afjp4KlsBX0Zb+ELZXw==
-  dependencies:
-    "@grpc/proto-loader" "^0.7.0"
-    "@types/node" ">=12.12.47"
-
-"@grpc/grpc-js@1.8.5":
-  version "1.8.5"
-  resolved "https://registry.yarnpkg.com/@grpc/grpc-js/-/grpc-js-1.8.5.tgz#54409ae33db7ae2130a8f0187b62facbdec41ef4"
-  integrity sha512-+hpNMAz+RdeckGdGRSHj8gjBEv8crcrTZjsagOZtYqCoWu4JXuNqRlxniwxhKFWxNrxZpSMQLmAjIkoDIgFjyQ==
+"@grpc/grpc-js@1.8.7":
+  version "1.8.7"
+  resolved "https://registry.yarnpkg.com/@grpc/grpc-js/-/grpc-js-1.8.7.tgz#2154fc0134462ad45f4134e8b54682a25ed05956"
+  integrity sha512-dRAWjRFN1Zy9mzPNLkFFIWT8T6C9euwluzCHZUKuhC+Bk3MayNPcpgDRyG+sg+n2sitEUySKxUynirVpu9ItKw==
   dependencies:
     "@grpc/proto-loader" "^0.7.0"
     "@types/node" ">=12.12.47"
@@ -2308,13 +2295,13 @@
   resolved "https://registry.yarnpkg.com/@webgpu/types/-/types-0.1.21.tgz#b181202daec30d66ccd67264de23814cfd176d3a"
   integrity sha512-pUrWq3V5PiSGFLeLxoGqReTZmiiXwY3jRkIG5sLLKjyqNxrwm/04b4nw7LSmGWJcKk59XOM/YRTUwOzo4MMlow==
 
-a11y-js@0.1.2:
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/a11y-js/-/a11y-js-0.1.2.tgz#26169a77bb9d4e1016237cbc32fdba2c8c12a180"
-  integrity sha512-Zt/H0M2PDCr5y2iu0KQMwDaSnq/AvG1EQdadmHBt+igsd0A2s73zgT2ByFJp6+ncTxLjkVCX/crM8gCcZ61DFA==
+a11y-js@0.1.8:
+  version "0.1.8"
+  resolved "https://registry.yarnpkg.com/a11y-js/-/a11y-js-0.1.8.tgz#9ef6c5e7160ae8a939294fdfd5af2fb2a7e73d1e"
+  integrity sha512-MdLKAPE4pWJKq8x/OmQcFnDnX7N/9X+wh2JlUUwww6/WYzAO4JHLBfZDQ6IQvoIA/eRPoRz6ytWQpMAi2pHmpg==
   dependencies:
     axe-core "4.5.1"
-    html_codesniffer_fork "3.0.3-canary-1"
+    html_codesniffer_fork "3.0.6"
     jsdom "21.0.0"
 
 abab@^2.0.6:
@@ -3333,10 +3320,10 @@ detect-newline@^3.0.0:
   resolved "https://registry.yarnpkg.com/detect-newline/-/detect-newline-3.1.0.tgz#576f5dfc63ae1a192ff192d8ad3af6308991b651"
   integrity sha512-TLz+x/vEXm/Y7P7wn1EJFNLxYpUD4TgMosxY6fAVJUnJMbupHBOncxyWUG9OpTaH9EBD7uFI5LfEgmMOc54DsA==
 
-devtools-protocol@0.0.1068969:
-  version "0.0.1068969"
-  resolved "https://registry.yarnpkg.com/devtools-protocol/-/devtools-protocol-0.0.1068969.tgz#8b9a4bc48aed1453bed08d62b07481f9abf4d6d8"
-  integrity sha512-ATFTrPbY1dKYhPPvpjtwWKSK2mIwGmRwX54UASn9THEuIZCe2n9k3vVuMmt6jWeL+e5QaaguEv/pMyR+JQB7VQ==
+devtools-protocol@0.0.1082910:
+  version "0.0.1082910"
+  resolved "https://registry.yarnpkg.com/devtools-protocol/-/devtools-protocol-0.0.1082910.tgz#d79490dc66ef23eb17a24423c9ce5ce661714a91"
+  integrity sha512-RqoZ2GmqaNxyx+99L/RemY5CkwG9D0WEfOKxekwCRXOGrDCep62ngezEJUVMq6rISYQ+085fJnWDQqGHlxVNww==
 
 devtools-protocol@0.0.981744:
   version "0.0.981744"
@@ -3997,10 +3984,10 @@ html-escaper@^2.0.0:
   resolved "https://registry.yarnpkg.com/html-escaper/-/html-escaper-2.0.2.tgz#dfd60027da36a36dfcbe236262c00a5822681453"
   integrity sha512-H2iMtd0I4Mt5eYiapRdIDjp+XzelXQ0tFE4JS7YFwFevXXMmOp9myNrUvCg0D6ws8iqkRPBfKHgbwig1SmlLfg==
 
-html_codesniffer_fork@3.0.3-canary-1:
-  version "3.0.3-canary-1"
-  resolved "https://registry.yarnpkg.com/html_codesniffer_fork/-/html_codesniffer_fork-3.0.3-canary-1.tgz#3eb8757e931d5335ce8e2fda8f4ae32a6a357582"
-  integrity sha512-08o5i4J81RjYo0kboni6KD9qjGP+zi7m4Fk/X3hWHYv7Uosm4k/H7UuCh/vIFqK84aI1r4GfRCejQ+qxkEnIJQ==
+html_codesniffer_fork@3.0.6:
+  version "3.0.6"
+  resolved "https://registry.yarnpkg.com/html_codesniffer_fork/-/html_codesniffer_fork-3.0.6.tgz#48196abfa69a48086dadf5ca95ac682ccabc88d0"
+  integrity sha512-C+tWcxFy5mWQYLQySdemlqMKiWBKbzIrb5OIaWf9pKcEI006Md+lXFKj4RMOON8QfhURBH1XmYoNGy3OmD+H6A==
 
 htmlparser2@^8.0.1:
   version "8.0.1"
@@ -5618,14 +5605,14 @@ punycode@^2.1.0, punycode@^2.1.1:
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-2.1.1.tgz#b58b010ac40c22c5657616c8d2c2c02c7bf479ec"
   integrity sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A==
 
-puppeteer-core@19.4.1:
-  version "19.4.1"
-  resolved "https://registry.yarnpkg.com/puppeteer-core/-/puppeteer-core-19.4.1.tgz#f4875943841ebdb6fc2ad7a475add958692b0237"
-  integrity sha512-JHIuqtqrUAx4jGOTxXu4ilapV2jabxtVMA/e4wwFUMvtSsqK4nVBSI+Z1SKDoz7gRy/JUIc8WzmfocCa6SIZ1w==
+puppeteer-core@19.6.0:
+  version "19.6.0"
+  resolved "https://registry.yarnpkg.com/puppeteer-core/-/puppeteer-core-19.6.0.tgz#7f1708a66d6901cd71c28f6e105c9aff73d0ec57"
+  integrity sha512-GvqWdHr9eY/MFR5pXf9o0apnrTmG0hhS7/TtCPfeAvCbaUS1bsLMZWxNGvI/QbviRu4xxi6HrR7VW4x/4esq1Q==
   dependencies:
     cross-fetch "3.1.5"
     debug "4.3.4"
-    devtools-protocol "0.0.1068969"
+    devtools-protocol "0.0.1082910"
     extract-zip "2.0.1"
     https-proxy-agent "5.0.1"
     proxy-from-env "1.1.0"
@@ -5652,16 +5639,16 @@ puppeteer-core@^13.7.0:
     unbzip2-stream "1.4.3"
     ws "8.5.0"
 
-puppeteer@19.4.1:
-  version "19.4.1"
-  resolved "https://registry.yarnpkg.com/puppeteer/-/puppeteer-19.4.1.tgz#cac7d3f0084badebb8ebacbe6f4d7262e7f21818"
-  integrity sha512-PCnrR13B8A+VSEDXRmrNXRZbrkF1tfsI1hKSC7vs13eNS6CUD3Y4FA8SF8/VZy+Pm1kg5AggJT2Nu3HLAtGkFg==
+puppeteer@19.6.0:
+  version "19.6.0"
+  resolved "https://registry.yarnpkg.com/puppeteer/-/puppeteer-19.6.0.tgz#89a0bfa7da3db12b40ff9fe6c48cbc0eb149e03b"
+  integrity sha512-KpRjn/bosTWe8xOQ/F5J1UmQ4inR77ADddn8G6MqMPp/y9Tl+7EycXgrjO0/3i/OQfHi5bsvkTKXRkm0ieo/ew==
   dependencies:
     cosmiconfig "8.0.0"
     https-proxy-agent "5.0.1"
     progress "2.0.3"
     proxy-from-env "1.1.0"
-    puppeteer-core "19.4.1"
+    puppeteer-core "19.6.0"
 
 qs@6.11.0, qs@^6.11.0:
   version "6.11.0"
