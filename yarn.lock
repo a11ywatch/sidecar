@@ -2,12 +2,12 @@
 # yarn lockfile v1
 
 
-"@a11ywatch/core@^0.7.31":
-  version "0.7.31"
-  resolved "https://registry.yarnpkg.com/@a11ywatch/core/-/core-0.7.31.tgz#6cae7cd919f82c0b523e4091973a467069c2be58"
-  integrity sha512-97gDof1vExkS3fsAuGLuVtwbCHUHSW4lMsbPoGCx9JCBWvYDGzmrKr19R13whtGAE5wpy6tC2SBaiwzuVWnlhQ==
+"@a11ywatch/core@^0.7.32":
+  version "0.7.32"
+  resolved "https://registry.yarnpkg.com/@a11ywatch/core/-/core-0.7.32.tgz#961b89bf06df874d13169c45552a2a16ff300fbe"
+  integrity sha512-oE6f6pH412Z/XSbDrUfNeloACZ+gsyDPs+hB/jEl5BAoe8rxdDZBRUF2ZvqH390QtPCjvcsRYZccmfS1GgEe1w==
   dependencies:
-    "@a11ywatch/protos" "^0.4.3"
+    "@a11ywatch/protos" "^0.4.4"
     "@a11ywatch/website-source-builder" "^0.1.8"
     "@fastify/cookie" "^6.0.0"
     "@fastify/cors" "^7.0.0"
@@ -63,26 +63,31 @@
     jpeg-js "^0.4.4"
     tensornet "1.0.14"
 
-"@a11ywatch/pagemind@^0.7.14":
-  version "0.7.14"
-  resolved "https://registry.yarnpkg.com/@a11ywatch/pagemind/-/pagemind-0.7.14.tgz#dfccbde092c7647d58c52f36aacbfc1dd6cc5655"
-  integrity sha512-/JcocFKlfaIYHzAPPLsswIRjD+3hGycdXzThid31NmDktv6BfOFx7bMJC1vVdjrC6AfNzky8GH+miXv6gwg2bg==
+"@a11ywatch/pagemind@^0.7.22":
+  version "0.7.22"
+  resolved "https://registry.yarnpkg.com/@a11ywatch/pagemind/-/pagemind-0.7.22.tgz#91120e6974448cfbc03647da29ee11e34ceccbcb"
+  integrity sha512-6ydI8rQfJNSxHCPw/AfM8OqoJDUv5WsrSdszpFD5eoOYRAV2DeaXkZOxC5341DLtf5m+M3w9KWEtwGzXyyGgUA==
   dependencies:
     "@a11ywatch/protos" "^0.4.3"
     "@a11ywatch/website-source-builder" "^0.1.8"
     "@grpc/grpc-js" "1.8.7"
     "@grpc/proto-loader" "0.7.4"
-    a11y-js "0.1.8"
+    a11y-js "0.1.18"
     fastq "1.15.0"
     get-page-speed "1.0.1"
     lighthouse "9.6.8"
     pb-util "1.0.3"
-    puppeteer "19.6.0"
+    puppeteer "19.6.1"
 
 "@a11ywatch/protos@^0.4.3":
   version "0.4.3"
   resolved "https://registry.yarnpkg.com/@a11ywatch/protos/-/protos-0.4.3.tgz#af390f87c874d9caaeece7d234a8509cfe3770b0"
   integrity sha512-yrCueJOdo6lrVPB/YtUJHyZF+pkIIDT76VE/c6T/u+tdwJLnbmHhhwQiKCks0btYmX0P3PDo0AIl4PFb3Zp75w==
+
+"@a11ywatch/protos@^0.4.4":
+  version "0.4.4"
+  resolved "https://registry.yarnpkg.com/@a11ywatch/protos/-/protos-0.4.4.tgz#1952f05d668e5842e6a9b120fc2691fe9a1b839c"
+  integrity sha512-AGHO5GCuNeynuMy/+B1NxwFXm5jrQyF2p26d3UlyCSW0ZNIhddQxmtfeWyuPDu76EWtzNJH/izqckTxJWGDKEg==
 
 "@a11ywatch/website-source-builder@^0.0.37":
   version "0.0.37"
@@ -2295,13 +2300,13 @@
   resolved "https://registry.yarnpkg.com/@webgpu/types/-/types-0.1.21.tgz#b181202daec30d66ccd67264de23814cfd176d3a"
   integrity sha512-pUrWq3V5PiSGFLeLxoGqReTZmiiXwY3jRkIG5sLLKjyqNxrwm/04b4nw7LSmGWJcKk59XOM/YRTUwOzo4MMlow==
 
-a11y-js@0.1.8:
-  version "0.1.8"
-  resolved "https://registry.yarnpkg.com/a11y-js/-/a11y-js-0.1.8.tgz#9ef6c5e7160ae8a939294fdfd5af2fb2a7e73d1e"
-  integrity sha512-MdLKAPE4pWJKq8x/OmQcFnDnX7N/9X+wh2JlUUwww6/WYzAO4JHLBfZDQ6IQvoIA/eRPoRz6ytWQpMAi2pHmpg==
+a11y-js@0.1.18:
+  version "0.1.18"
+  resolved "https://registry.yarnpkg.com/a11y-js/-/a11y-js-0.1.18.tgz#9cdb674b1d82a8365483bed2d8a318014f00b5b6"
+  integrity sha512-NyNzaRb8mKP3RfYQvsn3GVrRDAP7XT77LHLRG3lPsl65VX1894S5me6RKgzm+wZ3lIIZ2zCpaFJ+dZkPTLdpYg==
   dependencies:
     axe-core "4.5.1"
-    html_codesniffer_fork "3.0.6"
+    html_codesniffer_fork "3.0.14"
     jsdom "21.0.0"
 
 abab@^2.0.6:
@@ -3984,10 +3989,10 @@ html-escaper@^2.0.0:
   resolved "https://registry.yarnpkg.com/html-escaper/-/html-escaper-2.0.2.tgz#dfd60027da36a36dfcbe236262c00a5822681453"
   integrity sha512-H2iMtd0I4Mt5eYiapRdIDjp+XzelXQ0tFE4JS7YFwFevXXMmOp9myNrUvCg0D6ws8iqkRPBfKHgbwig1SmlLfg==
 
-html_codesniffer_fork@3.0.6:
-  version "3.0.6"
-  resolved "https://registry.yarnpkg.com/html_codesniffer_fork/-/html_codesniffer_fork-3.0.6.tgz#48196abfa69a48086dadf5ca95ac682ccabc88d0"
-  integrity sha512-C+tWcxFy5mWQYLQySdemlqMKiWBKbzIrb5OIaWf9pKcEI006Md+lXFKj4RMOON8QfhURBH1XmYoNGy3OmD+H6A==
+html_codesniffer_fork@3.0.14:
+  version "3.0.14"
+  resolved "https://registry.yarnpkg.com/html_codesniffer_fork/-/html_codesniffer_fork-3.0.14.tgz#b424aa001d6d2aab4d4e3bdf1b1ca4fbbf53b762"
+  integrity sha512-BnVuu36CWmwZDwoxTnFR4E8cxs/WEDIQxyRF6aUiVGHo0R6e+/EmpwTqkzOSqRju9q0W4NYS48fUwmzzCA4ghA==
 
 htmlparser2@^8.0.1:
   version "8.0.1"
@@ -5605,10 +5610,10 @@ punycode@^2.1.0, punycode@^2.1.1:
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-2.1.1.tgz#b58b010ac40c22c5657616c8d2c2c02c7bf479ec"
   integrity sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A==
 
-puppeteer-core@19.6.0:
-  version "19.6.0"
-  resolved "https://registry.yarnpkg.com/puppeteer-core/-/puppeteer-core-19.6.0.tgz#7f1708a66d6901cd71c28f6e105c9aff73d0ec57"
-  integrity sha512-GvqWdHr9eY/MFR5pXf9o0apnrTmG0hhS7/TtCPfeAvCbaUS1bsLMZWxNGvI/QbviRu4xxi6HrR7VW4x/4esq1Q==
+puppeteer-core@19.6.1:
+  version "19.6.1"
+  resolved "https://registry.yarnpkg.com/puppeteer-core/-/puppeteer-core-19.6.1.tgz#952726a364f3acff8cd8df8def798555962dbfe0"
+  integrity sha512-TdbqPYGHRgaqO1XPOM5ThE7uSs5NsYraOUU546okJz7jR9He5wnGuFd6LppoeWt8a4eM5RgzmICxeDUD5QwQtA==
   dependencies:
     cross-fetch "3.1.5"
     debug "4.3.4"
@@ -5639,16 +5644,16 @@ puppeteer-core@^13.7.0:
     unbzip2-stream "1.4.3"
     ws "8.5.0"
 
-puppeteer@19.6.0:
-  version "19.6.0"
-  resolved "https://registry.yarnpkg.com/puppeteer/-/puppeteer-19.6.0.tgz#89a0bfa7da3db12b40ff9fe6c48cbc0eb149e03b"
-  integrity sha512-KpRjn/bosTWe8xOQ/F5J1UmQ4inR77ADddn8G6MqMPp/y9Tl+7EycXgrjO0/3i/OQfHi5bsvkTKXRkm0ieo/ew==
+puppeteer@19.6.1:
+  version "19.6.1"
+  resolved "https://registry.yarnpkg.com/puppeteer/-/puppeteer-19.6.1.tgz#25d0a188d44b99d8ea3870f89ea1931a48def189"
+  integrity sha512-gcqNilThyBPrUMvo2UZNG4KVoMjhCfCV7/84mTVk3oo0k65iO7hEKrB4waiJ15O0MHQpM79+XBHavRgBbRXUWQ==
   dependencies:
     cosmiconfig "8.0.0"
     https-proxy-agent "5.0.1"
     progress "2.0.3"
     proxy-from-env "1.1.0"
-    puppeteer-core "19.6.0"
+    puppeteer-core "19.6.1"
 
 qs@6.11.0, qs@^6.11.0:
   version "6.11.0"
