@@ -1,6 +1,6 @@
 {
   "name": "@a11ywatch/a11ywatch",
-  "version": "0.2.132",
+  "version": "0.2.135",
   "description": "Powerful web accessibility sidecar",
   "main": "./server.js",
   "author": "Jeff Mendez <jeff@a11ywatch.com>",
@@ -27,9 +27,9 @@
   "license": "MIT",
   "dependencies": {
     "@a11ywatch/core": "^0.7.33",
-    "@a11ywatch/crawler": "^0.6.70",
+    "@a11ywatch/crawler": "^0.6.73",
     "@a11ywatch/mav": "^0.7.12",
-    "@a11ywatch/pagemind": "^0.7.30",
+    "@a11ywatch/pagemind": "^0.7.31",
     "@a11ywatch/protos": "^0.4.4"
   },
   "devDependencies": {
