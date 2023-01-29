@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@a11ywatch/core@^0.7.32":
-  version "0.7.32"
-  resolved "https://registry.yarnpkg.com/@a11ywatch/core/-/core-0.7.32.tgz#961b89bf06df874d13169c45552a2a16ff300fbe"
-  integrity sha512-oE6f6pH412Z/XSbDrUfNeloACZ+gsyDPs+hB/jEl5BAoe8rxdDZBRUF2ZvqH390QtPCjvcsRYZccmfS1GgEe1w==
+"@a11ywatch/core@^0.7.33":
+  version "0.7.33"
+  resolved "https://registry.yarnpkg.com/@a11ywatch/core/-/core-0.7.33.tgz#2711b9f4c104e074b744e3604a415dd705311e43"
+  integrity sha512-HYher/3KJkgI5jilz3BCdOHi6w1Jhs/a2wzmYNq13Juy9Zlm5VRXtV+hI0/jJAARKo0xG6xNB0Uqsqb5sphMHA==
   dependencies:
     "@a11ywatch/protos" "^0.4.4"
     "@a11ywatch/website-source-builder" "^0.1.8"
@@ -63,16 +63,16 @@
     jpeg-js "^0.4.4"
     tensornet "1.0.14"
 
-"@a11ywatch/pagemind@^0.7.28":
-  version "0.7.28"
-  resolved "https://registry.yarnpkg.com/@a11ywatch/pagemind/-/pagemind-0.7.28.tgz#81da37b815042055cbed0d26037fad0ef0d2940d"
-  integrity sha512-uckWPIY0XXQHFzu2VDHAjjU1xjjaxfvqzIC6ny7aWG071RU0MrDynHJVoHFW+jVMYavEta59vPb2UliI0tcU4Q==
+"@a11ywatch/pagemind@^0.7.30":
+  version "0.7.30"
+  resolved "https://registry.yarnpkg.com/@a11ywatch/pagemind/-/pagemind-0.7.30.tgz#c28ed1709988f77fe3e3d35a2f30393c5d12ff5b"
+  integrity sha512-UXbzlz5xPRLQG+wAx1exmGOE5zBY8YNjx1GKkzeq8XUTDiS3rYzDTO4mDOM32nTU4pNoW0cxXgAGEvsmbbkuKA==
   dependencies:
     "@a11ywatch/protos" "^0.4.3"
     "@a11ywatch/website-source-builder" "^0.1.8"
     "@grpc/grpc-js" "1.8.7"
     "@grpc/proto-loader" "0.7.4"
-    a11y-js "0.1.21"
+    a11y-js "0.2.2"
     fastq "1.15.0"
     get-page-speed "1.0.1"
     lighthouse "9.6.8"
@@ -2300,10 +2300,10 @@
   resolved "https://registry.yarnpkg.com/@webgpu/types/-/types-0.1.21.tgz#b181202daec30d66ccd67264de23814cfd176d3a"
   integrity sha512-pUrWq3V5PiSGFLeLxoGqReTZmiiXwY3jRkIG5sLLKjyqNxrwm/04b4nw7LSmGWJcKk59XOM/YRTUwOzo4MMlow==
 
-a11y-js@0.1.21:
-  version "0.1.21"
-  resolved "https://registry.yarnpkg.com/a11y-js/-/a11y-js-0.1.21.tgz#90048881ace0272a0e9c077eb2cc400d7ec46209"
-  integrity sha512-nM/Zl7CA2Fu4kHgZ+UNERtVyEmRJzD1cLkMhZIs6956Aw1Es0iwbR+cIXXCb1GJ4RPx8eOJ53vK+Z/YlDGGk6A==
+a11y-js@0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/a11y-js/-/a11y-js-0.2.2.tgz#93b7c61261fa6396110651378cae39ed4d07261a"
+  integrity sha512-071164hibaxFQvqPJhYHwNQslu/6Aj8ymEfawQjCJz9x9uwzKYaTRebZPTPt6h2PKIp5jy3RAJ7PctNoJcxpcQ==
   dependencies:
     axe-core "4.5.1"
     html_codesniffer_fork "3.1.17"
