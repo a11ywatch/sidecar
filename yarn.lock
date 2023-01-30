@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@a11ywatch/core@^0.7.34":
-  version "0.7.34"
-  resolved "https://registry.yarnpkg.com/@a11ywatch/core/-/core-0.7.34.tgz#2ad17bbc3437101d27fbbc6a2a0a8cd8a523a5a9"
-  integrity sha512-HH9R1ycX1K1BvF9rfCemk9hM66a9kMW1nBKQDPgahz69QjNrjnhLjC/H8xOPxtAe1I2zUCaK6GN8vgqADqVnvQ==
+"@a11ywatch/core@^0.7.46":
+  version "0.7.46"
+  resolved "https://registry.yarnpkg.com/@a11ywatch/core/-/core-0.7.46.tgz#65f009aa2eaedfe587b24668ac7bc6376ae92ff3"
+  integrity sha512-/+s3pNmrdu6zHBO78IPO9qtpL9VoIaotG0B1oa6zwWczY2kt9717ppJD2QuX0ybAXEQ+J69b9iV8QKjIlJ5vMw==
   dependencies:
     "@a11ywatch/protos" "^0.4.4"
     "@a11ywatch/website-source-builder" "^0.1.8"
@@ -19,6 +19,7 @@
     apollo-server-core "3.11.1"
     apollo-server-fastify "3.11.1"
     cron "2.1.0"
+    csv-writer "^1.6.0"
     date-fns "2.29.3"
     exceljs "4.3.0"
     fastify "^3.29.4"
@@ -3236,6 +3237,11 @@ cssstyle@^2.3.0:
   integrity sha512-AZL67abkUzIuvcHqk7c09cezpGNcxUxU4Ioi/05xHk4DQeTkWmGYftIE6ctU6AEt+Gn4n1lDStOtj7FKycP71A==
   dependencies:
     cssom "~0.3.6"
+
+csv-writer@^1.6.0:
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/csv-writer/-/csv-writer-1.6.0.tgz#d0cea44b6b4d7d3baa2ecc6f3f7209233514bcf9"
+  integrity sha512-NOx7YDFWEsM/fTRAJjRpPp8t+MKRVvniAg9wQlUKx20MFrPs73WLJhFf5iteqrxNYnsy924K3Iroh3yNHeYd2g==
 
 data-urls@^3.0.2:
   version "3.0.2"
