@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@a11ywatch/core@^0.7.46":
-  version "0.7.46"
-  resolved "https://registry.yarnpkg.com/@a11ywatch/core/-/core-0.7.46.tgz#65f009aa2eaedfe587b24668ac7bc6376ae92ff3"
-  integrity sha512-/+s3pNmrdu6zHBO78IPO9qtpL9VoIaotG0B1oa6zwWczY2kt9717ppJD2QuX0ybAXEQ+J69b9iV8QKjIlJ5vMw==
+"@a11ywatch/core@^0.7.49":
+  version "0.7.49"
+  resolved "https://registry.yarnpkg.com/@a11ywatch/core/-/core-0.7.49.tgz#dd334a0d21f8470ed629dbcb806bdb2552ee72e6"
+  integrity sha512-1N50v4h8AEQR70adTFAJWZHbA7aGngg+IGxkksNBD4EQBKIxfyC92H88qhgOhfhMKotuC8pvjk0BU4k9YmJnZg==
   dependencies:
     "@a11ywatch/protos" "^0.4.4"
     "@a11ywatch/website-source-builder" "^0.1.8"
