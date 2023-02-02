@@ -245,9 +245,6 @@ dagger do push
 # now you can run `docker run localhost:2222/a11ywatch:latest`
 ```
 
-The dagger test currently use `A11YWATCH_MEMORY_ONLY=true` enabling the memory database. The network isolation in dagger is not
-currently set to handle the network isolation for the test.
-
 ## Help
 
 When on node v18 and above the flag `--no-experimental-fetch` is required ex: `node --no-experimental-fetch server.js`.

@@ -28,7 +28,7 @@ dagger.#Plan & {
 	}
 		
 	_pull: docker.#Pull & {
-		source: "node:19.2-bullseye-slim"
+		source: "node:19.5-bullseye-slim"
 	}
 
 	_copy: docker.#Copy & {
@@ -74,7 +74,7 @@ dagger.#Plan & {
 					mounts: _local
 					command: {
 						name: "/bin/bash"
-						args: ["-c", "yarn install --frozen-lockfile && yarn test:ci"]
+						args: ["-c", "yarn install --frozen-lockfile && A11YWATCH_MEMORY_ONLY=true yarn test:ci"]
 					}
 				}
 			}

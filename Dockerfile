@@ -75,6 +75,7 @@ ENV PUPPETEER_EXECUTABLE_PATH="/usr/bin/chromium" \
 	REDIS_CLIENT="redis://0.0.0.0:6379" \
     REDIS_HOST="0.0.0.0" \
 	SUPER_MODE="true"
+	# CHROME_HOST="host.docker.internal"
 
 # required runtime deps
 RUN apt-get update && \
