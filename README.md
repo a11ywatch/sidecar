@@ -1,6 +1,6 @@
 # sidecar
 
-A11yWatch native javascript [sidecar](https://learn.microsoft.com/en-us/azure/architecture/patterns/sidecar)
+A11yWatch Lite native javascript [sidecar](https://learn.microsoft.com/en-us/azure/architecture/patterns/sidecar)
 
 ## Getting started
 
@@ -57,7 +57,7 @@ Use the packages exported methods, use a [client](https://github.com/a11ywatch/a
 import { scan, multiPageScan, crawlList } from "@a11ywatch/a11ywatch";
 
 // single page website scan.
-await scan({ url: "https://jeffmendez.com" });
+await scan({ url: "https://a11ywatch.com" });
 
 // all pages
 await multiPageScan({ url: "https://a11ywatch.com" });
@@ -191,7 +191,7 @@ curl --location --request POST 'http://localhost:3280/api/crawl' \
 
 ## Packages exposed
 
-The following packages can be imported to use directly to extend the A11yWatch suite.
+The following packages can be imported to use directly to extend [A11yWatch Lite](https://github.com/a11ywatch/a11ywatch).
 
 1. [`@a11ywatch/core`](https://github.com/a11ywatch/a11ywatch-core)
 1. [`@a11ywatch/mav`](https://github.com/a11ywatch/mav)
@@ -252,8 +252,7 @@ When on node v18 and above the flag `--no-experimental-fetch` is required ex: `n
 If you run into issues with modules not loading try deleting all of the `node_modules` and running `npm install` again.
 Upon switching node versions certain modules need to be re-installed for the native compilation to work.
 
-
-The project starts a valid [A11yWatch](https://github.com/a11ywatch/a11ywatch) instance and does not require using the CLI or any method outside.
+The project starts a valid [A11yWatch Lite](https://github.com/a11ywatch/a11ywatch) instance.
 
 ## LICENSE
 

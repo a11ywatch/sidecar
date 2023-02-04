@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@a11ywatch/core@^0.7.63":
-  version "0.7.63"
-  resolved "https://registry.yarnpkg.com/@a11ywatch/core/-/core-0.7.63.tgz#3bf34ea60b092f763f10faab04ba826addcbbde5"
-  integrity sha512-WxxuYftEIDhwXVz/ClPheAXfUWB1GyZ/xMfAoxOadymQctz8B1UOV2Qw2vpdFiiIxhVKAHpNairT+nB+YBgrjA==
+"@a11ywatch/core@^0.7.65":
+  version "0.7.65"
+  resolved "https://registry.yarnpkg.com/@a11ywatch/core/-/core-0.7.65.tgz#ec94161e6d5ef12ef855207a2ac9b442cb357c3a"
+  integrity sha512-DbktxccwpHTQPjRyFWth/ZqvB1v1NuCoHLzKHiO/P3WbK9RQKs/aL3MnkflCa21Tli5+FC5dU114ok4DiIVoCA==
   dependencies:
     "@a11ywatch/protos" "^0.4.6"
     "@a11ywatch/website-source-builder" "^0.1.8"
@@ -64,10 +64,10 @@
     jpeg-js "^0.4.4"
     tensornet "1.0.14"
 
-"@a11ywatch/pagemind@^0.7.34":
-  version "0.7.34"
-  resolved "https://registry.yarnpkg.com/@a11ywatch/pagemind/-/pagemind-0.7.34.tgz#f73cd2109e4fad04140308b6fa2706aaf3c5349f"
-  integrity sha512-bs4noAzml5DtvBd83dTmhcKnZSCl2KzO65jOa5vLFfxw0fPmeZynUvdRGxxK3AffbCGXXrW6y+X6bE5qn13GKQ==
+"@a11ywatch/pagemind@^0.7.37":
+  version "0.7.37"
+  resolved "https://registry.yarnpkg.com/@a11ywatch/pagemind/-/pagemind-0.7.37.tgz#045a7f874ddebad1768970baab74a0fb19584dbd"
+  integrity sha512-n/WZbTbB+Xb195X+PhD21tiKP3BRJ7DBreVU2Tq+QmpSTv+bAHVCBTxXXI5L+TqRVL+S4aSNlHWB1RI9UQBqIw==
   dependencies:
     "@a11ywatch/protos" "^0.4.3"
     "@a11ywatch/website-source-builder" "^0.1.8"
