@@ -1,5 +1,5 @@
 
-import { scanWebsite } from "@a11ywatch/core/core/actions/crawl/scan";
+import { scanWebsite } from "@a11ywatch/core/core/actions/accessibility/scan";
 import { crawlMultiSite } from "@a11ywatch/core/core/actions/accessibility/crawl";
 
 import {

@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@a11ywatch/core@^0.7.67":
-  version "0.7.67"
-  resolved "https://registry.yarnpkg.com/@a11ywatch/core/-/core-0.7.67.tgz#b3ec3e9e4580cf751272d435139b02c633f40ded"
-  integrity sha512-UhAPcA/JPpObL9w+UMn4JwM8xhUntSwbxFIRgTI5ZclrTvI2p6Rsm9zHGqHTI17hEw38OJYAv79ES8mQIEbUQg==
+"@a11ywatch/core@^0.7.68":
+  version "0.7.68"
+  resolved "https://registry.yarnpkg.com/@a11ywatch/core/-/core-0.7.68.tgz#f43db9ed10290275eee3952198054676fb4b58d4"
+  integrity sha512-q4kM9Ez4bl7q5eB9AMi72ryleWmjFSXjnz2VuL+zfpYEkU4rl91nyAhUJMi+XnInbUYuG1LueUYNNcgcIHdUAg==
   dependencies:
     "@a11ywatch/protos" "^0.4.6"
     "@a11ywatch/website-source-builder" "^0.1.8"
@@ -40,10 +40,10 @@
     stripe "11.1.0"
     ws "8.12.0"
 
-"@a11ywatch/crawler@^0.7.32":
-  version "0.7.32"
-  resolved "https://registry.yarnpkg.com/@a11ywatch/crawler/-/crawler-0.7.32.tgz#be93f99651a4747cc7c1abe1248aee355c9f8fe8"
-  integrity sha512-dvhQfRF7DfRnYhQroufFPMmYPiOCLBRI3mdQn+J+Y+/YQnvyABlGvMHT306433dQweanMSjff8AZsWLSLIiS4g==
+"@a11ywatch/crawler@^0.7.34":
+  version "0.7.34"
+  resolved "https://registry.yarnpkg.com/@a11ywatch/crawler/-/crawler-0.7.34.tgz#61a5b7a7f73963d1a4103dc92047974ecf5fb522"
+  integrity sha512-/rmAzLPEaRCA3KXHP9vk8fcXCZBqpRmmBw+gUREMz5ufM7Bb7za0i6oERZVQP4TzwgCFjPYmSbikMcLvxsZf2w==
 
 "@a11ywatch/mav@^0.7.12":
   version "0.7.12"
