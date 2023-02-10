@@ -1,6 +1,6 @@
 {
   "name": "@a11ywatch/a11ywatch",
-  "version": "0.2.172",
+  "version": "0.2.176",
   "description": "Powerful web accessibility sidecar",
   "main": "./server.js",
   "author": "Jeff Mendez <jeff@a11ywatch.com>",
@@ -29,7 +29,7 @@
     "@a11ywatch/core": "^0.7.71",
     "@a11ywatch/crawler": "^0.7.34",
     "@a11ywatch/mav": "^0.7.12",
-    "@a11ywatch/pagemind": "^0.7.53",
+    "@a11ywatch/pagemind": "^0.7.68",
     "@a11ywatch/protos": "^0.4.6"
   },
   "devDependencies": {

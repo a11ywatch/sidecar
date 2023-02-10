@@ -64,16 +64,16 @@
     jpeg-js "^0.4.4"
     tensornet "1.0.14"
 
-"@a11ywatch/pagemind@^0.7.53":
-  version "0.7.53"
-  resolved "https://registry.yarnpkg.com/@a11ywatch/pagemind/-/pagemind-0.7.53.tgz#45cf3104c53829b5ed91c76f6daed76fc3e2d6bb"
-  integrity sha512-EYLnmsVZxQ7CTV+B9HDDbKBzcs5TumY8i3skIaTZA0xuTb/Nkv3clMop3yJaYGmi63xqtdw8RoPNDo0mhl/+Cw==
+"@a11ywatch/pagemind@^0.7.68":
+  version "0.7.68"
+  resolved "https://registry.yarnpkg.com/@a11ywatch/pagemind/-/pagemind-0.7.68.tgz#5366e5adbb3554e17d40d0f76f9f66c05df83fd9"
+  integrity sha512-EYLe/cUPmjJ/YZ1eX9nwETrEY3QpaaqnYgedjQXw+9kEogkKTbzTOXIA51Q0x0i8edlq0VX9q2l1xZhP38zY0w==
   dependencies:
     "@a11ywatch/protos" "^0.4.3"
     "@a11ywatch/website-source-builder" "^0.1.8"
-    "@grpc/grpc-js" "1.8.7"
+    "@grpc/grpc-js" "1.8.8"
     "@grpc/proto-loader" "0.7.4"
-    a11y-js "0.2.7"
+    a11y-js "0.2.12"
     fastq "1.15.0"
     get-page-speed "1.0.1"
     lighthouse "9.6.8"
@@ -1478,6 +1478,14 @@
     "@grpc/proto-loader" "^0.7.0"
     "@types/node" ">=12.12.47"
 
+"@grpc/grpc-js@1.8.8":
+  version "1.8.8"
+  resolved "https://registry.yarnpkg.com/@grpc/grpc-js/-/grpc-js-1.8.8.tgz#a7c6765d0302f47ba67c0ce3cb79718d6b028248"
+  integrity sha512-4gfDqMLXTrorvYTKA1jL22zLvVwiHJ73t6Re1OHwdCFRjdGTDOVtSJuaWhtHaivyeDGg0LeCkmU77MTKoV3wPA==
+  dependencies:
+    "@grpc/proto-loader" "^0.7.0"
+    "@types/node" ">=12.12.47"
+
 "@grpc/proto-loader@0.7.4", "@grpc/proto-loader@^0.7.0":
   version "0.7.4"
   resolved "https://registry.yarnpkg.com/@grpc/proto-loader/-/proto-loader-0.7.4.tgz#4946a84fbf47c3ddd4e6a97acb79d69a9f47ebf2"
@@ -2301,13 +2309,13 @@
   resolved "https://registry.yarnpkg.com/@webgpu/types/-/types-0.1.21.tgz#b181202daec30d66ccd67264de23814cfd176d3a"
   integrity sha512-pUrWq3V5PiSGFLeLxoGqReTZmiiXwY3jRkIG5sLLKjyqNxrwm/04b4nw7LSmGWJcKk59XOM/YRTUwOzo4MMlow==
 
-a11y-js@0.2.7:
-  version "0.2.7"
-  resolved "https://registry.yarnpkg.com/a11y-js/-/a11y-js-0.2.7.tgz#f2007712bf5077fe1dfc8340665cdc54dad2efec"
-  integrity sha512-k+ylXGHWzK9YiOvr7rrsN0lcOFK4t3pemO7SiScVX7e/xKoBTFTGgsOSoBRao/TH7wDb7CsqmNUkNu4hNh3+Yw==
+a11y-js@0.2.12:
+  version "0.2.12"
+  resolved "https://registry.yarnpkg.com/a11y-js/-/a11y-js-0.2.12.tgz#41e77260e9987e1f5f8a1f03ff3acac615f2a9fa"
+  integrity sha512-1deWtwLjhl93dI0XXwmhQBgB53XQl86zF32V7HwwPhmS8q7fBkxhKdAd5D17sWgF11tEuxn75LokZdz0d4MvJg==
   dependencies:
     axe-core "4.5.1"
-    html_codesniffer_fork "3.1.17"
+    fast_htmlcs "0.0.3"
     jsdom "21.0.0"
 
 abab@^2.0.6:
@@ -3678,6 +3686,11 @@ fast-xml-parser@4.0.11:
   dependencies:
     strnum "^1.0.5"
 
+fast_htmlcs@0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/fast_htmlcs/-/fast_htmlcs-0.0.3.tgz#7e138b6f33705d77cb6fdf02fc1c7efa72faefac"
+  integrity sha512-6FelC4JZjU1OMyieKmVDk0MEulvEUktxQzQbN3IAm6YiT9SMAbQrsnpIZ4RioPqfsPb4+sOEVeWyRhTlp79XkQ==
+
 fastify-plugin@^3.0.0, fastify-plugin@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/fastify-plugin/-/fastify-plugin-3.0.1.tgz#79e84c29f401020f38b524f59f2402103fd21ed2"
@@ -3994,11 +4007,6 @@ html-escaper@^2.0.0:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/html-escaper/-/html-escaper-2.0.2.tgz#dfd60027da36a36dfcbe236262c00a5822681453"
   integrity sha512-H2iMtd0I4Mt5eYiapRdIDjp+XzelXQ0tFE4JS7YFwFevXXMmOp9myNrUvCg0D6ws8iqkRPBfKHgbwig1SmlLfg==
-
-html_codesniffer_fork@3.1.17:
-  version "3.1.17"
-  resolved "https://registry.yarnpkg.com/html_codesniffer_fork/-/html_codesniffer_fork-3.1.17.tgz#ef10bbc3bbe9afd7419b4b4e377583adf5fc9a0c"
-  integrity sha512-hqEcrcxoTzppeC1INRk0Lc13dTeCnr53/fe0X77JXEO+OHZClLhDZXdfsKdXyUcSm2/R+CsDlrUKonpjAYbGuw==
 
 htmlparser2@^8.0.1:
   version "8.0.1"
