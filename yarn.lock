@@ -64,10 +64,10 @@
     jpeg-js "^0.4.4"
     tensornet "1.0.14"
 
-"@a11ywatch/pagemind@^0.7.68":
-  version "0.7.68"
-  resolved "https://registry.yarnpkg.com/@a11ywatch/pagemind/-/pagemind-0.7.68.tgz#5366e5adbb3554e17d40d0f76f9f66c05df83fd9"
-  integrity sha512-EYLe/cUPmjJ/YZ1eX9nwETrEY3QpaaqnYgedjQXw+9kEogkKTbzTOXIA51Q0x0i8edlq0VX9q2l1xZhP38zY0w==
+"@a11ywatch/pagemind@^0.7.69":
+  version "0.7.69"
+  resolved "https://registry.yarnpkg.com/@a11ywatch/pagemind/-/pagemind-0.7.69.tgz#1f72a7f2e5efaeb63dd32f833e8c504519d1c73e"
+  integrity sha512-/K2vbPi7ER7VeGGVKrymE7gGGaPnhZE+g76HeL7gy5ZUYnVwtFOxkkECnwVPQ/9X3KN642LTKizRbmngPA3A2g==
   dependencies:
     "@a11ywatch/protos" "^0.4.3"
     "@a11ywatch/website-source-builder" "^0.1.8"
