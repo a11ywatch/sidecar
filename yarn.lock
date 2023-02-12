@@ -40,20 +40,20 @@
     stripe "11.1.0"
     ws "8.12.0"
 
-"@a11ywatch/crawler@^0.7.34":
-  version "0.7.34"
-  resolved "https://registry.yarnpkg.com/@a11ywatch/crawler/-/crawler-0.7.34.tgz#61a5b7a7f73963d1a4103dc92047974ecf5fb522"
-  integrity sha512-/rmAzLPEaRCA3KXHP9vk8fcXCZBqpRmmBw+gUREMz5ufM7Bb7za0i6oERZVQP4TzwgCFjPYmSbikMcLvxsZf2w==
+"@a11ywatch/crawler@^0.7.36":
+  version "0.7.36"
+  resolved "https://registry.yarnpkg.com/@a11ywatch/crawler/-/crawler-0.7.36.tgz#b9ea20b052bf47d165355646719e8b97099dc710"
+  integrity sha512-phteSnuM+37/+bXso0itVJvb/ntCXEdZZIBhUlSHPs4tQTzHan4GI0aNnSVEN//avmC2lt9emFEU8bxER8ZX3Q==
 
-"@a11ywatch/mav@^0.7.12":
-  version "0.7.12"
-  resolved "https://registry.yarnpkg.com/@a11ywatch/mav/-/mav-0.7.12.tgz#b404ef86fd6113ffb65c47322cc7951128c813aa"
-  integrity sha512-OH6b4msFEQGmZgK0MAOf55nrtbZ3D7a3PMgbEm8QIhjb/6NunZuHHul+NLu5mmvZHVuJI5Ve5TmTMu4AR+FUPQ==
+"@a11ywatch/mav@^0.7.13":
+  version "0.7.13"
+  resolved "https://registry.yarnpkg.com/@a11ywatch/mav/-/mav-0.7.13.tgz#a1010b57144c34b811b2f4984d48b899a8b4e861"
+  integrity sha512-VbrjFccxlNYF1YTn1pnLfKm/usKeLv1gNWBNnrX1NJU9R/yGfjYDWe/D+tLRGmc8jSaO+OuVTH0BQUgBZmoaRQ==
   dependencies:
     "@a11ywatch/protos" "^0.4.3"
-    "@a11ywatch/website-source-builder" "^0.0.37"
+    "@a11ywatch/website-source-builder" "^0.1.8"
     "@azure/cognitiveservices-computervision" "^8.2.0"
-    "@grpc/grpc-js" "1.8.7"
+    "@grpc/grpc-js" "1.8.8"
     "@grpc/proto-loader" "0.7.4"
     "@tensorflow-models/coco-ssd" "2.2.2"
     "@tensorflow-models/mobilenet" "2.1.0"
@@ -89,11 +89,6 @@
   version "0.4.6"
   resolved "https://registry.yarnpkg.com/@a11ywatch/protos/-/protos-0.4.6.tgz#4aecfdbb1c88762a2fb358cee0422355593f582b"
   integrity sha512-gZY2SPtgAy+ZvOY+OXpUYKlUd3i5YNuLi8+vjotXmeNpGvO4WI9IWh9HdCO/b0oc1VKm6efifsCtINtY0qTpJg==
-
-"@a11ywatch/website-source-builder@^0.0.37":
-  version "0.0.37"
-  resolved "https://registry.yarnpkg.com/@a11ywatch/website-source-builder/-/website-source-builder-0.0.37.tgz#96d5a9dae2dfe184ad5d7a3f554d9ffba0d6f911"
-  integrity sha512-YKw2nYq9RvUrTXEjoD5emRJsHCtYuX1fdHvX9mtqKg2vR85OMRLJSGMbV/kHCkpWWcK/VtOlollG51OcSSfqpA==
 
 "@a11ywatch/website-source-builder@^0.1.8":
   version "0.1.8"
