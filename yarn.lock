@@ -64,16 +64,16 @@
     jpeg-js "^0.4.4"
     tensornet "1.0.14"
 
-"@a11ywatch/pagemind@^0.7.71":
-  version "0.7.71"
-  resolved "https://registry.yarnpkg.com/@a11ywatch/pagemind/-/pagemind-0.7.71.tgz#efcd34d844805e23cf98c5bf086424756fff382d"
-  integrity sha512-CtnEaTBBY9REUdevAQT6sI7dFipDGuTizB9aWRt2kdUz/RQe/9pdUL56PC5/SpyMFynJBNASaebLFmFGdUY6Qg==
+"@a11ywatch/pagemind@^0.7.74":
+  version "0.7.74"
+  resolved "https://registry.yarnpkg.com/@a11ywatch/pagemind/-/pagemind-0.7.74.tgz#291d172f11a6fe0ebaa0bfd83f00e8cc227257cc"
+  integrity sha512-UgRdCR3RCYSE5XQKS+USgxUY8175YPygxhOvrzYhQzd/q/hMbPDH7F/t6bFgQj9fa9/hJOLQKtWCEEL5B0SebA==
   dependencies:
     "@a11ywatch/protos" "^0.4.3"
     "@a11ywatch/website-source-builder" "^0.1.8"
     "@grpc/grpc-js" "1.8.8"
     "@grpc/proto-loader" "0.7.4"
-    a11y-js "0.2.14"
+    a11y-js "0.2.17"
     fastq "1.15.0"
     get-page-speed "1.0.1"
     lighthouse "9.6.8"
@@ -2304,10 +2304,10 @@
   resolved "https://registry.yarnpkg.com/@webgpu/types/-/types-0.1.21.tgz#b181202daec30d66ccd67264de23814cfd176d3a"
   integrity sha512-pUrWq3V5PiSGFLeLxoGqReTZmiiXwY3jRkIG5sLLKjyqNxrwm/04b4nw7LSmGWJcKk59XOM/YRTUwOzo4MMlow==
 
-a11y-js@0.2.14:
-  version "0.2.14"
-  resolved "https://registry.yarnpkg.com/a11y-js/-/a11y-js-0.2.14.tgz#8099a823692a449d8aefac2070234d901455dea0"
-  integrity sha512-Uecmqhgm4Dq/GFQjDRwzG9+4VwRsCGDgAWcIRe7uV5aKirNQ7kPvz2rlScboaPm6C66IQVXev2FzxgmBXdNg1g==
+a11y-js@0.2.17:
+  version "0.2.17"
+  resolved "https://registry.yarnpkg.com/a11y-js/-/a11y-js-0.2.17.tgz#7b1268b6a249857b0fee19886219a9ea2609fceb"
+  integrity sha512-kvVkV+I2vDiPHTD+zSjtatd6LVR8JzsHlCBpmQVsF5doNbvoCtsnBcRTNDGvLQ3n2LdAcRL384vV3X7QgEiP5Q==
   dependencies:
     axe-core "4.6.3"
     fast_htmlcs "0.0.3"
