@@ -1,11 +1,12 @@
 {
   "name": "@a11ywatch/a11ywatch",
-  "version": "0.2.194",
-  "description": "Powerful web accessibility automation A11yWatch sidecar",
+  "version": "0.2.195",
+  "description": "Powerful web accessibility automation A11yWatch lite sidecar",
   "main": "./server.js",
   "author": "Jeff Mendez <jeff@a11ywatch.com>",
   "keywords": [
     "accessibility",
+    "accessibility-automation",
     "testing",
     "WCAG",
     "sidecar",
@@ -26,11 +27,11 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@a11ywatch/core": "^0.7.76",
-    "@a11ywatch/crawler": "^0.7.59",
+    "@a11ywatch/core": "^0.7.77",
+    "@a11ywatch/crawler": "^0.7.70",
     "@a11ywatch/mav": "^0.7.13",
     "@a11ywatch/pagemind": "^0.7.74",
-    "@a11ywatch/protos": "^0.4.6"
+    "@a11ywatch/protos": "^0.4.7"
   },
   "devDependencies": {
     "@swc/core": "^1.3.26",
