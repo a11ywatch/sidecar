@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@a11ywatch/core@^0.7.78":
-  version "0.7.78"
-  resolved "https://registry.yarnpkg.com/@a11ywatch/core/-/core-0.7.78.tgz#4bd15f61b610414dbbe72e174fcb8ef4044087eb"
-  integrity sha512-kDKEU7U0BANoomr67moSuaxAp7nWgsmRSqhAOScAAs75+qYzC2ArzIhafX/jjbRML61zS0MzQlLxFqopEdCiLA==
+"@a11ywatch/core@^0.7.81":
+  version "0.7.81"
+  resolved "https://registry.yarnpkg.com/@a11ywatch/core/-/core-0.7.81.tgz#e9a57c449a66b76fa5b6fe8bc42496df2f1d9238"
+  integrity sha512-Gxlseg/uCWZAYbBGVW/tZLInCVudIWp6VMCOC4Qdz8aqduPqog8QaS0Rcs5zF8qk5nHLSR2hz+wPtaUx4XEzIA==
   dependencies:
     "@a11ywatch/protos" "^0.4.7"
     "@a11ywatch/website-source-builder" "^0.1.8"
@@ -40,19 +40,20 @@
     stripe "11.1.0"
     ws "8.12.0"
 
-"@a11ywatch/crawler@^0.7.75":
-  version "0.7.75"
-  resolved "https://registry.yarnpkg.com/@a11ywatch/crawler/-/crawler-0.7.75.tgz#502ffd5ff86f29276b86f4f157dcb79c00d0aac0"
-  integrity sha512-sCZdHv651Wk1nutqz8WL1MingZE+vTCiViLHxKUI55WJHkCVzmA0FZ/fGjgbqJTnuT+UQkSGTzQuY+J0Y5+Yyg==
+"@a11ywatch/crawler@^0.7.79":
+  version "0.7.79"
+  resolved "https://registry.yarnpkg.com/@a11ywatch/crawler/-/crawler-0.7.79.tgz#0989bb61a5ec7d80ec116dcc29e19c646c78b13a"
+  integrity sha512-IaiyxtU5kswuhwwPNdAncQkGHmhZbJSXChhTenv3DoWLyshC2iWCW+N4k6aNCi4Il6h3LkX+GzsdfpJ1v8NMyA==
 
-"@a11ywatch/mav@^0.7.13":
-  version "0.7.13"
-  resolved "https://registry.yarnpkg.com/@a11ywatch/mav/-/mav-0.7.13.tgz#a1010b57144c34b811b2f4984d48b899a8b4e861"
-  integrity sha512-VbrjFccxlNYF1YTn1pnLfKm/usKeLv1gNWBNnrX1NJU9R/yGfjYDWe/D+tLRGmc8jSaO+OuVTH0BQUgBZmoaRQ==
+"@a11ywatch/mav@^0.7.16":
+  version "0.7.16"
+  resolved "https://registry.yarnpkg.com/@a11ywatch/mav/-/mav-0.7.16.tgz#680cde5ed13582a721c488cca3bb729a816fffa1"
+  integrity sha512-HsxRHlmTjaOMoRoDs0ldIuBHGNLFISpfdIDs/Y1eAq5NktRthmvlbfLtHwt/+H56ZkOeFFxSDcSW+LHmvHWlxw==
   dependencies:
     "@a11ywatch/protos" "^0.4.3"
     "@a11ywatch/website-source-builder" "^0.1.8"
     "@azure/cognitiveservices-computervision" "^8.2.0"
+    "@azure/ms-rest-js" "2.6.4"
     "@grpc/grpc-js" "1.8.8"
     "@grpc/proto-loader" "0.7.4"
     "@tensorflow-models/coco-ssd" "2.2.2"
@@ -987,7 +988,7 @@
     "@azure/abort-controller" "^1.0.0"
     tslib "^2.2.0"
 
-"@azure/ms-rest-js@^2.0.4":
+"@azure/ms-rest-js@2.6.4", "@azure/ms-rest-js@^2.0.4":
   version "2.6.4"
   resolved "https://registry.yarnpkg.com/@azure/ms-rest-js/-/ms-rest-js-2.6.4.tgz#b0a0f89841434471adf757d09e7e39e8ecfcd650"
   integrity sha512-2sbOpGhlBfv9itWdF7Qlk0CmoQCARxe5unwjNOprU7OdgEgabQncZ35L5u1A+zgdkVtNYF9Eo6XAhXzTweIhag==
