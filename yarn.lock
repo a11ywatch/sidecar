@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@a11ywatch/core@^0.7.82":
-  version "0.7.82"
-  resolved "https://registry.yarnpkg.com/@a11ywatch/core/-/core-0.7.82.tgz#b717fdc5776df83a3cb898cdb153b41d72a85be8"
-  integrity sha512-Ea7NWgsrV/XsdVwKz7KWmO4rIqperNz4G3+zpqIwqcxJTpN8PNE88r07DeLkSgh+5obTGbTE/nu10S46KFx98g==
+"@a11ywatch/core@^0.7.83":
+  version "0.7.83"
+  resolved "https://registry.yarnpkg.com/@a11ywatch/core/-/core-0.7.83.tgz#c5e77219ee47ab15f94220fead9964056fd0db69"
+  integrity sha512-bXUnHmt4CNK0BtdcpU22/sEFmowkjJjXr2+TcltizdQ5F6qxsanyX01IO/zMyBpYYPuLPVkJtxFJwLrPMvrhZQ==
   dependencies:
     "@a11ywatch/protos" "^0.4.7"
     "@a11ywatch/website-source-builder" "^0.1.8"
@@ -13,8 +13,8 @@
     "@fastify/cors" "^7.0.0"
     "@fastify/rate-limit" "^6.0.1"
     "@graphql-tools/schema" "^9.0.12"
-    "@grpc/grpc-js" "1.8.7"
-    "@grpc/proto-loader" "0.7.4"
+    "@grpc/grpc-js" "1.8.13"
+    "@grpc/proto-loader" "0.7.6"
     apollo-server "3.11.1"
     apollo-server-core "3.11.1"
     apollo-server-fastify "3.11.1"
@@ -1466,10 +1466,10 @@
     camel-case "4.1.2"
     tslib "~2.2.0"
 
-"@grpc/grpc-js@1.8.7":
-  version "1.8.7"
-  resolved "https://registry.yarnpkg.com/@grpc/grpc-js/-/grpc-js-1.8.7.tgz#2154fc0134462ad45f4134e8b54682a25ed05956"
-  integrity sha512-dRAWjRFN1Zy9mzPNLkFFIWT8T6C9euwluzCHZUKuhC+Bk3MayNPcpgDRyG+sg+n2sitEUySKxUynirVpu9ItKw==
+"@grpc/grpc-js@1.8.13":
+  version "1.8.13"
+  resolved "https://registry.yarnpkg.com/@grpc/grpc-js/-/grpc-js-1.8.13.tgz#e775685962909b76f8d4b813833c3d123867165b"
+  integrity sha512-iY3jsdfbc0ARoCLFvbvUB8optgyb0r1XLPb142u+QtgBcKJYkCIFt3Fd/881KqjLYWjsBJF57N3b8Eop9NDfUA==
   dependencies:
     "@grpc/proto-loader" "^0.7.0"
     "@types/node" ">=12.12.47"
@@ -1486,6 +1486,17 @@
   version "0.7.4"
   resolved "https://registry.yarnpkg.com/@grpc/proto-loader/-/proto-loader-0.7.4.tgz#4946a84fbf47c3ddd4e6a97acb79d69a9f47ebf2"
   integrity sha512-MnWjkGwqQ3W8fx94/c1CwqLsNmHHv2t0CFn+9++6+cDphC1lolpg9M2OU0iebIjK//pBNX9e94ho+gjx6vz39w==
+  dependencies:
+    "@types/long" "^4.0.1"
+    lodash.camelcase "^4.3.0"
+    long "^4.0.0"
+    protobufjs "^7.0.0"
+    yargs "^16.2.0"
+
+"@grpc/proto-loader@0.7.6":
+  version "0.7.6"
+  resolved "https://registry.yarnpkg.com/@grpc/proto-loader/-/proto-loader-0.7.6.tgz#b71fdf92b184af184b668c4e9395a5ddc23d61de"
+  integrity sha512-QyAXR8Hyh7uMDmveWxDSUcJr9NAWaZ2I6IXgAYvQmfflwouTM+rArE2eEaCtLlRqO81j7pRLCt81IefUei6Zbw==
   dependencies:
     "@types/long" "^4.0.1"
     lodash.camelcase "^4.3.0"
