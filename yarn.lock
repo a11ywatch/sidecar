@@ -40,10 +40,10 @@
     stripe "11.1.0"
     ws "8.12.0"
 
-"@a11ywatch/crawler@^0.7.80":
-  version "0.7.80"
-  resolved "https://registry.yarnpkg.com/@a11ywatch/crawler/-/crawler-0.7.80.tgz#9a62d8be61c442191281fb48dbfd06a4a35fcfcf"
-  integrity sha512-gsaetYJnfdpfQJMEOWSlfmC76rjq9usV26ALPxjDjOWxiLAycQIApXkFzMjHE0EZ8wK9FX25bK2McbgagVBkXw==
+"@a11ywatch/crawler@^0.7.81":
+  version "0.7.81"
+  resolved "https://registry.yarnpkg.com/@a11ywatch/crawler/-/crawler-0.7.81.tgz#2deee391d95455e1fe37c4181ebdc8c9ea40a846"
+  integrity sha512-qUMiZw8Y4SzLikKRghPZUv6BI13CPiBy0Tc736J4akja8fwGAHhqkt1naALivWOegtRZ2GnpCfSh+9VGVSRckA==
 
 "@a11ywatch/mav@^0.7.16":
   version "0.7.16"
