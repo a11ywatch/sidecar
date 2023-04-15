@@ -65,14 +65,14 @@
     jpeg-js "^0.4.4"
     tensornet "1.0.14"
 
-"@a11ywatch/pagemind@^0.7.75":
-  version "0.7.75"
-  resolved "https://registry.yarnpkg.com/@a11ywatch/pagemind/-/pagemind-0.7.75.tgz#7f7c047a56df29f26aded047bec90fe96f44ac46"
-  integrity sha512-ltFGTencrpIo7vf1gaGgOuFUMZAQ5MOuQJAR+f+MbDiryRb10jXbHUxQEbzi65x21XiAQA6rm66j5UjjH1lzHA==
+"@a11ywatch/pagemind@^0.7.76":
+  version "0.7.76"
+  resolved "https://registry.yarnpkg.com/@a11ywatch/pagemind/-/pagemind-0.7.76.tgz#fc44754df27affa350698fee201a37bc5ec678da"
+  integrity sha512-+CZflXY0c87d8aZ+hVW2pK3/pjlC7tkr4ODLX7GAbW7mp0S7kTfqbOspTBibBE8I+IzIuGLgP+iO5cebtVAFBA==
   dependencies:
     "@a11ywatch/protos" "^0.4.3"
     "@a11ywatch/website-source-builder" "^0.1.8"
-    "@grpc/grpc-js" "1.8.13"
+    "@grpc/grpc-js" "1.8.14"
     "@grpc/proto-loader" "0.7.6"
     a11y-js "0.2.17"
     fastq "1.15.0"
@@ -1470,6 +1470,14 @@
   version "1.8.13"
   resolved "https://registry.yarnpkg.com/@grpc/grpc-js/-/grpc-js-1.8.13.tgz#e775685962909b76f8d4b813833c3d123867165b"
   integrity sha512-iY3jsdfbc0ARoCLFvbvUB8optgyb0r1XLPb142u+QtgBcKJYkCIFt3Fd/881KqjLYWjsBJF57N3b8Eop9NDfUA==
+  dependencies:
+    "@grpc/proto-loader" "^0.7.0"
+    "@types/node" ">=12.12.47"
+
+"@grpc/grpc-js@1.8.14":
+  version "1.8.14"
+  resolved "https://registry.yarnpkg.com/@grpc/grpc-js/-/grpc-js-1.8.14.tgz#4fe0f9917d6f094cf59245763c275442b182e9ad"
+  integrity sha512-w84maJ6CKl5aApCMzFll0hxtFNT6or9WwMslobKaqWUEf1K+zhlL43bSQhFreyYWIWR+Z0xnVFC1KtLm4ZpM/A==
   dependencies:
     "@grpc/proto-loader" "^0.7.0"
     "@types/node" ">=12.12.47"
