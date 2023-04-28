@@ -12,7 +12,7 @@ __metadata:
     "@a11ywatch/core": ^0.7.85
     "@a11ywatch/crawler": ^0.7.83
     "@a11ywatch/mav": ^0.7.16
-    "@a11ywatch/pagemind": ^0.7.83
+    "@a11ywatch/pagemind": ^0.7.85
     "@a11ywatch/protos": ^0.4.7
     "@swc/core": ^1.3.26
     "@swc/jest": ^0.2.24
@@ -92,21 +92,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@a11ywatch/pagemind@npm:^0.7.83":
-  version: 0.7.83
-  resolution: "@a11ywatch/pagemind@npm:0.7.83"
+"@a11ywatch/pagemind@npm:^0.7.85":
+  version: 0.7.85
+  resolution: "@a11ywatch/pagemind@npm:0.7.85"
   dependencies:
     "@a11ywatch/protos": ^0.4.3
     "@a11ywatch/website-source-builder": ^0.1.8
     "@grpc/grpc-js": 1.8.14
     "@grpc/proto-loader": 0.7.6
-    a11y-js: 0.3.18
+    a11y-js: 0.3.25
     fastq: 1.15.0
     get-page-speed: 1.0.1
     lighthouse: 9.6.8
     pb-util: 1.0.3
     puppeteer: 19.6.3
-  checksum: 58a75fae6d82b502ac9f44c1b9115763837e685f4568fdad28ef719491b70af27860d12b1792c5d6b3c56be0da17dc3c4f1a762c2382a92ff9e1fc9c6a8d59dc
+  checksum: b7a5205ac28d671aed624773a6e632e6f36687c79cc01e0c5331626c4d61f0f0246ce5ecbc67b5f654068bd28960f3c42fae950b14340761e2c0d34b8a07d843
   languageName: node
   linkType: hard
 
@@ -3036,13 +3036,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"a11y-js@npm:0.3.18":
-  version: 0.3.18
-  resolution: "a11y-js@npm:0.3.18"
+"a11y-js@npm:0.3.25":
+  version: 0.3.25
+  resolution: "a11y-js@npm:0.3.25"
   dependencies:
     fast_axecore: 4.6.4
     fast_htmlcs: 0.0.5
-  checksum: aadd7a3b972bfe756ad0bd4b9f2c81846e49f5540806356ad0765916cea77166a939e5fc495a35e586c1f55575f06bae502df03914ff4a7b28bb4db2c64529ad
+  checksum: 19a59d3e518b4213a8596dd55e7bf44441a6a55580586b917bb5914de727969a0d6a523e4a48d6f8d5daf49942be94f214dea854c15f0c93380f4f1e64d785e1
   languageName: node
   linkType: hard
 
