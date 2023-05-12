@@ -52,7 +52,7 @@ dagger.#Plan & {
 			install: bash.#Run & {
 				input: copy.output
 				script: contents: """
-					PUPPETEER_SKIP_DOWNLOAD=true yarn install --frozen-lockfile
+					PUPPETEER_SKIP_DOWNLOAD=true yarn install
 					"""
 			}
 			build: bash.#Run & {
@@ -74,7 +74,7 @@ dagger.#Plan & {
 					mounts: _local
 					command: {
 						name: "/bin/bash"
-						args: ["-c", "yarn install --frozen-lockfile && A11YWATCH_MEMORY_ONLY=true yarn test:ci"]
+						args: ["-c", "yarn install && A11YWATCH_MEMORY_ONLY=true yarn test:ci"]
 					}
 				}
 			}
@@ -84,7 +84,7 @@ dagger.#Plan & {
 					mounts: _local
 					command: {
 						name: "/bin/bash"
-						args: ["-c", "yarn install --frozen-lockfile && A11YWATCH_MEMORY_ONLY=true yarn test:unit"]
+						args: ["-c", "yarn install && A11YWATCH_MEMORY_ONLY=true yarn test:unit"]
 					}
 				}
 			}
