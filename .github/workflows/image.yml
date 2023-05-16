@@ -19,7 +19,6 @@ jobs:
       - name: build and deploy images
         run: |
           docker buildx build \
-            --memory="1g" \
             -t a11ywatch/a11ywatch:latest \
             --platform linux/amd64,linux/arm64 \
             --push .
