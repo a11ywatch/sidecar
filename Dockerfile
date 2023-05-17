@@ -27,8 +27,7 @@ RUN apt-get update && \
 	
 COPY package*.json yarn.lock ./
 
-ENV PLAYWRIGHT_BROWSERS_PATH="/usr/bin/chromium" \
-	PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD="1"  \
+ENV PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD="1"  \
  	MONGOMS_SYSTEM_BINARY="/usr/bin/mongod" \
 	DISABLE_POSTINSTALL="true"
 
@@ -53,8 +52,7 @@ RUN apt-get update && \
 	gcc \
 	curl
 
-ENV PLAYWRIGHT_BROWSERS_PATH="/usr/bin/chromium" \
-	PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD="1"  \
+ENV PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD="1"  \
  	MONGOMS_SYSTEM_BINARY="/usr/bin/mongod" \
 	DISABLE_POSTINSTALL="true"
 
@@ -67,8 +65,7 @@ FROM node:20.1-bullseye-slim
 
 WORKDIR /usr/src/app
 
-ENV PLAYWRIGHT_BROWSERS_PATH="/usr/bin/chromium" \
- 	MONGOMS_SYSTEM_BINARY="/usr/bin/mongod" \
+ENV MONGOMS_SYSTEM_BINARY="/usr/bin/mongod" \
 	MONGO_INITDB_DATABASE="a11ywatch" \
 	MONGOMS_VERSION="5.0.9" \
 	DB_URL="mongodb://0.0.0.0:27017" \
@@ -80,7 +77,6 @@ ENV PLAYWRIGHT_BROWSERS_PATH="/usr/bin/chromium" \
 # required runtime deps
 RUN apt-get update && \
     apt-get install -y build-essential \
-	chromium \
 	curl \
 	redis-server
 	
@@ -88,6 +84,10 @@ COPY --from=dbinstaller /usr/bin/mongod /usr/bin/mongod
 COPY --from=builder /usr/src/app/dist ./dist
 COPY --from=builder /usr/src/app/node_modules ./node_modules
 COPY --from=installer /root/.cargo/bin/website_crawler /usr/bin/website_crawler
+
+# install chrome and firefox todo: move install at runtime to keep bin small
+RUN npx playwright install --with-deps chromium
+# npx playwright install --with-deps firefox
 
 # # test
 # COPY --from=builder /usr/src/app/__tests__ ./__tests__
