@@ -1,4 +1,3 @@
-
 import { scanWebsite } from "@a11ywatch/core/core/actions/accessibility/scan";
 import { crawlMultiSite } from "@a11ywatch/core/core/actions/accessibility/crawl";
 
@@ -8,9 +7,7 @@ import {
   getHostName,
 } from "@a11ywatch/core/core/utils";
 import { crawlEmitter } from "@a11ywatch/core/event";
-import {
-  pollTillConnected,
-} from "@a11ywatch/core/database/client";
+import { pollTillConnected } from "@a11ywatch/core/database/client";
 import { isReady } from "@a11ywatch/core/app";
 import { wsChromeEndpointurl } from "@a11ywatch/pagemind/config/chrome";
 
@@ -80,30 +77,30 @@ const logger = (
 
 // prevent re-starting the application on re-imports
 const initApplication = () => {
-    return new Promise(async (resolve) => {
-      if (!startedApp) {
-        await Promise.all(
-          ["mav", "pagemind", "crawler"].map(
-            (mname) => import(`@a11ywatch/${mname}`)
-          )
-        );
-          
-        try {
-          await import("@a11ywatch/core");
-        } catch(e) {
-          logger(e);
-        }
+  return new Promise(async (resolve) => {
+    if (!startedApp) {
+      await Promise.all(
+        ["mav", "pagemind", "crawler"].map(
+          (mname) => import(`@a11ywatch/${mname}`)
+        )
+      );
 
-        if(process.env.A11YWATCH_MEMORY_ONLY !== "true") {
-          await pollTillConnected();
-        }
-
-        // app ready
-        startedApp = true;
+      try {
+        await import("@a11ywatch/core");
+      } catch (e) {
+        logger(e);
       }
 
-      resolve(true)
-    })
+      if (process.env.A11YWATCH_MEMORY_ONLY !== "true") {
+        await pollTillConnected();
+      }
+
+      // app ready
+      startedApp = true;
+    }
+
+    resolve(true);
+  });
 };
 
 // auto init the suite.
