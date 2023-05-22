@@ -12,7 +12,7 @@ __metadata:
     "@a11ywatch/core": ^0.8.6
     "@a11ywatch/crawler": ^0.8.4
     "@a11ywatch/mav": ^0.7.16
-    "@a11ywatch/pagemind": ^0.9.21
+    "@a11ywatch/pagemind": ^0.9.22
     "@a11ywatch/protos": ^0.4.7
     "@swc/core": ^1.3.58
     "@swc/jest": ^0.2.26
@@ -92,9 +92,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@a11ywatch/pagemind@npm:^0.9.21":
-  version: 0.9.21
-  resolution: "@a11ywatch/pagemind@npm:0.9.21"
+"@a11ywatch/pagemind@npm:^0.9.22":
+  version: 0.9.22
+  resolution: "@a11ywatch/pagemind@npm:0.9.22"
   dependencies:
     "@a11ywatch/protos": ^0.4.3
     "@a11ywatch/website-source-builder": ^0.1.8
@@ -102,11 +102,11 @@ __metadata:
     "@grpc/proto-loader": 0.7.6
     fastq: 1.15.0
     get-page-speed: 1.0.1
-    kayle: ^0.4.51
+    kayle: ^0.4.52
     lighthouse: 9.6.8
     pb-util: 1.0.3
     playwright: ^1.33.0
-  checksum: b42ba21ecb31fa0e2a3a610b5d6f8d7dc5619329cf7c7adb4d7fd2fe188359a17915f2ce63ec76dcad458293226553e0a752e2e00782f9b7f0210b25739a74b3
+  checksum: eb256d6988b15f5117b923bddc781e238722fe841b1ef80f1495a9fe29af7758ced63ab238266576587c8a8d0d1d1a018d96285b119096adceb9f2518bbf0c9c
   languageName: node
   linkType: hard
 
@@ -3939,10 +3939,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fast_htmlcs@npm:0.0.49":
-  version: 0.0.49
-  resolution: "fast_htmlcs@npm:0.0.49"
-  checksum: 5fa359b8c333c9bc6e33d286c930657b8671058ec26da4d97180373d85407db05c37e2e258ea68116c9d5917b848be436a61e2226edccbeaf9b2c3f55b7463d2
+"fast_htmlcs@npm:0.0.50":
+  version: 0.0.50
+  resolution: "fast_htmlcs@npm:0.0.50"
+  checksum: 72f924a4608413f04a16106a1d998d8976a93b255db59c89e2441bf7a6fdf8d95f0fbba1132b8485ed62973d5e0761c73f075bac6fc2c01a56b2c800279b705b
   languageName: node
   linkType: hard
 
@@ -5407,14 +5407,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"kayle@npm:^0.4.51":
-  version: 0.4.51
-  resolution: "kayle@npm:0.4.51"
+"kayle@npm:^0.4.52":
+  version: 0.4.52
+  resolution: "kayle@npm:0.4.52"
   dependencies:
     fast_axecore: 4.6.23
-    fast_htmlcs: 0.0.49
+    fast_htmlcs: 0.0.50
     kayle_innate: 0.0.14
-  checksum: 7d8dad5761ddd83bbeca63e1fdfca8d5f47928c35649d328209e86760d5be6e287a31ad474de2e72b4bb7712663fda3c1a29b6dfea4d9062eaf7e2742586d566
+  checksum: b289b8fa49ece788576a1c41d2fd0b41064f9e9f5e7025cfce2bc289feee965f2eb6353e1c7c6646d7f3a27b966472f060a9c95da3b06b1cad791368dc5fa88d
   languageName: node
   linkType: hard
 
