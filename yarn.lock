@@ -9,10 +9,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@a11ywatch/a11ywatch@workspace:."
   dependencies:
-    "@a11ywatch/core": ^0.8.6
-    "@a11ywatch/crawler": ^0.8.4
+    "@a11ywatch/core": ^0.8.9
+    "@a11ywatch/crawler": ^0.8.5
     "@a11ywatch/mav": ^0.7.16
-    "@a11ywatch/pagemind": ^0.9.22
+    "@a11ywatch/pagemind": ^0.9.23
     "@a11ywatch/protos": ^0.4.7
     "@swc/core": ^1.3.58
     "@swc/jest": ^0.2.26
@@ -23,9 +23,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@a11ywatch/core@npm:^0.8.6":
-  version: 0.8.6
-  resolution: "@a11ywatch/core@npm:0.8.6"
+"@a11ywatch/core@npm:^0.8.9":
+  version: 0.8.9
+  resolution: "@a11ywatch/core@npm:0.8.9"
   dependencies:
     "@a11ywatch/protos": ^0.4.7
     "@a11ywatch/website-source-builder": ^0.1.8
@@ -38,7 +38,7 @@ __metadata:
     apollo-server: 3.12.0
     apollo-server-core: 3.12.0
     apollo-server-fastify: 3.12.0
-    cron: 2.1.0
+    cron: 2.3.0
     csv-writer: ^1.6.0
     date-fns: 2.29.3
     exceljs: 4.3.0
@@ -59,14 +59,14 @@ __metadata:
     pb-util: 1.0.3
     stripe: 11.1.0
     ws: 8.13.0
-  checksum: 4169bedca6e3fb01c4badcf83c4a62bc07f009d30350e237248ab91b001f819128c99fb9f6e7e14cfeba647def1bf102ea7fbe6a4624e13f0c352483b96a340c
+  checksum: a98490bcac44e9a851e12e3c22d816803a4368ea24762f115d2f29e8c44d83faa25a81d67e70d6ce6fe39649fc237263da11b216e8ad2deffda76c68bf188877
   languageName: node
   linkType: hard
 
-"@a11ywatch/crawler@npm:^0.8.4":
-  version: 0.8.4
-  resolution: "@a11ywatch/crawler@npm:0.8.4"
-  checksum: 125fff0d1ec8579a1e422c80201e19e48d54b59f3aa8b2d0fb84e84707faa7e939534daf8e7875a9312da97ad4ea734cf13b0c36fc9fdc63038352961419e541
+"@a11ywatch/crawler@npm:^0.8.5":
+  version: 0.8.5
+  resolution: "@a11ywatch/crawler@npm:0.8.5"
+  checksum: 5b61e214f81616155ee6abc0ec6eb6523616adcf6445e6f78bfa7a615af300fae5068453681f52e09e7bc555815a14dcd4cbc1cfbbd15db161f3047f62abf793
   languageName: node
   linkType: hard
 
@@ -92,9 +92,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@a11ywatch/pagemind@npm:^0.9.22":
-  version: 0.9.22
-  resolution: "@a11ywatch/pagemind@npm:0.9.22"
+"@a11ywatch/pagemind@npm:^0.9.23":
+  version: 0.9.23
+  resolution: "@a11ywatch/pagemind@npm:0.9.23"
   dependencies:
     "@a11ywatch/protos": ^0.4.3
     "@a11ywatch/website-source-builder": ^0.1.8
@@ -106,7 +106,7 @@ __metadata:
     lighthouse: 9.6.8
     pb-util: 1.0.3
     playwright: ^1.33.0
-  checksum: eb256d6988b15f5117b923bddc781e238722fe841b1ef80f1495a9fe29af7758ced63ab238266576587c8a8d0d1d1a018d96285b119096adceb9f2518bbf0c9c
+  checksum: 9c7a329b40d6bfa04d7b7d7daf1b88dd5db0c274eb01e618693d14b154094d207d278f8e6a0007cb0f6daa36f2fcb111216f3f81c7e283e7791ef2c1cbc002d3
   languageName: node
   linkType: hard
 
@@ -3321,12 +3321,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cron@npm:2.1.0":
-  version: 2.1.0
-  resolution: "cron@npm:2.1.0"
+"cron@npm:2.3.0":
+  version: 2.3.0
+  resolution: "cron@npm:2.3.0"
   dependencies:
-    luxon: ^1.23.x
-  checksum: 9395875c091f56db7964491c249cb143d2e4ba77560d7132da783943c1b0537ef1814eb8f552c81eda5a2aa153216dd3f5b7ff63e372a68a063fcfafe8231f91
+    luxon: ^3.2.1
+  checksum: 70b220f3fc4b6bcd594f7f2c690bbf7a3a03b0e081eb0119f8e3ca21635f2da07d89e038d561d4c0742c8b0dd04977f25e307d0608455ef9f527a556b2da92fc
   languageName: node
   linkType: hard
 
@@ -5792,10 +5792,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"luxon@npm:^1.23.x":
-  version: 1.28.1
-  resolution: "luxon@npm:1.28.1"
-  checksum: 2c62999adea79645fd1e931d685f61aeb33eda7f39fbf79b84261a233b62f9590f48336654ee9efd405848bd9e13dc7fe087c701b7126187201a88998dc68b04
+"luxon@npm:^3.2.1":
+  version: 3.3.0
+  resolution: "luxon@npm:3.3.0"
+  checksum: 50cf17a0dc155c3dcacbeae8c0b7e80db425e0ba97b9cbdf12a7fc142d841ff1ab1560919f033af46240ed44e2f70c49f76e3422524c7fc8bb8d81ca47c66187
   languageName: node
   linkType: hard
 
