@@ -9,7 +9,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@a11ywatch/a11ywatch@workspace:."
   dependencies:
-    "@a11ywatch/core": ^0.8.9
+    "@a11ywatch/core": ^0.8.10
     "@a11ywatch/crawler": ^0.8.5
     "@a11ywatch/mav": ^0.7.16
     "@a11ywatch/pagemind": ^0.9.27
@@ -23,9 +23,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@a11ywatch/core@npm:^0.8.9":
-  version: 0.8.9
-  resolution: "@a11ywatch/core@npm:0.8.9"
+"@a11ywatch/core@npm:^0.8.10":
+  version: 0.8.10
+  resolution: "@a11ywatch/core@npm:0.8.10"
   dependencies:
     "@a11ywatch/protos": ^0.4.7
     "@a11ywatch/website-source-builder": ^0.1.8
@@ -59,7 +59,7 @@ __metadata:
     pb-util: 1.0.3
     stripe: 11.1.0
     ws: 8.13.0
-  checksum: a98490bcac44e9a851e12e3c22d816803a4368ea24762f115d2f29e8c44d83faa25a81d67e70d6ce6fe39649fc237263da11b216e8ad2deffda76c68bf188877
+  checksum: 4ee9d76dbf5cb03b3aa2bd6fe95e8382701c7aa720fd463ebd4d951c17035af85322d8f5b70410d08b8ccf28b9aacfc16737c28544cebe099b15955c29bb8f5e
   languageName: node
   linkType: hard
 
