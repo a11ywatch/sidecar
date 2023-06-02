@@ -12,7 +12,7 @@ __metadata:
     "@a11ywatch/core": ^0.8.10
     "@a11ywatch/crawler": ^0.8.5
     "@a11ywatch/mav": ^0.7.16
-    "@a11ywatch/pagemind": ^0.9.27
+    "@a11ywatch/pagemind": ^0.9.28
     "@a11ywatch/protos": ^0.4.7
     "@swc/core": ^1.3.58
     "@swc/jest": ^0.2.26
@@ -92,9 +92,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@a11ywatch/pagemind@npm:^0.9.27":
-  version: 0.9.27
-  resolution: "@a11ywatch/pagemind@npm:0.9.27"
+"@a11ywatch/pagemind@npm:^0.9.28":
+  version: 0.9.28
+  resolution: "@a11ywatch/pagemind@npm:0.9.28"
   dependencies:
     "@a11ywatch/protos": ^0.4.3
     "@a11ywatch/website-source-builder": ^0.1.8
@@ -102,11 +102,11 @@ __metadata:
     "@grpc/proto-loader": 0.7.7
     fastq: 1.15.0
     get-page-speed: 1.0.1
-    kayle: ^0.4.53
+    kayle: ^0.4.58
     lighthouse: 9.6.8
     pb-util: 1.0.3
-    playwright: ^1.33.0
-  checksum: f0cbc9b59f4cf56cd5a1f036d801a041cd19c9f387ebb94f20e490ffa65fddc16d762c01719529df60dcc4b1fc0b8df9d39cb54a11b2ff6abfefdcbcd3067a21
+    playwright: ^1.34.3
+  checksum: 069ee9a1820337ca5f033ea6efab9beb4f8ab2b6404dfcfff6a3ce9dc1a9f66e815632cd915378ea188f63a54819e2831975acd9b75a4c4832af39b1c00d3ab7
   languageName: node
   linkType: hard
 
@@ -3947,17 +3947,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fast_axecore@npm:4.6.23":
-  version: 4.6.23
-  resolution: "fast_axecore@npm:4.6.23"
-  checksum: 2e9c125bfa0fde9a0418691a2fc1469c1ae8a3f20d0a44cf56425d96757fb82e9ca6d0ba97fdb7cee7e0625648e8fdabbfb23b11abc23a2c212020225c5c8923
+"fast_axecore@npm:4.6.24":
+  version: 4.6.24
+  resolution: "fast_axecore@npm:4.6.24"
+  checksum: 396474f686e5ec20798210c3cf5cd2da98391eafe2fe52e5e5b7c267b0466aad2b0fc51c89cca9a5237d3dd0eeecb361c72a5aab655f98c3fefdd0a28b43f22a
   languageName: node
   linkType: hard
 
-"fast_htmlcs@npm:0.0.51":
-  version: 0.0.51
-  resolution: "fast_htmlcs@npm:0.0.51"
-  checksum: 48c03a2bb3020b0b900b35ad8ff4352668a6a5bc380bf2f8df2f58a2b414751bb74ab8342022bd71106b751c57ae4c73f64e64b02e1b45bebd895fc06314e470
+"fast_htmlcs@npm:0.0.53":
+  version: 0.0.53
+  resolution: "fast_htmlcs@npm:0.0.53"
+  checksum: 8abde61821d906aff7b42993f67298a6361c4bd3cf4ab49620688f92457065521bd4e4b70e30df83699c22b41b8c7f27ccdfaf64d0e71da7d5bf2745316bd779
   languageName: node
   linkType: hard
 
@@ -5422,14 +5422,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"kayle@npm:^0.4.53":
-  version: 0.4.53
-  resolution: "kayle@npm:0.4.53"
+"kayle@npm:^0.4.58":
+  version: 0.4.58
+  resolution: "kayle@npm:0.4.58"
   dependencies:
-    fast_axecore: 4.6.23
-    fast_htmlcs: 0.0.51
+    fast_axecore: 4.6.24
+    fast_htmlcs: 0.0.53
     kayle_innate: 0.0.14
-  checksum: 9561973fc658c37ebfa5d8bae11ce79b2d9ea9d52543b4f180d918555e42e27266ae836aaa09399fe07974d918021fc2e47e02eeb8af8764c1cc93d246a0c69b
+  checksum: 47bd1616663aee3073c56ad7fa11b4c8f9e655cdb0472ba548b8e2ba6beb1bc60f09f6a82ca49b6b4f873569910f33821c58abc8786d700dfe00b5f3a5f75b77
   languageName: node
   linkType: hard
 
@@ -6567,23 +6567,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"playwright-core@npm:1.33.0":
-  version: 1.33.0
-  resolution: "playwright-core@npm:1.33.0"
+"playwright-core@npm:1.34.3":
+  version: 1.34.3
+  resolution: "playwright-core@npm:1.34.3"
   bin:
-    playwright: cli.js
-  checksum: 5fb7bda06a8b73b56b85b5a0b8f711211dde57a375d9379289e22239b2de879c6d93c8fdc9ba44b932bf100914ab1ca1a55697ad88440fdd0a39101fc020b77f
+    playwright-core: cli.js
+  checksum: eaf9e9b2d77b9726867dcbc641a1c72b0e8f680cdd71ff904366deea1c96141ff7563f6c6fb29f9975309d1b87dead97ea93f6f44953b59946882fb785b34867
   languageName: node
   linkType: hard
 
-"playwright@npm:^1.33.0":
-  version: 1.33.0
-  resolution: "playwright@npm:1.33.0"
+"playwright@npm:^1.34.3":
+  version: 1.34.3
+  resolution: "playwright@npm:1.34.3"
   dependencies:
-    playwright-core: 1.33.0
+    playwright-core: 1.34.3
   bin:
     playwright: cli.js
-  checksum: fb3934c56ed749cf412ea35b82052f013872d7f7b7747ab7042580af473dfc1b038956a31c132ee8c0098f74150c75e2073e9c737fd4c1ed54700a23fffc079f
+  checksum: 4495b23eacc673c03fd4706ce5914dd4855d46657e63411e54bb928e796d7ca59a6101379000ec73e2731437d04a441242cebbb6d4e069e050255db9eff65f7d
   languageName: node
   linkType: hard
 
