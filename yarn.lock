@@ -12,7 +12,7 @@ __metadata:
     "@a11ywatch/core": ^0.8.10
     "@a11ywatch/crawler": ^0.8.5
     "@a11ywatch/mav": ^0.7.16
-    "@a11ywatch/pagemind": ^0.9.28
+    "@a11ywatch/pagemind": ^0.9.29
     "@a11ywatch/protos": ^0.4.7
     "@swc/core": ^1.3.58
     "@swc/jest": ^0.2.26
@@ -92,9 +92,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@a11ywatch/pagemind@npm:^0.9.28":
-  version: 0.9.28
-  resolution: "@a11ywatch/pagemind@npm:0.9.28"
+"@a11ywatch/pagemind@npm:^0.9.29":
+  version: 0.9.29
+  resolution: "@a11ywatch/pagemind@npm:0.9.29"
   dependencies:
     "@a11ywatch/protos": ^0.4.3
     "@a11ywatch/website-source-builder": ^0.1.8
@@ -102,11 +102,11 @@ __metadata:
     "@grpc/proto-loader": 0.7.7
     fastq: 1.15.0
     get-page-speed: 1.0.1
-    kayle: ^0.4.58
+    kayle: ^0.4.66
     lighthouse: 9.6.8
     pb-util: 1.0.3
     playwright: ^1.34.3
-  checksum: 069ee9a1820337ca5f033ea6efab9beb4f8ab2b6404dfcfff6a3ce9dc1a9f66e815632cd915378ea188f63a54819e2831975acd9b75a4c4832af39b1c00d3ab7
+  checksum: 26505f4180133945a3745ac86d651ef12158addf8016f26ee6d8d18d85a2730ec3413a71b6c89d7685a387fe8cda41f43c953c99b58b420f6d09980f77999a14
   languageName: node
   linkType: hard
 
@@ -3947,17 +3947,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fast_axecore@npm:4.6.24":
-  version: 4.6.24
-  resolution: "fast_axecore@npm:4.6.24"
-  checksum: 396474f686e5ec20798210c3cf5cd2da98391eafe2fe52e5e5b7c267b0466aad2b0fc51c89cca9a5237d3dd0eeecb361c72a5aab655f98c3fefdd0a28b43f22a
+"fast_axecore@npm:4.6.25":
+  version: 4.6.25
+  resolution: "fast_axecore@npm:4.6.25"
+  checksum: 3115bc20f2653e77863a242592fc83b6cf00adcac1b8b53ce9dba6f188aaa8484699944653d522af9918ee949be2b5fe466bb6542d0a942046ca8507ebf2cb34
   languageName: node
   linkType: hard
 
-"fast_htmlcs@npm:0.0.53":
-  version: 0.0.53
-  resolution: "fast_htmlcs@npm:0.0.53"
-  checksum: 8abde61821d906aff7b42993f67298a6361c4bd3cf4ab49620688f92457065521bd4e4b70e30df83699c22b41b8c7f27ccdfaf64d0e71da7d5bf2745316bd779
+"fast_htmlcs@npm:0.0.55":
+  version: 0.0.55
+  resolution: "fast_htmlcs@npm:0.0.55"
+  checksum: 2cb06300bd85b4c75a6decd53a9134f2f57a1543e1200e3abec2ee37cc76176009cc8fcfcab83ddbeec2ea5696b3261f56e3130ebc6d93c311b81a9fe0e4996e
   languageName: node
   linkType: hard
 
@@ -5422,14 +5422,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"kayle@npm:^0.4.58":
-  version: 0.4.58
-  resolution: "kayle@npm:0.4.58"
+"kayle@npm:^0.4.66":
+  version: 0.4.66
+  resolution: "kayle@npm:0.4.66"
   dependencies:
-    fast_axecore: 4.6.24
-    fast_htmlcs: 0.0.53
+    fast_axecore: 4.6.25
+    fast_htmlcs: 0.0.55
     kayle_innate: 0.0.14
-  checksum: 47bd1616663aee3073c56ad7fa11b4c8f9e655cdb0472ba548b8e2ba6beb1bc60f09f6a82ca49b6b4f873569910f33821c58abc8786d700dfe00b5f3a5f75b77
+  checksum: f6e38c1abf653bfa07859bfed8e256d729f973262d6a31950b72476ce658068afd3c3faf8e6405da45eff6b3dd987a1bd2935ce74f31c025d000d351e4dedbb3
   languageName: node
   linkType: hard
 
