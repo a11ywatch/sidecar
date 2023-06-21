@@ -1,4 +1,4 @@
-FROM node:20.1-bullseye-slim AS dbinstaller 
+FROM node:20.2-bullseye-slim AS dbinstaller 
 
 RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
 
@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install -y mongodb-org
 
 RUN sed -i "s,\\(^[[:blank:]]*bindIp:\\) .*,\\1 0.0.0.0," /etc/mongod.conf
 
-FROM --platform=$BUILDPLATFORM node:20.1-bullseye-slim AS installer 
+FROM --platform=$BUILDPLATFORM node:20.2-bullseye-slim AS installer 
 
 WORKDIR /usr/src/app
 
@@ -40,7 +40,7 @@ RUN curl https://sh.rustup.rs -sSf | bash -s -- -y
 RUN rustup update
 RUN cargo install website_crawler
 
-FROM node:20.1-bullseye-slim AS builder 
+FROM node:20.2-bullseye-slim AS builder 
 
 WORKDIR /usr/src/app
 
@@ -61,7 +61,7 @@ COPY . .
 RUN yarn build && rm -R ./node_modules && yarn config set network-timeout 300000
 RUN yarn install --production
 
-FROM node:20.1-bullseye-slim
+FROM node:20.2-bullseye-slim
 
 WORKDIR /usr/src/app
 
