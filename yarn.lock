@@ -10,9 +10,9 @@ __metadata:
   resolution: "@a11ywatch/a11ywatch@workspace:."
   dependencies:
     "@a11ywatch/core": ^0.8.12
-    "@a11ywatch/crawler": ^0.8.7
+    "@a11ywatch/crawler": ^0.8.9
     "@a11ywatch/mav": ^0.7.16
-    "@a11ywatch/pagemind": ^0.9.35
+    "@a11ywatch/pagemind": ^0.9.39
     "@a11ywatch/protos": ^0.4.7
     "@swc/core": ^1.3.58
     "@swc/jest": ^0.2.26
@@ -63,10 +63,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@a11ywatch/crawler@npm:^0.8.7":
-  version: 0.8.7
-  resolution: "@a11ywatch/crawler@npm:0.8.7"
-  checksum: 06f3a0c2960e39c951cd2d004c8da0c935b7248bed0181d10022863ad866fb5035014b2a7d2d8ca0b0ee1e12d4677a4375009c4e9c6c6cee86b35fc80b58edce
+"@a11ywatch/crawler@npm:^0.8.9":
+  version: 0.8.9
+  resolution: "@a11ywatch/crawler@npm:0.8.9"
+  checksum: f20ad78ac0ba3f5b3ad81b342b8e596bb2a6dea8afcb63f65f42e85ef59f57a81068d64afdef4c76a8da415150852349d6a467ab24ad2efea5b6c330595eac03
   languageName: node
   linkType: hard
 
@@ -92,21 +92,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@a11ywatch/pagemind@npm:^0.9.35":
-  version: 0.9.35
-  resolution: "@a11ywatch/pagemind@npm:0.9.35"
+"@a11ywatch/pagemind@npm:^0.9.39":
+  version: 0.9.39
+  resolution: "@a11ywatch/pagemind@npm:0.9.39"
   dependencies:
     "@a11ywatch/protos": ^0.4.7
     "@a11ywatch/website-source-builder": ^0.1.8
-    "@grpc/grpc-js": 1.8.16
-    "@grpc/proto-loader": 0.7.7
+    "@grpc/grpc-js": 1.8.20
+    "@grpc/proto-loader": 0.7.8
     fastq: 1.15.0
     get-page-speed: 1.0.1
-    kayle: ^0.4.69
+    kayle: 0.4.77
     lighthouse: 9.6.8
     pb-util: 1.0.3
-    playwright: ^1.35.1
-  checksum: 725d0261d91249271b847a4c9025d15955422071a5c80e41dae6da882f472bd38abdd66644e711dfd56120d0d7d1082aa6ad7250c3747c8f21c0104347e6b3fc
+    playwright: ^1.36.2
+  checksum: 63a0382e6a43521663a4e86a3f7b44bbf70b3377f19bc2a282ec97610319914ef9d1495977f0be3da403dcc0789bc088e380bdafb147015a413332676d3c026e
   languageName: node
   linkType: hard
 
@@ -1061,6 +1061,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@grpc/grpc-js@npm:1.8.20":
+  version: 1.8.20
+  resolution: "@grpc/grpc-js@npm:1.8.20"
+  dependencies:
+    "@grpc/proto-loader": ^0.7.0
+    "@types/node": ">=12.12.47"
+  checksum: 9a18b3b7342b13259567c7fe6161ba1b43d85ee911ed5003939dc392a0575724014978c40e6edb4eedb035126a8d3c66dcf6cb7678153565c2ae77c3bd4b3e97
+  languageName: node
+  linkType: hard
+
 "@grpc/grpc-js@npm:1.8.8":
   version: 1.8.8
   resolution: "@grpc/grpc-js@npm:1.8.8"
@@ -1098,6 +1108,21 @@ __metadata:
   bin:
     proto-loader-gen-types: build/bin/proto-loader-gen-types.js
   checksum: 6015d99d36d0451075a53e5c5842e8912235973a515677afca038269969ad84f22a4c9fbc9badf52f034736b3f1bf864739f7c4238ba8a7e6fd3bba75cfce0ee
+  languageName: node
+  linkType: hard
+
+"@grpc/proto-loader@npm:0.7.8":
+  version: 0.7.8
+  resolution: "@grpc/proto-loader@npm:0.7.8"
+  dependencies:
+    "@types/long": ^4.0.1
+    lodash.camelcase: ^4.3.0
+    long: ^4.0.0
+    protobufjs: ^7.2.4
+    yargs: ^17.7.2
+  bin:
+    proto-loader-gen-types: build/bin/proto-loader-gen-types.js
+  checksum: 0c7d755b08b74c25d113e363ebb7b44d2bb778158304c2c9549e1b36a57a9b7afc05563684b3cb39faed47c585ba609b84546a076f86eab7d5fef2d5794a45a9
   languageName: node
   linkType: hard
 
@@ -3986,10 +4011,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fast_axecore@npm:4.6.25":
-  version: 4.6.25
-  resolution: "fast_axecore@npm:4.6.25"
-  checksum: 3115bc20f2653e77863a242592fc83b6cf00adcac1b8b53ce9dba6f188aaa8484699944653d522af9918ee949be2b5fe466bb6542d0a942046ca8507ebf2cb34
+"fast_axecore@npm:4.6.29":
+  version: 4.6.29
+  resolution: "fast_axecore@npm:4.6.29"
+  checksum: 56a4a87a614b0d8239828d889deec7de4b7ecebca902df990af9a45cc1f605f3fb14a86061c22e2efe7ee34a050b40f9afdbecabbc5ae5f344c59fa04dab2883
   languageName: node
   linkType: hard
 
@@ -5461,21 +5486,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"kayle@npm:^0.4.69":
-  version: 0.4.69
-  resolution: "kayle@npm:0.4.69"
+"kayle@npm:0.4.77":
+  version: 0.4.77
+  resolution: "kayle@npm:0.4.77"
   dependencies:
-    fast_axecore: 4.6.25
+    fast_axecore: 4.6.29
     fast_htmlcs: 0.0.55
-    kayle_innate: 0.0.14
-  checksum: e77455f44abd5773dd3df829d5f8532e754485743e6e4fd9fa8d4374effcf068a393fb8b03cfd84c4fd443416f5623e0d521538d84f052f48b410cd87b3a7950
+    kayle_innate: 0.0.15
+  checksum: 3be8f4919f592d47d822ff9a065d454500d4a5c0ac02cd03e7490ed7c9d751567b709b1c1adcc346c76d4ba188b52981cf4c35ac63ad9c5693c11f54b974169a
   languageName: node
   linkType: hard
 
-"kayle_innate@npm:0.0.14":
-  version: 0.0.14
-  resolution: "kayle_innate@npm:0.0.14"
-  checksum: 0bb0702551ff39bbdc82193da0f0146fcd4a3051a0a942ec7263b977a451bf8e186877079192b55bc1f07948dd40fac2e69c053ed25be5e1f7be6d85c62765aa
+"kayle_innate@npm:0.0.15":
+  version: 0.0.15
+  resolution: "kayle_innate@npm:0.0.15"
+  checksum: b98baeee74df1200e8d9eadfeac4e7763115f7d177e3be80ab61f7c2a2622a9d8e6aaf3f35b0d9ce488f27a201b2c6fbbc788704c66d53a8cfd0c0d9da3c07f9
   languageName: node
   linkType: hard
 
@@ -6606,23 +6631,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"playwright-core@npm:1.35.1":
-  version: 1.35.1
-  resolution: "playwright-core@npm:1.35.1"
+"playwright-core@npm:1.36.2":
+  version: 1.36.2
+  resolution: "playwright-core@npm:1.36.2"
   bin:
     playwright-core: cli.js
-  checksum: 179abc0051f00474e528935b507fa8cedc986b2803b020d7679878ba28cdd7036ad5a779792aad2ad281f8dc625eb1d2fb77663cb8de0d20c7ffbda7c18febdd
+  checksum: 2193ce802ef93c28b9b5e11a0b1d7b60778c686015659978d1cbf0eb9cda2cdc85ec5575b887c1346e9d161cc2805bf27638d76a2f7f857dffeae968e6ceffcd
   languageName: node
   linkType: hard
 
-"playwright@npm:^1.35.1":
-  version: 1.35.1
-  resolution: "playwright@npm:1.35.1"
+"playwright@npm:^1.36.2":
+  version: 1.36.2
+  resolution: "playwright@npm:1.36.2"
   dependencies:
-    playwright-core: 1.35.1
+    playwright-core: 1.36.2
   bin:
     playwright: cli.js
-  checksum: 46e8ad6d4429acd8e6c8e680ed8107b13c62a22bb95172666411aedb8e9abd8f9c379e4905493a330e29c3dcf63b9a49a528f2f081d682d9f5da078c54760634
+  checksum: 5876b65a0f1303e45f99c7d120706af0ab808efd5d89c514741584ff1060408b62148ae2790c2e6527642f2b8f49db682710b87d3df7b3ba510e8e847e6041ef
   languageName: node
   linkType: hard
 
@@ -6709,6 +6734,26 @@ __metadata:
     "@types/node": ">=13.7.0"
     long: ^5.0.0
   checksum: ae41669b1b0372fb1d49f506f2d1f2b0fb3dc3cece85987b17bcb544e4cef7c8d27f480486cdec324146ad0a5d22a327166a7ea864a9b3e49cc3c92a5d3f6500
+  languageName: node
+  linkType: hard
+
+"protobufjs@npm:^7.2.4":
+  version: 7.2.4
+  resolution: "protobufjs@npm:7.2.4"
+  dependencies:
+    "@protobufjs/aspromise": ^1.1.2
+    "@protobufjs/base64": ^1.1.2
+    "@protobufjs/codegen": ^2.0.4
+    "@protobufjs/eventemitter": ^1.1.0
+    "@protobufjs/fetch": ^1.1.0
+    "@protobufjs/float": ^1.0.2
+    "@protobufjs/inquire": ^1.1.0
+    "@protobufjs/path": ^1.1.2
+    "@protobufjs/pool": ^1.1.0
+    "@protobufjs/utf8": ^1.1.0
+    "@types/node": ">=13.7.0"
+    long: ^5.0.0
+  checksum: a952cdf2a5e5250c16ae651b570849b6f5b20a5475c3eef63ffb290ad239aa2916adfc1cc676f7fc93c69f48113df268761c0c246f7f023118c85bdd1a170044
   languageName: node
   linkType: hard
 
