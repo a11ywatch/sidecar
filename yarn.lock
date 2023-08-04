@@ -11,8 +11,8 @@ __metadata:
   dependencies:
     "@a11ywatch/core": ^0.8.12
     "@a11ywatch/crawler": ^0.8.9
-    "@a11ywatch/mav": ^0.7.16
-    "@a11ywatch/pagemind": ^0.9.40
+    "@a11ywatch/mav": ^0.7.23
+    "@a11ywatch/pagemind": ^0.9.41
     "@a11ywatch/protos": ^0.4.7
     "@swc/core": ^1.3.58
     "@swc/jest": ^0.2.26
@@ -70,31 +70,29 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@a11ywatch/mav@npm:^0.7.16":
-  version: 0.7.16
-  resolution: "@a11ywatch/mav@npm:0.7.16"
+"@a11ywatch/mav@npm:^0.7.23":
+  version: 0.7.23
+  resolution: "@a11ywatch/mav@npm:0.7.23"
   dependencies:
     "@a11ywatch/protos": ^0.4.3
     "@a11ywatch/website-source-builder": ^0.1.8
     "@azure/cognitiveservices-computervision": ^8.2.0
     "@azure/ms-rest-js": 2.6.4
-    "@grpc/grpc-js": 1.8.8
-    "@grpc/proto-loader": 0.7.4
-    "@tensorflow-models/coco-ssd": 2.2.2
-    "@tensorflow-models/mobilenet": 2.1.0
-    "@tensorflow/tfjs-backend-wasm": 4.1.0
-    "@tensorflow/tfjs-converter": 4.1.0
-    "@tensorflow/tfjs-core": 4.1.0
+    "@grpc/grpc-js": 1.9.0
+    "@grpc/proto-loader": 0.7.8
+    "@tensorflow/tfjs-backend-wasm": ^4.9.0
+    "@tensorflow/tfjs-converter": ^4.9.0
+    "@tensorflow/tfjs-core": ^4.9.0
     base64-to-tensor: ^1.2.8
     jpeg-js: ^0.4.4
-    tensornet: 1.0.14
-  checksum: e798a946bab4ef09f16dc624ce9c03e427753b1912629de1bee502dff403af3a5b4f9b1ffc99fdf29d27d41b97c9d57630e01c330412ef7f6749389b2e4a168a
+    tensornet: ^1.0.16
+  checksum: a23a27af33e17e3dd855a83f30fc78efb15847ee15d353858c75e860778a4cd6e7454b3c071ff3df88cad5ca7ca2fe7597bb44d29178483d35a7305c58030a38
   languageName: node
   linkType: hard
 
-"@a11ywatch/pagemind@npm:^0.9.40":
-  version: 0.9.40
-  resolution: "@a11ywatch/pagemind@npm:0.9.40"
+"@a11ywatch/pagemind@npm:^0.9.41":
+  version: 0.9.41
+  resolution: "@a11ywatch/pagemind@npm:0.9.41"
   dependencies:
     "@a11ywatch/protos": ^0.4.7
     "@a11ywatch/website-source-builder": ^0.1.8
@@ -102,11 +100,11 @@ __metadata:
     "@grpc/proto-loader": 0.7.8
     fastq: 1.15.0
     get-page-speed: 1.0.1
-    kayle: 0.5.11
+    kayle: 0.5.15
     lighthouse: 9.6.8
     pb-util: 1.0.3
     playwright: ^1.36.2
-  checksum: 163847f432033ffb1e109c7fa98b134f490cd40e255b889238af0b69fd257367f0122d56d7a2cfa31c80215276885c3d73fdf0522c1559b9c30e40cf96b28e32
+  checksum: bcd6f85676ca25a9b5bda4737fdc7dd08069a43f8c2e3128835d26917e5a08a61dc8b0c7a43a093ac176def8a05362f2a02581729218e6c7d5a5e2e6c2fb8021
   languageName: node
   linkType: hard
 
@@ -1071,28 +1069,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@grpc/grpc-js@npm:1.8.8":
-  version: 1.8.8
-  resolution: "@grpc/grpc-js@npm:1.8.8"
+"@grpc/grpc-js@npm:1.9.0":
+  version: 1.9.0
+  resolution: "@grpc/grpc-js@npm:1.9.0"
   dependencies:
     "@grpc/proto-loader": ^0.7.0
     "@types/node": ">=12.12.47"
-  checksum: 3416de560e93281d3c6b9d7c4b08c77cae912c75e1e0b5e2022a54b8ce18a264ba72685f8fe8b721f0efbc222a652a1b35b85073382dca4b7ffd14989abd6821
-  languageName: node
-  linkType: hard
-
-"@grpc/proto-loader@npm:0.7.4, @grpc/proto-loader@npm:^0.7.0":
-  version: 0.7.4
-  resolution: "@grpc/proto-loader@npm:0.7.4"
-  dependencies:
-    "@types/long": ^4.0.1
-    lodash.camelcase: ^4.3.0
-    long: ^4.0.0
-    protobufjs: ^7.0.0
-    yargs: ^16.2.0
-  bin:
-    proto-loader-gen-types: build/bin/proto-loader-gen-types.js
-  checksum: 7789a959060535287a74cef8e13783e9a1506ae22365a48e0cfb29f48697ac946b461fe12ee711d280c4690a333c705f504076303a806f2fef81cc3e532637ac
+  checksum: 32817c84e4b0eedc523b123cbfce935cafedbf33f94f7609931a878dd6945c4d83b4a781a9d7dedbd4fd273a95e8bd3b0de5f6ca920112331e1c3279fa104b3e
   languageName: node
   linkType: hard
 
@@ -1123,6 +1106,21 @@ __metadata:
   bin:
     proto-loader-gen-types: build/bin/proto-loader-gen-types.js
   checksum: 0c7d755b08b74c25d113e363ebb7b44d2bb778158304c2c9549e1b36a57a9b7afc05563684b3cb39faed47c585ba609b84546a076f86eab7d5fef2d5794a45a9
+  languageName: node
+  linkType: hard
+
+"@grpc/proto-loader@npm:^0.7.0":
+  version: 0.7.4
+  resolution: "@grpc/proto-loader@npm:0.7.4"
+  dependencies:
+    "@types/long": ^4.0.1
+    lodash.camelcase: ^4.3.0
+    long: ^4.0.0
+    protobufjs: ^7.0.0
+    yargs: ^16.2.0
+  bin:
+    proto-loader-gen-types: build/bin/proto-loader-gen-types.js
+  checksum: 7789a959060535287a74cef8e13783e9a1506ae22365a48e0cfb29f48697ac946b461fe12ee711d280c4690a333c705f504076303a806f2fef81cc3e532637ac
   languageName: node
   linkType: hard
 
@@ -1786,81 +1784,51 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tensorflow-models/coco-ssd@npm:2.2.2, @tensorflow-models/coco-ssd@npm:^2.2.2":
-  version: 2.2.2
-  resolution: "@tensorflow-models/coco-ssd@npm:2.2.2"
-  peerDependencies:
-    "@tensorflow/tfjs-converter": ^3.3.0
-    "@tensorflow/tfjs-core": ^3.3.0
-  checksum: 3ec4fade895a0151ac36db2086af4ac1dc957e2ac5b1b586a1c4182ba8f583f759bc82d093372a8731eb92dfb645ae3f3c471755b788e5e1ae9e2a66a4c6f942
-  languageName: node
-  linkType: hard
-
-"@tensorflow-models/mobilenet@npm:2.1.0, @tensorflow-models/mobilenet@npm:^2.1.0":
-  version: 2.1.0
-  resolution: "@tensorflow-models/mobilenet@npm:2.1.0"
-  peerDependencies:
-    "@tensorflow/tfjs-converter": ^3.1.0
-    "@tensorflow/tfjs-core": ^3.1.0
-  checksum: b45bda1e666495969ce119cebd67119fad951e09bdb4f6d0f400dee8663487cc3a0b4fcc05c28ad2b908e0ce7050cb7479406983c83ac19af03968121ceea34e
-  languageName: node
-  linkType: hard
-
-"@tensorflow/tfjs-backend-cpu@npm:4.1.0":
-  version: 4.1.0
-  resolution: "@tensorflow/tfjs-backend-cpu@npm:4.1.0"
+"@tensorflow/tfjs-backend-cpu@npm:4.10.0":
+  version: 4.10.0
+  resolution: "@tensorflow/tfjs-backend-cpu@npm:4.10.0"
   dependencies:
     "@types/seedrandom": ^2.4.28
     seedrandom: ^3.0.5
   peerDependencies:
-    "@tensorflow/tfjs-core": 4.1.0
-  checksum: 77b7f8e0d7b2536d3b3d6e74bd352a4a6f7f01fd8bbd8f50089ee1e140c08e5b64513b7b5aaa0803a0601afbb29af3554dd923db8ce1d2f44cd560d3eb6cc9cb
+    "@tensorflow/tfjs-core": 4.10.0
+  checksum: 0a976b4dc00627d9e7b42cf55ae30f5da6462a3796056969894aeb048eafa744fe5b28be6bd3293ef8d00ead7bd5bb936d02b9bb4895597ccc65de165021021e
   languageName: node
   linkType: hard
 
-"@tensorflow/tfjs-backend-wasm@npm:4.1.0":
-  version: 4.1.0
-  resolution: "@tensorflow/tfjs-backend-wasm@npm:4.1.0"
+"@tensorflow/tfjs-backend-wasm@npm:^4.9.0":
+  version: 4.10.0
+  resolution: "@tensorflow/tfjs-backend-wasm@npm:4.10.0"
   dependencies:
-    "@tensorflow/tfjs-backend-cpu": 4.1.0
+    "@tensorflow/tfjs-backend-cpu": 4.10.0
     "@types/emscripten": ~0.0.34
   peerDependencies:
-    "@tensorflow/tfjs-core": 4.1.0
-  checksum: a33514e1e8bc46d84335f8c39d3e07d458ff96f5ea8d995d2fc2b12ff8ab8fa453aca928365c7528ee0526d60903379d6dfbd928d5774cb8bd840042cbdc8818
+    "@tensorflow/tfjs-core": 4.10.0
+  checksum: 3671ebcb8424a1655a548e56c6e83bcc44ed19ba2da94e5a01b1fab9a4d31c1dad6e21a7591a4b56b8a6535a5cf21a1ba309335e7d2507e39f56661d5fb5e9cc
   languageName: node
   linkType: hard
 
-"@tensorflow/tfjs-converter@npm:4.1.0":
-  version: 4.1.0
-  resolution: "@tensorflow/tfjs-converter@npm:4.1.0"
+"@tensorflow/tfjs-converter@npm:^4.9.0":
+  version: 4.10.0
+  resolution: "@tensorflow/tfjs-converter@npm:4.10.0"
   peerDependencies:
-    "@tensorflow/tfjs-core": 4.1.0
-  checksum: cb6ca68f535b4a30a5a2e8eaf0eecf35404845374609e6984c4a3d90304c325efe5ec8c93e4946783cd8a6c8bfd497051e8c59703eb18d65d0a976bec30b7f3e
+    "@tensorflow/tfjs-core": 4.10.0
+  checksum: 446bb173b2bc83aecb33538689ca5decd9015f6a1fd685cc4ab59ffba43e5aed8f86c31d8b9ad7782680f7e235969c9724f0d97eeb410ee7ed9024ad43704921
   languageName: node
   linkType: hard
 
-"@tensorflow/tfjs-converter@npm:^3.18.0":
-  version: 3.21.0
-  resolution: "@tensorflow/tfjs-converter@npm:3.21.0"
-  peerDependencies:
-    "@tensorflow/tfjs-core": 3.21.0
-  checksum: b31e010f53ba860fa852376ad50ed9ef66ecd940e59620c47e127c1a1dc9b0c0fd748e5c691e7066c117d97f4bd4cd47201c02c92ad5f10f26e5541426cabb4a
-  languageName: node
-  linkType: hard
-
-"@tensorflow/tfjs-core@npm:4.1.0":
-  version: 4.1.0
-  resolution: "@tensorflow/tfjs-core@npm:4.1.0"
+"@tensorflow/tfjs-core@npm:^4.9.0":
+  version: 4.10.0
+  resolution: "@tensorflow/tfjs-core@npm:4.10.0"
   dependencies:
     "@types/long": ^4.0.1
     "@types/offscreencanvas": ~2019.7.0
     "@types/seedrandom": ^2.4.28
-    "@types/webgl-ext": 0.0.30
-    "@webgpu/types": 0.1.21
+    "@webgpu/types": 0.1.30
     long: 4.0.0
     node-fetch: ~2.6.1
     seedrandom: ^3.0.5
-  checksum: b7af0c6603bc71abf8507f808d76ffdeb1428bfcd2dc966b7ae6167afa6e5c1874a302ec2d1c82a6ffceb4d8ae6dd3d2c87654ddf1a8571e54a7fc5d62c0f652
+  checksum: 8b57d90de05dbd3bd59982ab7427b6a7a15cbb72acc65ff629c81baa6cb415b1a42d6e2b040683389b1bc95815ac44cdd6acf74d3d57975a4dd2ca31bb365571
   languageName: node
   linkType: hard
 
@@ -2165,13 +2133,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/webgl-ext@npm:0.0.30":
-  version: 0.0.30
-  resolution: "@types/webgl-ext@npm:0.0.30"
-  checksum: c98aa8af2d24d54dc29d836aed0ca5acff45903dc91879d62110e84e615024ca071af69d1dcff26857aa2ab80c86bea9373d718616dcc61dbfdc6a6dd917a064
-  languageName: node
-  linkType: hard
-
 "@types/webidl-conversions@npm:*":
   version: 7.0.0
   resolution: "@types/webidl-conversions@npm:7.0.0"
@@ -2230,10 +2191,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@webgpu/types@npm:0.1.21":
-  version: 0.1.21
-  resolution: "@webgpu/types@npm:0.1.21"
-  checksum: b16ddc4d46a3c507a7f243f14b08b96ebbdb4495f9ea703441ad3525dd5e7e4a5f743f2879e51d74c78846f950e7d60c1349670f75cb7ca03ac3ddf51d46aabe
+"@webgpu/types@npm:0.1.30":
+  version: 0.1.30
+  resolution: "@webgpu/types@npm:0.1.30"
+  checksum: c07516879c60617214717d63789f4a512004d004e845ed0439449f564fb8b94bd48882d599918e7db26914d584c70aecda25e90a327aabc32e57c90aa818ac06
   languageName: node
   linkType: hard
 
@@ -4011,10 +3972,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fast_axecore@npm:4.6.29":
-  version: 4.6.29
-  resolution: "fast_axecore@npm:4.6.29"
-  checksum: 56a4a87a614b0d8239828d889deec7de4b7ecebca902df990af9a45cc1f605f3fb14a86061c22e2efe7ee34a050b40f9afdbecabbc5ae5f344c59fa04dab2883
+"fast_axecore@npm:4.6.31":
+  version: 4.6.31
+  resolution: "fast_axecore@npm:4.6.31"
+  checksum: 07d1b490c369a33b80d5a9d763926a02d3d523cdd1481818baaea9a8846594a86e7f2011957b8f2f582c3fe2a7cf9cedd8e0c1606879c4e86b22b00ef14d18c6
   languageName: node
   linkType: hard
 
@@ -5486,14 +5447,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"kayle@npm:0.5.11":
-  version: 0.5.11
-  resolution: "kayle@npm:0.5.11"
+"kayle@npm:0.5.15":
+  version: 0.5.15
+  resolution: "kayle@npm:0.5.15"
   dependencies:
-    fast_axecore: 4.6.29
+    fast_axecore: 4.6.31
     fast_htmlcs: 0.0.55
     kayle_innate: 0.0.16
-  checksum: 29adc64bd2380e62f5ad2da43295dd186cb4d9fd3a4ab5fc79e01df23035a422b6e2a97bbf27b44adf2d23985b384de510c39c5b7d9e55e6e630b06ab1912088
+  checksum: ee741e135e07d888a90bc45946cd61f3e363deeec61d32da28edf4e4d9845fa3c6dfa71c1d24f626198a06e93d27861c9c4a5a6296e962a88ad6a6136b8383f5
   languageName: node
   linkType: hard
 
@@ -7598,17 +7559,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tensornet@npm:1.0.14":
-  version: 1.0.14
-  resolution: "tensornet@npm:1.0.14"
+"tensornet@npm:^1.0.16":
+  version: 1.0.16
+  resolution: "tensornet@npm:1.0.16"
   dependencies:
-    "@tensorflow-models/coco-ssd": ^2.2.2
-    "@tensorflow-models/mobilenet": ^2.1.0
-    "@tensorflow/tfjs-converter": ^3.18.0
     base64-to-tensor: ^1.2.8
   peerDependencies:
+    "@tensorflow/tfjs-converter": "*"
     "@tensorflow/tfjs-core": "*"
-  checksum: 8d436ec0535a6eb0ddb3eaff0b8ed4ce0a496023f14c2b9898798311ae6bb9ff6a01dcc418e632f89c8912ee407746938eb735c13bbdcb23114fffcdcb05e27b
+  checksum: 9cf299a6ebb450a54987fa724e150055b0b490c55cae1ea2eb56544d0ceb1be8eaea2c2e73b4f188bfb07c8e248151f0633204b15c6169f94252c658cff8d289
   languageName: node
   linkType: hard
 
