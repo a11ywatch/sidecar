@@ -12,7 +12,7 @@ __metadata:
     "@a11ywatch/core": ^0.8.13
     "@a11ywatch/crawler": ^0.8.9
     "@a11ywatch/mav": ^0.7.27
-    "@a11ywatch/pagemind": ^0.9.42
+    "@a11ywatch/pagemind": ^0.9.43
     "@a11ywatch/protos": ^0.4.7
     "@swc/core": ^1.3.58
     "@swc/jest": ^0.2.26
@@ -90,21 +90,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@a11ywatch/pagemind@npm:^0.9.42":
-  version: 0.9.42
-  resolution: "@a11ywatch/pagemind@npm:0.9.42"
+"@a11ywatch/pagemind@npm:^0.9.43":
+  version: 0.9.43
+  resolution: "@a11ywatch/pagemind@npm:0.9.43"
   dependencies:
     "@a11ywatch/protos": ^0.4.7
     "@a11ywatch/website-source-builder": ^0.1.8
-    "@grpc/grpc-js": 1.9.0
-    "@grpc/proto-loader": 0.7.8
+    "@grpc/grpc-js": 1.9.3
+    "@grpc/proto-loader": 0.7.10
     fastq: 1.15.0
     get-page-speed: 1.0.1
     kayle: 0.5.30
     lighthouse: 9.6.8
     pb-util: 1.0.3
-    playwright: ^1.36.2
-  checksum: 41ca6fd9acd07fd2303d6fcf7924a9808c297a4f624210939d460b5accad7bc94f261b13e966cef182de74ffc9da81bbe203f93c03463f3d01cbe1c25644ca7a
+    playwright: ^1.38.0
+  checksum: 98014f122ef8d34ae86a4a3fc46f16b9f612d8d6e77b4d6040ed2c5f6af67bf5b8c299df133ecc72b2f61bf55090a47d2c06f314d800acf434c1f4ab1c161e0d
   languageName: node
   linkType: hard
 
@@ -1056,6 +1056,30 @@ __metadata:
     "@grpc/proto-loader": ^0.7.0
     "@types/node": ">=12.12.47"
   checksum: 32817c84e4b0eedc523b123cbfce935cafedbf33f94f7609931a878dd6945c4d83b4a781a9d7dedbd4fd273a95e8bd3b0de5f6ca920112331e1c3279fa104b3e
+  languageName: node
+  linkType: hard
+
+"@grpc/grpc-js@npm:1.9.3":
+  version: 1.9.3
+  resolution: "@grpc/grpc-js@npm:1.9.3"
+  dependencies:
+    "@grpc/proto-loader": ^0.7.8
+    "@types/node": ">=12.12.47"
+  checksum: 09634de9f871a17c95db95338fe472522d5dca0f77b622e3a497ef806262813445ba1a1f3261f03461d84ac985e420317d5638b3314fcb524ee2e47e512ffa64
+  languageName: node
+  linkType: hard
+
+"@grpc/proto-loader@npm:0.7.10, @grpc/proto-loader@npm:^0.7.8":
+  version: 0.7.10
+  resolution: "@grpc/proto-loader@npm:0.7.10"
+  dependencies:
+    lodash.camelcase: ^4.3.0
+    long: ^5.0.0
+    protobufjs: ^7.2.4
+    yargs: ^17.7.2
+  bin:
+    proto-loader-gen-types: build/bin/proto-loader-gen-types.js
+  checksum: 4987e23b57942c2363b6a6a106e63efae636666cefa348778dfafef2ff72da7343c8587667521cb1d52482827bcd001dd535bdc27065110af56d9c7c176334c9
   languageName: node
   linkType: hard
 
@@ -4200,7 +4224,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fsevents@npm:^2.3.2, fsevents@npm:~2.3.2":
+"fsevents@npm:2.3.2, fsevents@npm:^2.3.2, fsevents@npm:~2.3.2":
   version: 2.3.2
   resolution: "fsevents@npm:2.3.2"
   dependencies:
@@ -4210,7 +4234,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fsevents@patch:fsevents@^2.3.2#~builtin<compat/fsevents>, fsevents@patch:fsevents@~2.3.2#~builtin<compat/fsevents>":
+"fsevents@patch:fsevents@2.3.2#~builtin<compat/fsevents>, fsevents@patch:fsevents@^2.3.2#~builtin<compat/fsevents>, fsevents@patch:fsevents@~2.3.2#~builtin<compat/fsevents>":
   version: 2.3.2
   resolution: "fsevents@patch:fsevents@npm%3A2.3.2#~builtin<compat/fsevents>::version=2.3.2&hash=df0bf1"
   dependencies:
@@ -6697,23 +6721,27 @@ __metadata:
   languageName: node
   linkType: hard
 
-"playwright-core@npm:1.36.2":
-  version: 1.36.2
-  resolution: "playwright-core@npm:1.36.2"
+"playwright-core@npm:1.38.0":
+  version: 1.38.0
+  resolution: "playwright-core@npm:1.38.0"
   bin:
     playwright-core: cli.js
-  checksum: 2193ce802ef93c28b9b5e11a0b1d7b60778c686015659978d1cbf0eb9cda2cdc85ec5575b887c1346e9d161cc2805bf27638d76a2f7f857dffeae968e6ceffcd
+  checksum: 9eb43fc6c3cb392d5f35b0fd0b7291b38a8cbdc3cbb944a8261f744f30d09196dfa3b5d84aa02ffc09af87d08d31b385b007b6af20d0b6cd50a29344f3b0db8d
   languageName: node
   linkType: hard
 
-"playwright@npm:^1.36.2":
-  version: 1.36.2
-  resolution: "playwright@npm:1.36.2"
+"playwright@npm:^1.38.0":
+  version: 1.38.0
+  resolution: "playwright@npm:1.38.0"
   dependencies:
-    playwright-core: 1.36.2
+    fsevents: 2.3.2
+    playwright-core: 1.38.0
+  dependenciesMeta:
+    fsevents:
+      optional: true
   bin:
     playwright: cli.js
-  checksum: 5876b65a0f1303e45f99c7d120706af0ab808efd5d89c514741584ff1060408b62148ae2790c2e6527642f2b8f49db682710b87d3df7b3ba510e8e847e6041ef
+  checksum: c5356690a391d5dd41f814d4e2694b93ba9e79381ce63de752da1c6c59b1f9c69bc6be853d973d0542d73a44a6b15f7c0081a164a64cd27b6b31207710c0ab34
   languageName: node
   linkType: hard
 
