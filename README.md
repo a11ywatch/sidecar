@@ -228,6 +228,8 @@ A11YWATCH_NO_STORE=true
 DISABLE_POSTINSTALL=true
 # do not store data and use memory db
 A11YWATCH_MEMORY_ONLY=true
+# enable screen recording to a directory
+PAGEMIND_RECORD=true
 ```
 
 ## Pipelines

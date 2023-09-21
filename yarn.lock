@@ -12,7 +12,7 @@ __metadata:
     "@a11ywatch/core": ^0.8.13
     "@a11ywatch/crawler": ^0.8.9
     "@a11ywatch/mav": ^0.7.27
-    "@a11ywatch/pagemind": ^0.9.43
+    "@a11ywatch/pagemind": ^0.9.44
     "@a11ywatch/protos": ^0.4.7
     "@swc/core": ^1.3.58
     "@swc/jest": ^0.2.26
@@ -90,9 +90,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@a11ywatch/pagemind@npm:^0.9.43":
-  version: 0.9.43
-  resolution: "@a11ywatch/pagemind@npm:0.9.43"
+"@a11ywatch/pagemind@npm:^0.9.44":
+  version: 0.9.44
+  resolution: "@a11ywatch/pagemind@npm:0.9.44"
   dependencies:
     "@a11ywatch/protos": ^0.4.7
     "@a11ywatch/website-source-builder": ^0.1.8
@@ -104,7 +104,7 @@ __metadata:
     lighthouse: 9.6.8
     pb-util: 1.0.3
     playwright: ^1.38.0
-  checksum: 98014f122ef8d34ae86a4a3fc46f16b9f612d8d6e77b4d6040ed2c5f6af67bf5b8c299df133ecc72b2f61bf55090a47d2c06f314d800acf434c1f4ab1c161e0d
+  checksum: fe7b28c363fb4164288ebb7b45aa516c572ccb0fee2691c0933055a0dd56b6d68e4311aefa09bfead8920ff0f70aa1e15bf87e988ea9d36f0ec0c0a167832d40
   languageName: node
   linkType: hard
 
