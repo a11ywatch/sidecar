@@ -5,6 +5,7 @@
 // global.TextDecoder = TextDecoder;
 
 import { scan, appReady, multiPageScan, crawlList } from "../src/server";
+import { crawlWebsiteStream } from "../src/client";
 
 jest.setTimeout(300000);
 
@@ -53,6 +54,22 @@ describe("suite", () => {
       }).then((pages) => {
         expect(pages.length).toBe(pageList.length);
       });
+    });
+  });
+
+  test("can multi page crawl with the client", () => {
+    appReady().then(async () => {
+      const data = await crawlWebsiteStream(
+        {
+          url: "https://jeffmendez.com",
+        }
+      );
+
+      const issuesCount = data.issues.filter(
+        (issue) => issue.type === "error"
+      ).length;
+      
+      expect(issuesCount).toBeLessThan(30);
     });
   });
 });

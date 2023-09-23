@@ -1,3 +1,6 @@
+process.env.CHROME_HOST = process.env.CHROME_HOST || "127.0.0.1";
+process.env.A11YWATCH_MEMORY_ONLY = process.env.A11YWATCH_MEMORY_ONLY || "true";
+
 import { scanWebsite } from "@a11ywatch/core/core/actions/accessibility/scan";
 import { crawlMultiSite } from "@a11ywatch/core/core/actions/accessibility/crawl";
 
@@ -11,6 +14,7 @@ import { pollTillConnected } from "@a11ywatch/core/database/client";
 import { isReady } from "@a11ywatch/core/app";
 import { wsChromeEndpointurl } from "@a11ywatch/pagemind/config/chrome";
 
+// todo: get from pagemind lib
 export type Issues = {
   type: "error" | "warning" | "notice";
   code?: string;
@@ -20,7 +24,7 @@ export type Issues = {
   selector?: string;
   runner?: string;
 };
-// issue stats
+// issue stats todo: get from lib
 export type IssuesInfo = {
   accessScoreAverage: number;
   possibleIssuesFixedByCdn: number;
@@ -64,7 +68,7 @@ const appReady = async () => {
 const logger = (
   value: string,
   fn: keyof Console = "log",
-  optional: any[] = []
+  optional: any[] = [],
 ) => {
   // disable logging in production
   if (
@@ -81,8 +85,8 @@ const initApplication = () => {
     if (!startedApp) {
       await Promise.all(
         ["mav", "pagemind", "crawler"].map(
-          (mname) => import(`@a11ywatch/${mname}`)
-        )
+          (mname) => import(`@a11ywatch/${mname}`),
+        ),
       );
 
       try {
@@ -128,13 +132,13 @@ async function scan(params: Parameters<typeof scanWebsite>[0]) {
  */
 async function multiPageScan(
   params: Parameters<typeof crawlMultiSiteWithEvent>[0],
-  cb?: (res: { data: Results }) => void
+  cb?: (res: { data: Results }) => void,
 ) {
   await appReady();
   if (typeof cb === "function") {
     crawlEmitter.on(
       `crawl-${domainName(getHostName(params.url))}-${params?.userId || 0}`,
-      cb
+      cb,
     );
   }
   return await crawlMultiSiteWithEvent(params);

@@ -13,10 +13,11 @@ OS an automatic installation is performed.
 node - v14.0 and up, pref node ^v18.
 
 1. `yarn add @a11ywatch/a11ywatch`.
+1. `npx playwright install`
 
 ### bun
 
-1. `npm i puppeteer` # we need pre-install scripts
+1. `npx playwright install` # we need pre-install scripts
 1. `bun install @a11ywatch/a11ywatch`.
 
 In order to build `@a11ywatch/crawler` >= 0.5.0, you need the `protoc` Protocol Buffers compiler, along with Protocol Buffers resource files.
@@ -198,6 +199,7 @@ The following packages can be imported to use directly to extend [A11yWatch Lite
 1. [`@a11ywatch/pagemind`](https://github.com/a11ywatch/pagemind)
 1. [`@a11ywatch/crawler`](https://github.com/a11ywatch/crawler)
 1. [`@a11ywatch/elastic-cdn`](https://github.com/a11ywatch/elastic-cdn)
+1. [`@a11ywatch/client`](https://gitlab.com/j-mendez/a11ywatch-clients/-/tree/main/typescript_api_client)
 
 ## Examples
 
@@ -230,6 +232,8 @@ DISABLE_POSTINSTALL=true
 A11YWATCH_MEMORY_ONLY=true
 # enable screen recording to a directory
 PAGEMIND_RECORD=true
+# set the chrome host
+CHROME_HOST=
 ```
 
 ## Pipelines
@@ -245,6 +249,27 @@ dagger do build
 # make sure to have localhost listening - `docker run -d -p 2222:5000 --restart=always --name localregistry registry:2`
 dagger do push
 # now you can run `docker run localhost:2222/a11ywatch:latest`
+```
+
+## Client
+
+We bundled the client for a one stop install for javascript at `@a11ywatch/a11ywatch/client`.
+
+```ts
+import { setAPIToken, setA11yWatchURL, crawlWebsite, scanWebsite } from "@a11ywatch/a11ywatch/client"
+
+// set at runtime to a new token - if you use the env variable below it is also set without the method
+setAPIToken(process.env.A11YWATCH_TOKEN)
+setA11yWatchURL("https://api.a11ywatch.com")
+
+// single page audit
+const audit = await scanWebsite({ url: "https://mywebsite.com" })
+console.log(audit)
+
+// stream multi page full website audit results
+await crawlWebsite({ url: "https://mywebsite.com" }, (audit) => { 
+  console.log(audit)
+})
 ```
 
 ## Help

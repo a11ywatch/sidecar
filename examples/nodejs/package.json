@@ -7,10 +7,12 @@
     "build": "tsc",
     "start": "node ./dist/index.js",
     "start:auth": "node ./dist/authenticate.js",
-    "test": "jest"
+    "start:client": "node ./dist/external.js",
+    "test": "jest",
+    "postinstall": "tsc"
   },
   "dependencies": {
-    "@a11ywatch/a11ywatch": "^0.1.40"
+    "@a11ywatch/a11ywatch": "^0.3.60"
   },
   "devDependencies": {
     "@types/node": "^18.0.0",

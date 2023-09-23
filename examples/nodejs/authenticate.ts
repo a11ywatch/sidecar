@@ -1,4 +1,4 @@
-// authentication example via bun
+// authentication example vianodejs
 import { appReady } from "@a11ywatch/a11ywatch";
 
 // wait till app is ready to auth
