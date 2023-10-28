@@ -11,7 +11,7 @@ __metadata:
   dependencies:
     "@a11ywatch/client": ^0.0.5
     "@a11ywatch/core": ^0.8.15
-    "@a11ywatch/crawler": ^0.8.9
+    "@a11ywatch/crawler": ^0.8.12
     "@a11ywatch/mav": ^0.7.27
     "@a11ywatch/pagemind": ^0.9.54
     "@a11ywatch/protos": ^0.4.7
@@ -75,10 +75,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@a11ywatch/crawler@npm:^0.8.9":
-  version: 0.8.11
-  resolution: "@a11ywatch/crawler@npm:0.8.11"
-  checksum: 3cb51088ac98c9e050c840ab784fba8db17255fda101df5089cb454de8ba5dfaaf13c252bf01fd73e14af994265671a2e05997fdf0670f13b81487e1604daa4d
+"@a11ywatch/crawler@npm:^0.8.12":
+  version: 0.8.12
+  resolution: "@a11ywatch/crawler@npm:0.8.12"
+  checksum: 32a07edb7513dc0e7481ceb68e03e928a8d18f182b17f21d40f535c454566f21791b73ded042c1cda8dcbee9e7713872a26d341c0c2b2a25d08ea3637f84c471
   languageName: node
   linkType: hard
 
