@@ -10,10 +10,10 @@ __metadata:
   resolution: "@a11ywatch/a11ywatch@workspace:."
   dependencies:
     "@a11ywatch/client": "npm:^0.0.5"
-    "@a11ywatch/core": "npm:^0.8.15"
-    "@a11ywatch/crawler": "npm:^0.9.1"
-    "@a11ywatch/mav": "npm:^0.7.27"
-    "@a11ywatch/pagemind": "npm:^0.9.57"
+    "@a11ywatch/core": "npm:^0.8.16"
+    "@a11ywatch/crawler": "npm:^0.9.2"
+    "@a11ywatch/mav": "npm:^0.7.28"
+    "@a11ywatch/pagemind": "npm:^0.9.58"
     "@a11ywatch/protos": "npm:^0.4.7"
     "@swc/core": "npm:^1.3.58"
     "@swc/jest": "npm:^0.2.26"
@@ -35,9 +35,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@a11ywatch/core@npm:^0.8.15":
-  version: 0.8.15
-  resolution: "@a11ywatch/core@npm:0.8.15"
+"@a11ywatch/core@npm:^0.8.16":
+  version: 0.8.16
+  resolution: "@a11ywatch/core@npm:0.8.16"
   dependencies:
     "@a11ywatch/protos": "npm:^0.4.7"
     "@a11ywatch/website-source-builder": "npm:^0.1.14"
@@ -45,7 +45,7 @@ __metadata:
     "@fastify/cors": "npm:^7.0.0"
     "@fastify/rate-limit": "npm:^6.0.1"
     "@graphql-tools/schema": "npm:^9.0.19"
-    "@grpc/grpc-js": "npm:1.9.4"
+    "@grpc/grpc-js": "npm:1.10.1"
     "@grpc/proto-loader": "npm:0.7.7"
     apollo-server: "npm:3.12.0"
     apollo-server-core: "npm:3.12.0"
@@ -71,26 +71,26 @@ __metadata:
     pb-util: "npm:1.0.3"
     stripe: "npm:11.18.0"
     ws: "npm:8.13.0"
-  checksum: c22f9342df9b559ba86b74553797ddc4f9d101c5b89be33fc52b075f83894b67ee56fb554234aa7731be0207dfac5fe17c367e95204507242141cb60d8a50da2
+  checksum: dfcb210beff5f450a00990cfd3f616c5da54df8393a40d7be51c04e701c9f3f168c878bc5c256160dd248c63b2d11d0cb38194d22fbde5d710c31bf65f04ba00
   languageName: node
   linkType: hard
 
-"@a11ywatch/crawler@npm:^0.9.1":
-  version: 0.9.1
-  resolution: "@a11ywatch/crawler@npm:0.9.1"
-  checksum: df143527630b2de0667126a2bad137b69b268aa59cfc31a6dfd3d0cae66e1b2595a48eb1f18a715e0c8cffc912e9662c2db05c3dfb634aafe85ae7323ace6cb7
+"@a11ywatch/crawler@npm:^0.9.2":
+  version: 0.9.2
+  resolution: "@a11ywatch/crawler@npm:0.9.2"
+  checksum: 0866e534eab8f29827f7405252eaa762524abb31e91fbb4246b4d063c04386097ee74ffdf76fbf9cfca9366052dd99c825b08b924ca9f49afb59914ec7303de2
   languageName: node
   linkType: hard
 
-"@a11ywatch/mav@npm:^0.7.27":
-  version: 0.7.27
-  resolution: "@a11ywatch/mav@npm:0.7.27"
+"@a11ywatch/mav@npm:^0.7.28":
+  version: 0.7.28
+  resolution: "@a11ywatch/mav@npm:0.7.28"
   dependencies:
     "@a11ywatch/protos": "npm:^0.4.3"
     "@a11ywatch/website-source-builder": "npm:^0.1.8"
     "@azure/cognitiveservices-computervision": "npm:^8.2.0"
     "@azure/ms-rest-js": "npm:2.6.4"
-    "@grpc/grpc-js": "npm:1.9.0"
+    "@grpc/grpc-js": "npm:1.10.1"
     "@grpc/proto-loader": "npm:0.7.8"
     "@tensorflow/tfjs-backend-wasm": "npm:^4.9.0"
     "@tensorflow/tfjs-converter": "npm:^4.9.0"
@@ -98,25 +98,25 @@ __metadata:
     base64-to-tensor: "npm:^1.2.16"
     sharp: "npm:^0.32.4"
     tensornet: "npm:^1.0.21"
-  checksum: bb968ebdaa8ecb7ba339d948fc1b83db9be100492870dfaff1b90bf107a7dd7dbaf9425c8f6bc605198ba8ad46b9623ea5c774d4c4d89c45f57d0f826db21e9d
+  checksum: 45fe71d67c6cab424e80a9a410a412ee3c8c3b50ded3caed27cea1e5379f4115424a7483bbd692735cf1cc7be732d623c543b0f2261b46cbd86e6a2ac767a646
   languageName: node
   linkType: hard
 
-"@a11ywatch/pagemind@npm:^0.9.57":
-  version: 0.9.57
-  resolution: "@a11ywatch/pagemind@npm:0.9.57"
+"@a11ywatch/pagemind@npm:^0.9.58":
+  version: 0.9.58
+  resolution: "@a11ywatch/pagemind@npm:0.9.58"
   dependencies:
     "@a11ywatch/protos": "npm:^0.4.7"
     "@a11ywatch/website-source-builder": "npm:^0.1.8"
-    "@grpc/grpc-js": "npm:1.9.3"
+    "@grpc/grpc-js": "npm:1.10.1"
     "@grpc/proto-loader": "npm:0.7.10"
-    fastq: "npm:1.15.0"
+    fastq: "npm:1.17.1"
     get-page-speed: "npm:1.0.1"
-    kayle: "npm:0.8.1"
+    kayle: "npm:0.8.17"
     lighthouse: "npm:9.6.8"
     pb-util: "npm:1.0.3"
-    playwright: "npm:^1.38.1"
-  checksum: 52f5b3b0f4fed9cc65a2cc0f128dc6aee94a0ac920644cb6d7b0cad48a148fa5e922ee58e7b92ecf5da096a5ec3cbf636124d27e1c5ae67dedee9a3582366fe6
+    playwright: "npm:^1.41.2"
+  checksum: c97d7ce205db4787ecb1f837b2b9fb9af1c5b956ec96fbf942d9e2ec0746a351b80cee6ac1cc9e9314ccafd435a8e08ae9866a4b55506b7e59e26e317e9866ee
   languageName: node
   linkType: hard
 
@@ -1018,37 +1018,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@grpc/grpc-js@npm:1.9.0":
-  version: 1.9.0
-  resolution: "@grpc/grpc-js@npm:1.9.0"
-  dependencies:
-    "@grpc/proto-loader": "npm:^0.7.0"
-    "@types/node": "npm:>=12.12.47"
-  checksum: 91c2e3a11fcac6a24e2b994d61e065d585929faf6eb4878372e3293dcb50d138fd3cd263a1795f670892b599b7c1b91e124e706ec6e71a71ddd4f9014f81d9af
-  languageName: node
-  linkType: hard
-
-"@grpc/grpc-js@npm:1.9.3":
-  version: 1.9.3
-  resolution: "@grpc/grpc-js@npm:1.9.3"
+"@grpc/grpc-js@npm:1.10.1":
+  version: 1.10.1
+  resolution: "@grpc/grpc-js@npm:1.10.1"
   dependencies:
     "@grpc/proto-loader": "npm:^0.7.8"
     "@types/node": "npm:>=12.12.47"
-  checksum: ad609a9ce647a454de1209a23403be9a106b8917db37efee2cd8e059e0ce6f49fb54827f692516b679d55c64cf88ae11667cbedb8a6f51a5dfb8f8ed1bb1f11b
+  checksum: d71dc86f59db93c5367222d6e887d3bd0215b0e5ae00ecf07acbf2b61ed7b05ab17ebb3d317a2f31cb1747627548ec77ea1df1816c24e0362c3c6c1f9c4418e2
   languageName: node
   linkType: hard
 
-"@grpc/grpc-js@npm:1.9.4":
-  version: 1.9.4
-  resolution: "@grpc/grpc-js@npm:1.9.4"
-  dependencies:
-    "@grpc/proto-loader": "npm:^0.7.8"
-    "@types/node": "npm:>=12.12.47"
-  checksum: 6a3b1a8fc730c695d6ce7896abd2b1c034f2fbd9854a4cbdaf57fa739c1cecdd81fb3b6217e8f98d4e2eb4ccb2f816911788a045b766ec1e32d3d77a16509358
-  languageName: node
-  linkType: hard
-
-"@grpc/proto-loader@npm:0.7.10, @grpc/proto-loader@npm:^0.7.0, @grpc/proto-loader@npm:^0.7.8":
+"@grpc/proto-loader@npm:0.7.10, @grpc/proto-loader@npm:^0.7.8":
   version: 0.7.10
   resolution: "@grpc/proto-loader@npm:0.7.10"
   dependencies:
@@ -4174,17 +4154,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fast_axecore@npm:4.6.31":
-  version: 4.6.31
-  resolution: "fast_axecore@npm:4.6.31"
-  checksum: cdf90eddad2de8e9982eeb2df1dccd17e29b476ae33089b383cc1c67fb9d35519ec364f4a3d526782036159bfdb42b4ea99572681536d2790ffc14e06e18a664
+"fast_axecore@npm:4.6.32":
+  version: 4.6.32
+  resolution: "fast_axecore@npm:4.6.32"
+  checksum: 117567bf824dfbadc20516a3039826459995ec992ac20c10600b1eb7ffb6fef7b08f84146c19e5782eb829947cdb45e25626525c2c7c5e01ba6ffb499a848334
   languageName: node
   linkType: hard
 
-"fast_htmlcs@npm:0.0.68":
-  version: 0.0.68
-  resolution: "fast_htmlcs@npm:0.0.68"
-  checksum: 51e0ea727899875baa29f94977a5906132b33efd2f3c4c7a811250a4f7902ab11f58ba48bb5351a792b84165e4d7391025046bdb8fcfeb084b9ca5e192af85bb
+"fast_htmlcs@npm:0.0.74":
+  version: 0.0.74
+  resolution: "fast_htmlcs@npm:0.0.74"
+  checksum: 9492c34f135c0eca1e3b170bfd0a0680793aee55bfccb0444a0294272d8eccf8c151b5f80808d47d0820c4f80673580bf659652d664a177224fe33719a49f4ca
   languageName: node
   linkType: hard
 
@@ -4225,6 +4205,15 @@ __metadata:
   dependencies:
     reusify: "npm:^1.0.4"
   checksum: 67c01b1c972e2d5b6fea197a1a39d5d582982aea69ff4c504badac71080d8396d4843b165a9686e907c233048f15a86bbccb0e7f83ba771f6fa24bcde059d0c3
+  languageName: node
+  linkType: hard
+
+"fastq@npm:1.17.1":
+  version: 1.17.1
+  resolution: "fastq@npm:1.17.1"
+  dependencies:
+    reusify: "npm:^1.0.4"
+  checksum: a443180068b527dd7b3a63dc7f2a47ceca2f3e97b9c00a1efe5538757e6cc4056a3526df94308075d7727561baf09ebaa5b67da8dcbddb913a021c5ae69d1f69
   languageName: node
   linkType: hard
 
@@ -5710,21 +5699,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"kayle@npm:0.8.1":
-  version: 0.8.1
-  resolution: "kayle@npm:0.8.1"
+"kayle@npm:0.8.17":
+  version: 0.8.17
+  resolution: "kayle@npm:0.8.17"
   dependencies:
-    fast_axecore: "npm:4.6.31"
-    fast_htmlcs: "npm:0.0.68"
-    kayle_innate: "npm:0.0.22"
-  checksum: e0928f3e26532d288a6134317a7ea2650db8fb38a0230fedccb6c1f3f2a9dd0b5e3e2d25e8914ee8b9be49a91c4e3ecde52bdfa5c3553c933662a99a102dde15
+    fast_axecore: "npm:4.6.32"
+    fast_htmlcs: "npm:0.0.74"
+    kayle_innate: "npm:0.0.25"
+  checksum: 4d5b2e2c4030a19e165afcd3e6f937084759a8aaeea18228dabf7317e66a3a0d6379bb3771f49d775c6939bb0e8e6475899781e5acbd43ee2f3a2aa8ae42d763
   languageName: node
   linkType: hard
 
-"kayle_innate@npm:0.0.22":
-  version: 0.0.22
-  resolution: "kayle_innate@npm:0.0.22"
-  checksum: 8a25803b4355e4e36e47a1485cd0da9b093c6301ba90a758a740067955aa2b5e9cd2634fbd68f2e05e3035cacbf8b7f98621158a37c7da75d1266790cabee59c
+"kayle_innate@npm:0.0.25":
+  version: 0.0.25
+  resolution: "kayle_innate@npm:0.0.25"
+  checksum: 161e78d5fbc8bea0355e8bd59d5fc30779dbc62d671ff02f41cd16c2324874584f53efe2730942554b32d39a8d31fa6ae36bb00a2d89023b40bc5f9b38cb1ead
   languageName: node
   linkType: hard
 
@@ -6948,27 +6937,27 @@ __metadata:
   languageName: node
   linkType: hard
 
-"playwright-core@npm:1.38.1":
-  version: 1.38.1
-  resolution: "playwright-core@npm:1.38.1"
+"playwright-core@npm:1.41.2":
+  version: 1.41.2
+  resolution: "playwright-core@npm:1.41.2"
   bin:
     playwright-core: cli.js
-  checksum: c28bfd0ada5f00f564ed75216ccd785eff8d18bc69e9e568e3e8327211fc6e1b3562af715990a0420c91610d18f8227b125bbfcf2377996a37f4b2deafe5a3d7
+  checksum: 77ff881ebb9cc0654edd00c5ff202f5f61aee7a5318e1f12a82e30a3636de21e8b5982fae6138e5bb90115ae509c15a640cf85b10b3e2daebb2bb286da54fd4c
   languageName: node
   linkType: hard
 
-"playwright@npm:^1.38.1":
-  version: 1.38.1
-  resolution: "playwright@npm:1.38.1"
+"playwright@npm:^1.41.2":
+  version: 1.41.2
+  resolution: "playwright@npm:1.41.2"
   dependencies:
     fsevents: "npm:2.3.2"
-    playwright-core: "npm:1.38.1"
+    playwright-core: "npm:1.41.2"
   dependenciesMeta:
     fsevents:
       optional: true
   bin:
     playwright: cli.js
-  checksum: c5eb030f191f912127292c61aa12eb904e50ad4005267d6c894e41a0ad551c4db512f70a2a2dbfa089ea9612715f1f1a1b2aad1e17f537fc9f0a3c2bbbff6486
+  checksum: 272399f622dc2df90fbef147b9b1cfab5d7a78cc364bdfa98d2bf08faa9894346f58629fe4fef41b108ca2cb203b3970d7886b7f392cb0399c75b521478e2920
   languageName: node
   linkType: hard
 
