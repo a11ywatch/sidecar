@@ -65,6 +65,9 @@ FROM node:20.1-bullseye-slim
 
 WORKDIR /usr/src/app
 
+ARG NODE_ENV=production
+ENV NODE_ENV $NODE_ENV
+
 ENV MONGOMS_SYSTEM_BINARY="/usr/bin/mongod" \
 	MONGO_INITDB_DATABASE="a11ywatch" \
 	MONGOMS_VERSION="5.0.9" \
