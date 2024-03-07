@@ -13,8 +13,8 @@ __metadata:
     "@a11ywatch/core": "npm:^0.8.16"
     "@a11ywatch/crawler": "npm:^0.9.2"
     "@a11ywatch/mav": "npm:^0.7.28"
-    "@a11ywatch/pagemind": "npm:^0.9.58"
-    "@a11ywatch/protos": "npm:^0.4.7"
+    "@a11ywatch/pagemind": "npm:^0.9.60"
+    "@a11ywatch/protos": "npm:^0.4.8"
     "@swc/core": "npm:^1.3.58"
     "@swc/jest": "npm:^0.2.26"
     "@types/node": "npm:^18.15.10"
@@ -102,9 +102,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@a11ywatch/pagemind@npm:^0.9.58":
-  version: 0.9.58
-  resolution: "@a11ywatch/pagemind@npm:0.9.58"
+"@a11ywatch/pagemind@npm:^0.9.60":
+  version: 0.9.60
+  resolution: "@a11ywatch/pagemind@npm:0.9.60"
   dependencies:
     "@a11ywatch/protos": "npm:^0.4.7"
     "@a11ywatch/website-source-builder": "npm:^0.1.8"
@@ -112,11 +112,11 @@ __metadata:
     "@grpc/proto-loader": "npm:0.7.10"
     fastq: "npm:1.17.1"
     get-page-speed: "npm:1.0.1"
-    kayle: "npm:0.8.17"
+    kayle: "npm:0.8.26"
     lighthouse: "npm:9.6.8"
     pb-util: "npm:1.0.3"
-    playwright: "npm:^1.41.2"
-  checksum: c97d7ce205db4787ecb1f837b2b9fb9af1c5b956ec96fbf942d9e2ec0746a351b80cee6ac1cc9e9314ccafd435a8e08ae9866a4b55506b7e59e26e317e9866ee
+    playwright: "npm:^1.42.1"
+  checksum: 0528b3b422c3b2bfe6db7c1ec955ec47dd36105dff4f871278f1c537fb3ab26a106c239650e32178953ddf464bcb323977c21bda67a81eeff0784e1c164bea0e
   languageName: node
   linkType: hard
 
@@ -124,6 +124,13 @@ __metadata:
   version: 0.4.7
   resolution: "@a11ywatch/protos@npm:0.4.7"
   checksum: 7974ce0f4b95e24bc1b4999be35e339373b956eb74a99c47328e95fa3834786c874d3d67e54f8a68484844fdb6202425cf6945ddcccc8420be8fa95ec6154198
+  languageName: node
+  linkType: hard
+
+"@a11ywatch/protos@npm:^0.4.8":
+  version: 0.4.8
+  resolution: "@a11ywatch/protos@npm:0.4.8"
+  checksum: 0c14da9f947e9fe8c6c01a8a503e5a5d8fcd05c63c4be6113c280d328dc520fe418f0b12e4fdc4d8b6b099fcc7efbd5211aced7b64ee8dcbedaf0d90e5f3cf2a
   languageName: node
   linkType: hard
 
@@ -4154,17 +4161,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fast_axecore@npm:4.6.32":
-  version: 4.6.32
-  resolution: "fast_axecore@npm:4.6.32"
-  checksum: 117567bf824dfbadc20516a3039826459995ec992ac20c10600b1eb7ffb6fef7b08f84146c19e5782eb829947cdb45e25626525c2c7c5e01ba6ffb499a848334
+"fast_axecore@npm:4.6.33":
+  version: 4.6.33
+  resolution: "fast_axecore@npm:4.6.33"
+  checksum: ce0658c21b314639eb64ab29fb053f4fec5b6421348966526430c5a71df0393bad3415db40f395602d2a47c6069c574602789db7d4cadc860800cad839f9e21e
   languageName: node
   linkType: hard
 
-"fast_htmlcs@npm:0.0.74":
-  version: 0.0.74
-  resolution: "fast_htmlcs@npm:0.0.74"
-  checksum: 9492c34f135c0eca1e3b170bfd0a0680793aee55bfccb0444a0294272d8eccf8c151b5f80808d47d0820c4f80673580bf659652d664a177224fe33719a49f4ca
+"fast_htmlcs@npm:0.0.77":
+  version: 0.0.77
+  resolution: "fast_htmlcs@npm:0.0.77"
+  checksum: 431fc4f87b479e65341fc242affacdbaee19d76a6201d99e74dacd17e7364561b5f80279e2ea1058e400675f4c4c318432817cc60e9967cdd3b562ae831cf320
   languageName: node
   linkType: hard
 
@@ -5699,21 +5706,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"kayle@npm:0.8.17":
-  version: 0.8.17
-  resolution: "kayle@npm:0.8.17"
+"kayle@npm:0.8.26":
+  version: 0.8.26
+  resolution: "kayle@npm:0.8.26"
   dependencies:
-    fast_axecore: "npm:4.6.32"
-    fast_htmlcs: "npm:0.0.74"
-    kayle_innate: "npm:0.0.25"
-  checksum: 4d5b2e2c4030a19e165afcd3e6f937084759a8aaeea18228dabf7317e66a3a0d6379bb3771f49d775c6939bb0e8e6475899781e5acbd43ee2f3a2aa8ae42d763
+    fast_axecore: "npm:4.6.33"
+    fast_htmlcs: "npm:0.0.77"
+    kayle_innate: "npm:0.0.26"
+  checksum: 4809e635d6aa952a2a581f71656a5e6f3d9612fef7c7547fa7effd059667484ce7f4898e43ced0e4166ada00c9192b9a309de76f29f5e1d71eb800684ad1da9b
   languageName: node
   linkType: hard
 
-"kayle_innate@npm:0.0.25":
-  version: 0.0.25
-  resolution: "kayle_innate@npm:0.0.25"
-  checksum: 161e78d5fbc8bea0355e8bd59d5fc30779dbc62d671ff02f41cd16c2324874584f53efe2730942554b32d39a8d31fa6ae36bb00a2d89023b40bc5f9b38cb1ead
+"kayle_innate@npm:0.0.26":
+  version: 0.0.26
+  resolution: "kayle_innate@npm:0.0.26"
+  checksum: 9e25b9dc28efe4ccbb78cd8f29822e952d02248033ff70229d3dccd4220ec4e0837b37cdd4140d06dd88efe29b1a493146da1d5ebedda51c58712515edfdee0c
   languageName: node
   linkType: hard
 
@@ -6937,27 +6944,27 @@ __metadata:
   languageName: node
   linkType: hard
 
-"playwright-core@npm:1.41.2":
-  version: 1.41.2
-  resolution: "playwright-core@npm:1.41.2"
+"playwright-core@npm:1.42.1":
+  version: 1.42.1
+  resolution: "playwright-core@npm:1.42.1"
   bin:
     playwright-core: cli.js
-  checksum: 77ff881ebb9cc0654edd00c5ff202f5f61aee7a5318e1f12a82e30a3636de21e8b5982fae6138e5bb90115ae509c15a640cf85b10b3e2daebb2bb286da54fd4c
+  checksum: 6a71d2e2aa5b054d6e83836f09e139a0ff4de3aa9b6aebe0e03de3ab828c735d23a20a60fafcee91c1658da490cc390f05af463325ac842beaff58a173f7ad9e
   languageName: node
   linkType: hard
 
-"playwright@npm:^1.41.2":
-  version: 1.41.2
-  resolution: "playwright@npm:1.41.2"
+"playwright@npm:^1.42.1":
+  version: 1.42.1
+  resolution: "playwright@npm:1.42.1"
   dependencies:
     fsevents: "npm:2.3.2"
-    playwright-core: "npm:1.41.2"
+    playwright-core: "npm:1.42.1"
   dependenciesMeta:
     fsevents:
       optional: true
   bin:
     playwright: cli.js
-  checksum: 272399f622dc2df90fbef147b9b1cfab5d7a78cc364bdfa98d2bf08faa9894346f58629fe4fef41b108ca2cb203b3970d7886b7f392cb0399c75b521478e2920
+  checksum: 1f866a6820e19feaaeb12cd87bfa93299d6d72e1287413098c5ae0349c7e7953eb0a303bdfbb99c12173a3493e6fdb642f89a166cfcfd8295254a520abf6eb7f
   languageName: node
   linkType: hard
 
