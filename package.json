@@ -1,6 +1,6 @@
 {
   "name": "@a11ywatch/a11ywatch",
-  "version": "0.3.81",
+  "version": "0.3.82",
   "description": "A11yWatch lite sidecar for web accessibility automation.",
   "main": "./server.js",
   "author": "Jeff Mendez <jeff@a11ywatch.com>",
@@ -29,9 +29,9 @@
   "dependencies": {
     "@a11ywatch/client": "^0.0.5",
     "@a11ywatch/core": "^0.8.17",
-    "@a11ywatch/crawler": "^0.9.2",
+    "@a11ywatch/crawler": "^0.9.3",
     "@a11ywatch/mav": "^0.7.28",
-    "@a11ywatch/pagemind": "^0.9.61",
+    "@a11ywatch/pagemind": "^0.9.62",
     "@a11ywatch/protos": "^0.4.8"
   },
   "devDependencies": {
